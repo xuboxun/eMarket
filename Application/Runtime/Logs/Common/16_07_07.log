@@ -1,0 +1,30 @@
+[ 2016-07-07T15:17:39+08:00 ] ::1 /e-market/index.php/e-market
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001298s ]
+ERR: 无法加载模块:E-market
+
+[ 2016-07-07T15:17:49+08:00 ] ::1 /e-market/index.php/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000091s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001025s ]
+ERR: 无法加载模块:Login
+
+[ 2016-07-07T15:19:37+08:00 ] ::1 /e-market/index.php/Login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000098s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002013s ]
+ERR: 无法加载模块:Login
+
+[ 2016-07-07T15:20:00+08:00 ] ::1 /e-market/index.php/Index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002074s ]
+ERR: 无法加载模块:Index
+
+[ 2016-07-07T15:20:04+08:00 ] ::1 /e-market/index.php/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001984s ]
+ERR: 无法加载模块:Index
+
