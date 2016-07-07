@@ -15,4 +15,17 @@ class LoginController extends Controller {
      public function findpwd(){
         $this->display();
      }
+
+
+     //----------具体操作-----------------
+     //用户注册  
+     public function user_record(){
+       // if($_POST){
+        $data['username']="username";
+        $data['password']="password";
+        $data['email']="email"; 
+        $data['tel']="tel";
+     // }
+        $m=M('user');
+     }
  }
