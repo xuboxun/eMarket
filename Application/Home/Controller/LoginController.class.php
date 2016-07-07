@@ -27,5 +27,10 @@ class LoginController extends Controller {
         $data['tel']="tel";
      // }
         $m=M('user');
+        if($m->add($data)){
+        	echo "注册成功";
+        }else{
+        	echo "注册失败";
+        }
      }
  }

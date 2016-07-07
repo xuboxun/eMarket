@@ -111,7 +111,7 @@ create table goodsorder
 /*==============================================================*/
 create table shop
 (
-   sid                  int not null,
+   sid                  int not null AUTO_INCREMENT,
    bid                  int not null,
    s_address            varchar(50) not null,
    s_img                varchar(200),
@@ -124,7 +124,7 @@ create table shop
 /*==============================================================*/
 create table user
 (
-   uid                  int not null,
+   uid                  int not null AUTO_INCREMENT,
    username             varchar(50) not null unique,
    password             varchar(50) not null,
    email                varchar(50) not null unique,

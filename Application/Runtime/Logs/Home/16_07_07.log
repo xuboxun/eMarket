@@ -126,3 +126,13 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001710s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002089s ]
 
+[ 2016-07-07T15:47:42+08:00 ] ::1 /e-market/index.php/home/Login/user_record
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000128s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.081916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.082189s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0132s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '0' pour la clef 'PRIMARY'
+
