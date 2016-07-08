@@ -1,0 +1,97 @@
+body{
+	margin:0 auto;
+	color:#6c6c6c;
+	font-size:14px;
+	font-family: ;
+}
+/*整体布局*/
+.main{
+	width:100%;
+	min-width: 1100px;
+ 	min-height:810px;
+ 	background:;	
+}
+/*头部*/
+.header{
+	width:100%;
+	height:102px;
+	background:#F0F0F0;
+	
+	box-shadow:2px 2px 6px #ccc;
+}
+.header img{
+	float:left;
+	margin-left:80px;
+	margin-right:300px;
+}
+.header a{
+	float:left;
+	margin-top:60px;
+	font-size:17px;
+	margin-left:20px;
+	text-decoration: none;
+}
+.header a:hover{
+	color:orange;
+}
+/*主体左边内容*/
+.lcontant{
+	width:33%;
+	margin-left: 18%;
+	margin-top: 35px;
+	height:570px;
+	background:;
+	font-size:17px;
+	border-right: 1px solid #ccc;
+	float:left;
+}/**/
+.txt{
+	width:320px;
+	height:90px;
+	background:;
+}
+.shuru{
+	border:1px solid #ddd;
+	height:22px;
+	line-height:22px;
+	width:300px;
+    padding:11px 8px 11px 5px;
+    font-size: 14px;
+    text-align:center;
+    color:#666;
+    background:;
+    border-radius: 8px;
+}
+.submit{
+	
+	background:#2283D2;
+	color:#fff;
+	font-size:18px;
+	width:315px;
+	height:40px;
+	border-radius: 5px;
+}
+/*主题内容右边布局*/
+.rcontant{
+    width:49%;
+	margin-left: 51%;
+	height:580px;
+	font-size:17px;
+	background:;
+}
+.right1 img{
+     width:37%;
+	height:350px;
+	margin-top: 60px;
+	margin-left: 140px;
+	margin-bottom: 160px;
+	background:red;
+}
+.rcontant a{
+	font-size: 20px;
+	text-decoration: none;
+	margin-left: 48%;	
+}
+.rcontant a:hover{
+	color:orange;
+}

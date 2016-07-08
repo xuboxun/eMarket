@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
@@ -21,8 +21,8 @@
 			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" name="password" />
 			 </div>            
              <div class="link">
-			 	<a class="forgetpsw" href="__URL__/findpwd">忘记密码</a>
-			 	<a class="sign" href="__URL__/register">注册</a>
+			 	<a class="forgetpsw" href="/e-market/index.php/Home/Login/findpwd">忘记密码</a>
+			 	<a class="sign" href="/e-market/index.php/Home/Login/register">注册</a>
 			 </div>
              <div> 
              	<input class="submit" type="submit" value="登录" />

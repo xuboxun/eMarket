@@ -1,0 +1,90 @@
+body{
+	margin:0 auto;
+	color:#6c6c6c;
+	font-size:14px;
+	font-family: ;
+}
+/*总体布局*/
+.main{
+	width:100%;
+	min-width: 1100px;
+ 	min-height:710px;
+ 	background:;	
+}
+/*第二层次布局*/
+.owner{
+	width:92%;
+	margin-left:2%;
+	height:450px;
+	background-image:url(../image/login.jpg);
+	background-size:100% 700px; 
+	margin-top:60px;
+	background-repeat:no-repeat;
+	padding:85px 25px 40px;
+}
+/*表格布局*/
+.contant{
+	margin-left:66%;
+ 	padding:25px 25px 40px;
+ 	width:300px;
+ 	height:300px;
+ 	border:1px solid #ccc;
+ 	background-color: #fff;
+ 	border-radius: 8px;
+ 	
+}
+.login_title{
+	text-align: center;
+	color: #2283D2;
+	font-size: 22px;
+}
+/*.filed span{
+	color: #999;
+    font-size: 14px;
+    height: 18px;
+    left: 50px;
+    line-height: 18px;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    transition:all 0.2s ease-out 0s;
+}*/
+.filed input{
+	margin-top: 23px;
+	border:1px solid #ddd;
+	height:18px;
+	line-height:18px;
+	width:240px;
+    padding:11px 8px 11px 50px;
+}
+.link{
+	margin-top: 23px;
+	overflow:hidden;
+}
+.forgetpsw{
+	float:left;
+}
+.sign{
+	float:right;
+}
+.link a{
+	color:#777;
+	font-size:14px;
+	text-decoration: none;
+}
+.link a:hover{
+	color:orange;
+}
+
+.submit{
+	background:#2283D2;
+	border:none; 
+	color:#fff;
+	font-size:18px;
+	width:301px;
+	height:38px;
+	margin-top: 23px;
+	border-radius: 5px;
+}
+
+
