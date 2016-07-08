@@ -1,4 +1,4 @@
-<!-- 
+<?php if (!defined('THINK_PATH')) exit();?><!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
@@ -9,10 +9,10 @@ description : 首页
 <head>
 	<meta charset="utf-8">
 	<title>电子商城</title>
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
-	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/js/base.js"></script>
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/index.css">
+	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/eMarket/Public/js/base.js"></script>
 </head>
 <body>
 <div id="wrapper">
