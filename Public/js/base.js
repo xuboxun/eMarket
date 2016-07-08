@@ -41,10 +41,13 @@ $(function(){
 			num = kind;
 		}
 		src = $(".small-ad-img div:eq("+num+") img").attr("src");
+		// 更新大图片
 		$(".big-ad-img-main").attr("index",num);
 		$(".big-ad-img-main").attr("src",src);
+		// 缩略图样式
 		$(".small-ad-img div").removeClass("small-ad-img-datail-active"); 
 		$(".small-ad-img div:eq("+num+")").addClass("small-ad-img-datail-active");
+		// 小图标样式
 		$(".ad-img-icon span").css("background","#333"); 
 		$(".ad-img-icon span:eq("+num+")").css("background","#b61d1d"); 
 	}
