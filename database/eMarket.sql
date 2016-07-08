@@ -27,11 +27,11 @@ drop table if exists user;
 /*==============================================================*/
 create table business
 (
-   bid                  int not null AUTO_INCREMENT,
-   b_username           varchar(50) not null unique,
-   b_password           varchar(50) not null,
-   b_email              varchar(50) not null unique,
-   b_tel                varchar(50) not null unique,
+   bid                int not null AUTO_INCREMENT,
+   username           varchar(50) not null unique,
+   password           varchar(50) not null,
+   email              varchar(50) not null unique,
+   tel                varchar(50) not null unique,
    primary key (bid)
 );
 

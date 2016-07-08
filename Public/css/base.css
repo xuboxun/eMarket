@@ -1,0 +1,150 @@
+/*
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+*/
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+ul {
+	list-style-type: none;
+}
+/*网页整体包裹区*/
+#wrapper {
+	min-width:1200px;
+	width:100%;
+	height:1000px;
+	float:left;
+	background: #999;
+}
+.container {
+	width:80%;
+	margin:0 auto;
+}
+
+/*顶部*/
+#banner {
+	width:100%;
+	height:38px;
+	background: #F5F5F5;
+	font-size:0.85em;
+}
+.banner-user {
+	float:left;
+	width:150px;
+	height:100%;
+	line-height: 38px;
+}
+.banner-user span {
+	margin-right:10px;
+	float: left;
+}
+.banner-user span:first-child a {
+	color:red;
+}
+.banner-right {
+	width:auto;
+	float:right;
+}
+.banner-right-ul {
+	float: right;
+	line-height: 38px;
+}
+.banner-right-ul li {
+	min-width:70px;
+	margin-right:10px;
+	float: left;
+}
+.banner-right-ul li a {
+	display: inline-block;
+	width:100%;
+	height:100%;
+	text-align: center;
+	color:#666;
+}
+.banner-right-ul li a:hover {
+	background: #fff;
+}
+
+/*头部*/
+#header {
+	width:100%;
+	height:180px;
+	background: #ccc;
+	float: left;
+}
+/*logo图片*/
+#header .logo {
+	width:200px;
+	height:120px;
+	margin-top:30px;
+	margin-left: 10px;
+	float: left;
+	background: #142EA1;
+}
+/*搜索区域*/
+#header .search {
+	width:60%;
+	height: 100px;
+	margin-top:30px;
+	margin-left: 50px;
+	float:left;
+	/*border:1px solid black;*/
+}
+.search form {
+	width:100%;
+}
+.search form div.guide {
+	width:100%;
+	height:35px;
+	line-height: 35px;
+}
+.search form div.guide span{
+	min-width:60px;
+	height:35px;
+	display: inline-block;
+	text-align: center;
+	line-height: 35px;
+	font-size: 0.9em;
+	float: left;
+}
+.search form div.guide span:hover {
+	/*background: #C2a8a6;*/
+	color:#C22830;
+	cursor: pointer;
+}
+.guide-active {
+	color: #fff;
+	background: #C22830;
+}
+.search form input[type=text]{
+	width:80%;
+	height:40px;
+	font-size: 1.2em;
+	font-weight: 200;
+	padding-left:5px;
+	float: left;
+	border:2px solid #C22830;
+}
+.search form input[type=submit] {
+	width:120px;
+	height:43px;
+	float: left;
+	font-size: 1.15em;
+	letter-spacing: 2px;
+	color: #fff;
+	border:0px;
+	background: #C22830;
+}
+.search form input[type=submit]:hover {
+	cursor: pointer;
+}

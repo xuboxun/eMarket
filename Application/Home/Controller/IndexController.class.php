@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+<<<<<<< HEAD
        
      }
      //模糊查询
@@ -25,4 +26,8 @@ class IndexController extends Controller {
      
         var_dump($arr);
      }
+=======
+        $this->display();
+    }
+>>>>>>> ab06f7ddb2f6faa62cf8c29cc1591bf1e9507d05
 }

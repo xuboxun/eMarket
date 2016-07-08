@@ -1,25 +1,18 @@
-<!-- 
-<<<<<<< Updated upstream
+<?php if (!defined('THINK_PATH')) exit();?><!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
 description : 首页
-=======
-author  : huangyifan
-version : 1.0
-date    : 2016.7.8
->>>>>>> Stashed changes
  -->
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-<<<<<<< Updated upstream
 	<title>电子商城</title>
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/index.css">
-	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
-	<script type="text/javascript" src="__PUBLIC__/js/base.js"></script>
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/index.css">
+	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/eMarket/Public/js/base.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -58,19 +51,6 @@ date    : 2016.7.8
 			</div>
 		</div>
 	</div>
-=======
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="">
-	<script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
-</head>
-<body>
-<div id="container">
-	<!-- 顶部 start -->
-	<div id="banner"></div>
-	<!-- 底部 end -->
-	<!-- 头部 start -->
-	<div id="header"></div>
->>>>>>> Stashed changes
 	<!-- 头部 end -->
 	<!-- 导航栏 start -->
 	<div id="nav"></div>
