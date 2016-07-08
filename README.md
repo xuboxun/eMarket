@@ -7,16 +7,16 @@
   	d.缩进：1个tab=4空格的缩进
 	e.每个文件开头几行写编码信息，如下例
 		`< !--
-		 author  	: huangyifan
-		 version 	: 1.0
-		 date    	: 2016.7.8
-		 description	: 首页
+		 author : huangyifan
+		 version : 1.0
+		 date : 2016.7.8
+		 description : 首页
  		-->`
  		`/*
-		 author  	: huangyifan
-		 version 	: 1.0
-		 date    	: 2016.7.8
-		 description	: 首页css
+		 author : huangyifan
+		 version : 1.0
+		 date : 2016.7.8
+		 description : 首页css
 		*/`
 
 ##2.版本控制：
