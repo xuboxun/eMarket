@@ -18,15 +18,17 @@ class LoginController extends Controller {
      //
 
      //----------具体操作-----------------
-     //用户注册  
-     public function user_record(){
+     //注册  
+     public function record(){
        // if($_POST){
+        //$table='business';//商家注册
+        $table='user';//用户注册
         $data['username']="username";
         $data['password']="password";
         $data['email']="email"; 
         $data['tel']="tel";
      // }
-        $m=M('user');
+        $m=M($table);
         if($m->add($data)){
         	echo "注册成功";
         }else{

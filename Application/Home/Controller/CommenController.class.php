@@ -27,4 +27,20 @@ class CommenController extends Controller {
                    $verify = new \Think\Verify();
                    return $verify->check($code, $id);
      }
+
+     //模糊查询
+     public function widsearch(){
+        $str="e66";//查询的关键字
+        $zd="email";//字段名
+        $sjk="user";//表名
+        for($i=0;$i<strlen($str)-1;$i++){
+            $pl=" ".$zd." like '%".$str[$i]."%' or".$pl;
+        }
+        $pl=$pl." ".$zd." like '%".$str[$i]."%'";
+        $sql="select * from ".$sjk." where".$pl;
+        var_dump($sql);
+        $Model = new \Think\Model();// 实例化一个model对象 没有对应任何数据表
+        $arr= $Model->query($sql);
+        var_dump($arr);
+     }
 }
