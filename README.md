@@ -10,7 +10,7 @@
 		 author  	: huangyifan
 		 version 	: 1.0
 		 date    	: 2016.7.8
-		 description 	: 首页
+		 descriptio	: 首页
  		-->`
  		`/*
 		 author  	  : huangyifan
