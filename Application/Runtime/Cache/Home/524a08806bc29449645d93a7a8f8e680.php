@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" href="/e-market/Public/css/register.css">
+		<link rel="stylesheet" href="/eMarket/Public/css/register.css">
 	</head>
 	<body>
 	 	<div class="main">
 	 		<div class="header">
-	 			<img src="/e-market/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/e-market/index.php/Home/Login/login">请登录</a>
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>
 	 		<div class="lcontant">
 			   <form name="form">
@@ -41,9 +41,9 @@
 	 		</div>
 	 		<div class="rcontant">
 	 			<div class="right1">
-	 				<img src="/e-market/Public/image/register.png"/>
+	 				<img src="/eMarket/Public/image/register.png"/>
 	 			</div>
-	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
+	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
 	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>

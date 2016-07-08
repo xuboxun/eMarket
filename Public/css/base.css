@@ -22,9 +22,9 @@ ul {
 #wrapper {
 	min-width:1200px;
 	width:100%;
-	height:1000px;
+	min-height:1000px;
 	float:left;
-	background: #999;
+	background: #ddd;
 }
 .container {
 	width:80%;
@@ -79,7 +79,7 @@ ul {
 #header {
 	width:100%;
 	height:180px;
-	background: #ccc;
+	background: #fff;
 	float: left;
 }
 /*logo图片*/
@@ -103,9 +103,11 @@ ul {
 .search form {
 	width:100%;
 }
+/*搜索导航*/
 .search form div.guide {
 	width:100%;
 	height:35px;
+	float: left;
 	line-height: 35px;
 }
 .search form div.guide span{
@@ -119,14 +121,20 @@ ul {
 }
 .search form div.guide span:hover {
 	/*background: #C2a8a6;*/
-	color:#C22830;
+	/*color:#C22830;*/
 	cursor: pointer;
 }
 .guide-active {
 	color: #fff;
 	background: #C22830;
 }
-.search form input[type=text]{
+/*搜索区域*/
+.search form div.search-input{
+	width:100%;
+	height:43px;
+	float: left;
+}
+.search form div.search-input input[type=text]{
 	width:80%;
 	height:40px;
 	font-size: 1.2em;
@@ -135,8 +143,8 @@ ul {
 	float: left;
 	border:2px solid #C22830;
 }
-.search form input[type=submit] {
-	width:120px;
+.search form div.search-input input[type=submit] {
+	width:18%;
 	height:43px;
 	float: left;
 	font-size: 1.15em;
@@ -145,6 +153,84 @@ ul {
 	border:0px;
 	background: #C22830;
 }
-.search form input[type=submit]:hover {
+.search form div.search-input input[type=submit]:hover {
 	cursor: pointer;
+}
+/*搜索结果*/
+.search-answer {
+	width:99%;
+	min-height:0px;
+	max-height:270px;
+	border:1px solid #999;
+	position: relative;
+	top:0px;
+	z-index: 999;
+	float: left;
+	background: #fff;
+	display: none;
+}
+.search-answer-left {
+	width:50%;
+	top:0;
+	float: left;
+}
+.search-answer-right {
+	width:50%;
+	float: right;
+	display: none;
+}
+.search-ul {
+	width: 100%;
+	float: left;
+}
+.search-ul li{
+	width:100%;
+	height:27px;
+	line-height: 27px;
+	float: left;
+	display: inline-block;
+	text-indent: 10px;
+	color:#333;
+	cursor: pointer;
+}
+.search-ul li:hover {
+	background: #E6E6E6;
+}
+
+/*尾部*/
+#footer {
+	width:100%;
+	height:220px;
+	float: left;
+	padding-bottom: 20px;
+}
+.footer-top {
+	height:130px;
+	width:100%;
+	background: yellow;
+	float: left;
+}
+.footer-bottom {
+	width: 100%;
+	height: 100px;
+	float: left;
+	text-align: center;
+	color:#333;
+	font-size: 0.9em;
+}
+.footer-bottom div{
+	line-height: 25px;
+}
+.footer-bottom-line1 {
+	width:100%;
+	float: left;
+	margin-top:10px;
+}
+.footer-bottom-line1 span{
+	display: inline-block;
+	width:80px;	
+	line-height: 25px;
+}
+.footer-bottom div.copyright a {
+	color:#C22830;
 }
