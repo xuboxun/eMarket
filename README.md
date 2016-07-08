@@ -6,6 +6,17 @@
   	c.代码重用：有大量重复的代码独立出来成为独立的模块或文件
   	d.缩进：1个tab=4空格的缩进
 	e.每个文件开头几行写编码信息，如下例
+		`<!-- 
+author  : huangyifan
+version : 1.0
+date    : 2016.7.8
+ -->
+ 		`/*
+author  : huangyifan
+version : 1.0
+date    : 2016.7.8
+*/`
+<!DOCTYPE html>`
 
 ##2.版本控制：
   	每次编码前从github上拉取最新版本，每次结束编码前上传本地最新版本
