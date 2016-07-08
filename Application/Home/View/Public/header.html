@@ -1,3 +1,10 @@
+<!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+-->
+
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
@@ -31,6 +38,23 @@
 					<div class="search-input">
 						<input type="text" name="search" id="searchValue"><input type="submit" name="submit" value="搜索">
 					</div>
+					<script type="text/javascript">
+						// 即时搜索
+						var timer = setInterval(function(){
+							var search = $.trim($("#searchValue").val());
+							if(search != null && search != ""){
+								// 向服务器传数据
+								$.post('__APP__/Home/Index/search',{
+									search:search
+								},function(ans){
+									$(".search-ul li").html(ans);
+								})
+								$(".search-answer").show();
+							}else{
+								$(".search-answer").hide();
+							}
+						},500)
+					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
 						<div class="search-answer-left">

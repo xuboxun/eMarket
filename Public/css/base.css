@@ -27,7 +27,7 @@ ul {
 	background: #ddd;
 }
 .container {
-	width:80%;
+	width:1200px;
 	margin:0 auto;
 }
 
@@ -78,24 +78,25 @@ ul {
 /*头部*/
 #header {
 	width:100%;
-	height:180px;
+	height:150px;
 	background: #fff;
 	float: left;
+	border-bottom:2px solid #C22830;
 }
 /*logo图片*/
 #header .logo {
 	width:200px;
-	height:120px;
-	margin-top:30px;
-	margin-left: 10px;
+	height:100px;
+	margin-top:25px;
+	margin-left: 20px;
 	float: left;
-	background: #142EA1;
+	background: #C22830;
 }
 /*搜索区域*/
 #header .search {
 	width:60%;
-	height: 100px;
-	margin-top:30px;
+	height: 80px;
+	margin-top:28px;
 	margin-left: 50px;
 	float:left;
 	/*border:1px solid black;*/
@@ -106,16 +107,16 @@ ul {
 /*搜索导航*/
 .search form div.guide {
 	width:100%;
-	height:35px;
+	height:28px;
 	float: left;
-	line-height: 35px;
+	line-height: 28px;
 }
 .search form div.guide span{
 	min-width:60px;
-	height:35px;
+	height:28px;
 	display: inline-block;
 	text-align: center;
-	line-height: 35px;
+	line-height: 28px;
 	font-size: 0.9em;
 	float: left;
 }
@@ -131,21 +132,21 @@ ul {
 /*搜索区域*/
 .search form div.search-input{
 	width:100%;
-	height:43px;
+	height:35px;
 	float: left;
 }
 .search form div.search-input input[type=text]{
 	width:80%;
-	height:40px;
-	font-size: 1.2em;
+	height:35px;
+	font-size: 1.0em;
 	font-weight: 200;
 	padding-left:5px;
 	float: left;
 	border:2px solid #C22830;
 }
 .search form div.search-input input[type=submit] {
-	width:18%;
-	height:43px;
+	width:16%;
+	height:38px;
 	float: left;
 	font-size: 1.15em;
 	letter-spacing: 2px;
@@ -158,7 +159,7 @@ ul {
 }
 /*搜索结果*/
 .search-answer {
-	width:99%;
+	width:97%;
 	min-height:0px;
 	max-height:270px;
 	border:1px solid #999;

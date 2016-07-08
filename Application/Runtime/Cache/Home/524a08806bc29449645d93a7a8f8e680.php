@@ -46,7 +46,7 @@
 	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			$(function(){
 			$('.input_test').bind({
@@ -86,12 +86,14 @@
 		            }
 		            xhr.open("get","?);
 		            xhr.send("null"); -->*/
-					$.get('/e-market/index.php/Home/Login/check_user',{
+					var time=setInterval(function(){},1000);
+					$.get('/eMarket/index.php/Home/Login/check_user',{
 						zd:"email",
 						con:tr
 					},function(res){
-						alert("fytf")
-						alert(res);
+						if(res=="已存在"){
+						   alert(res);
+						}
 					})
 				}
 				document.getElementById(id).style.display="none";

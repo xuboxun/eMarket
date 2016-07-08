@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" href="/e-market/Public/css/findpwd.css">
+		<link rel="stylesheet" href="/eMarket/Public/css/findpwd.css">
 	</head>
 	<body>
 	   <div class="main">
 	   		<!--头部-->
 	   		<div class="header">
-	   			<img src="/e-market/Public/image/logoletter.png"/>
-	   			<a href="/e-market/index.php/Home/Login/login">登录</a><a href="/e-market/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+	   			<img src="/eMarket/Public/image/logoletter.png"/>
+	   			<a href="/eMarket/index.php/Home/Login/login">登录</a><a href="/eMarket/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
 	   		</div>
 	   		<!--主题内容-->
 	   		<div class="contant">

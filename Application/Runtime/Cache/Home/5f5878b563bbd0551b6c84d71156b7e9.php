@@ -18,14 +18,7 @@ description : 首页
 <body>
 <div id="wrapper">
 	<!-- 引入头部 -->
-	<!-- 
-author : huangyifan
-version : 1.0
-date : 2016.7.8
-descriptioin : 公有css
--->
-
-<!-- 顶部 start -->
+	<!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
@@ -64,10 +57,11 @@ descriptioin : 公有css
 							var search = $.trim($("#searchValue").val());
 							if(search != null && search != ""){
 								// 向服务器传数据
-								$.post('/eMarket/index.php/Home/Index/search',{
+								$.post('/eMarket/index.php/Home/Index/Index/search',{
 									search:search
 								},function(ans){
-									$(".search-ul li").html(ans);
+									alert(ans)
+									// alert($(".search-ul li:eq(1)").html());
 								})
 								$(".search-answer").show();
 							}else{
@@ -120,62 +114,13 @@ descriptioin : 公有css
 	<!-- 中心区 start -->
 	<div id="main">
 		<div class="container">
-			<!-- 区块1 -->
-			<div class="block1">
-				<!-- 侧边导航 -->
-				<div class="sidenav">
-					<ul class="sidenav-ul">
-						<li class="sidenav-ul-li"><a href="">1类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">类别</a></li>
-						<li class="sidenav-ul-li"><a href="">12类别</a></li>
-					</ul>
-				</div>
-				<!-- 宣传图片区 -->
-				<div class="ad-img">
-					<!-- 中心大图片 -->
-					<div class="big-ad-img">
-						<a href=""><img src="/eMarket/Public/image/system/adimg1.jpg" index="0" class="big-ad-img-main"></a>
-						<span class="big-ad-img-change left"><</span>
-						<span class="big-ad-img-change right">></span>
-						<div class="ad-img-icon">
-							<span>1</span>
-							<span>2</span>
-							<span>3</span>
-							<span>4</span>
-						</div>
-					</div>
-					<!-- 缩略图 -->
-					<div class="small-ad-img">
-						<div class="small-ad-img-datail small-ad-img-datail-active"><img src="/eMarket/Public/image/system/adimg1.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg2.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg3.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg4.jpg"></div>
-					</div>
-				</div>
-			</div>
-			
+			main
 		</div>
 	</div>
 	<!-- 中心区 end -->
 
 	<!-- 引入尾部 -->
-	<!-- 
-author : huangyifan
-version : 1.0
-date : 2016.7.8
-descriptioin : 公有css
--->
-
-<!-- 尾部 start -->
+	<!-- 尾部 start -->
 	<div id="footer">
 		<div class="container">
 			<div class="footer-top">

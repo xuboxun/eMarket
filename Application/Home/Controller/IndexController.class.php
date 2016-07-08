@@ -6,7 +6,11 @@ class IndexController extends Controller {
         $this->display();
      }
      
-    
+    public function search(){
+        $search = $_POST['search'];
+        $ans = $search;
+        $this->ajaxReturn($ans);
+    }
     //模糊查询
     public function widsearch(){
         $str="e66";
