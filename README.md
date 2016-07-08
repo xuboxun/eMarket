@@ -10,13 +10,13 @@
 		 author  	: huangyifan
 		 version 	: 1.0
 		 date    	: 2016.7.8
-		 descriptio	: 首页
+		 description	: 首页
  		-->`
  		`/*
-		 author  	  : huangyifan
-		 version 	  : 1.0
-		 date    	  : 2016.7.8
-		 descriptioi	  : 首页css
+		 author  	: huangyifan
+		 version 	: 1.0
+		 date    	: 2016.7.8
+		 description	: 首页css
 		*/`
 
 ##2.版本控制：
