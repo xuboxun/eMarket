@@ -3,12 +3,11 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
-<<<<<<< HEAD
-       
-     }
-     //模糊查询
-     public function widsearch(){
-     	$str="e66";
+        $this->display();
+    }
+    //模糊查询
+    public function widsearch(){
+        $str="e66";
         $zd="email";
         $sjk="user";
      	//$where['email'] = ' (email like "%e%")  or ( email like "%a") ';
@@ -25,9 +24,5 @@ class IndexController extends Controller {
         // $sql="select * from user where ".;
      
         var_dump($arr);
-     }
-=======
-        $this->display();
     }
->>>>>>> ab06f7ddb2f6faa62cf8c29cc1591bf1e9507d05
 }

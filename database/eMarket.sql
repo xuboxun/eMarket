@@ -115,7 +115,7 @@ create table shop
    bid                  int not null,
    s_address            varchar(50) not null,
    s_img                varchar(200),
-   messageid            varchar(50),
+   sname                varchar(50),
    primary key (sid)
 );
 
