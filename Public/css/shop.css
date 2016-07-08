@@ -1,0 +1,21 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#head{
+	height: 200px;
+	width: 100%;
+	/*background-color: yellow;*/
+}
+#main{
+	height: 450px;
+	width:100%;
+	background-color: yellow;
+}
+#center{
+	margin-left: 30%;
+	height: 200px;
+	width: 40%;
+	margin-top: 50px;
+	background-color: red;
+}

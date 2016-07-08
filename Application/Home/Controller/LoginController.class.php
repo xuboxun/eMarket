@@ -18,6 +18,15 @@ class LoginController extends Controller {
      //
 
      //----------具体操作-----------------
+     //检查用户是否存在
+     public function check_user(){
+      if($_GET){
+        $zd=I('get.zd');
+        $table="user";
+        $con=I('get.con');
+        $this->check($zd,$table,$con);
+      }
+     }
      //注册  
      public function record(){
        // if($_POST){
@@ -30,20 +39,25 @@ class LoginController extends Controller {
      // }
         $m=M($table);
         if($m->add($data)){
-        	echo "注册成功";
+        	echo "已存在";
         }else{
-        	echo "注册失败";
+        	echo "未使用";
         }
      }
-     //判断用户名是否存在
-      public function check_user(){
-         $where['user']="username";
-         $m=M('user');
+     //判断该字段是否存在
+      public function check($zd,$table,$con){
+        // $zd="username";
+        // $table="user"; //用户验证
+        // //$table='business';//商家验证
+        // $con="username";
+         $where[$zd]=$con;
+         $m=M($table);
          $num=$m->where($where)->find();
+         // var_dump($num);
          if($num){
-         	echo "用户名已注册";
+         	echo "已存在";
          }else{
-         	echo "1";
+         	echo "未使用";
          }
       }
       //用户登录判断
