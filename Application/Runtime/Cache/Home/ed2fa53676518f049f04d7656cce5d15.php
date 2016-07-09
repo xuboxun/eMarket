@@ -74,6 +74,48 @@ descriptioin : 个人页面的头部
 				<!--订单内容-->
 				<div class="right">
 				 	<div class="series"><p>所有订单</p></div> 
+				 	<div class="things">
+				 		<table class="tab">
+				 			<thead>
+				 				<tr>
+				 					<th width="440px;">宝贝</th>
+				 					<th width="150px;">单价</th>
+				 					<th widyh="150px;">数量</th>
+				 					<th width="150px;">交易状态</th>
+				 					<th width="150px;">全部操作</th>
+				 				</tr>
+				 			</thead>
+				 			<tbody>
+				 				<tr class="first">
+				 					<td colspan="5"></td>
+				 				</tr>
+
+				 				<tr class="two">
+				 					<td colspan="5">
+				 						<span class="dealtime" title="2016-07-09 21:50:39">2016-07-09 21:50:39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				 						<span class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：20152763431</span>
+				 					</td>
+				 				</tr>
+
+				 				<tr class="three">
+				 					<td width="440px;">
+				 						<div class="goods-item">
+				 							<div>
+				 								<img src="__"/>
+				 							</div>
+				 							<div>
+				 								<a href="">【好食光】雀巢(Nestle)咖啡1+2特浓30条390克</a>
+				 							</div>
+				 						</div>
+				 					</td>
+				 					<td width="150px;"><span>39.9</span></td>
+				 					<td width="150px;"><span>1</span></td>
+				 					<td width="150px;"><span>交易成功</span></td>
+				 					<td width="150px;"><span><a href="">追加评论</a><br><a href="">再次购买</a></span></td>
+				 				</tr>
+				 			</tbody>
+				 		</table>
+				 	</div>
 				</div>
 			</div>
 		</div>
