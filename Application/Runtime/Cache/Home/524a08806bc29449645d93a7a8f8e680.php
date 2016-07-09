@@ -48,7 +48,7 @@
 	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			$(function(){
@@ -125,7 +125,27 @@
 		            }
 		            xhr.open("get","?);
 		            xhr.send("null"); -->*/
+<<<<<<< HEAD
 					//var time=setInterval(function(){},1000);
+=======
+					var time=setInterval(function(){},1000);
+					$.get('/eMarket/index.php/Home/Login/check_user',{
+						zd:"email",
+						con:tr
+					},function(res){
+						if(res=="已存在"){
+						   alert(res);
+						}
+					})
+				}
+				document.getElementById(id).style.display="none";
+			}
+			function register(){
+			   //alert('hello');
+			    var tr=document.getElementById('username').value;
+				//if()
+			}
+>>>>>>> 34a9bf222820de530016b2ea9242fedba2a3027e
 			</script>
 			
 	</body>
