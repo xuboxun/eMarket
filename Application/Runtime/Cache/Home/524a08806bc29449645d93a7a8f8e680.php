@@ -14,29 +14,27 @@
 	 		<div class="lcontant">
 			   <form name="form">
 	 			<div class="txt">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="username" value="用户名" onclick="f1('shuru1')" onblur="f2('shuru1')"/>
-	 				<p style="color:#999;font-size:14px;display:none;" id="shuru1">!!支持中文、字母、数字的组，4-20个字符</p>
+	 				<input class="input_test shuru" type="text" style="color:#777" id="username" value="用户名" onclick="f1('username1','!!支持中文、字母、数字的组，4-20个字符')" onblur="f2('username1')"/>
+	 				<p style="color:#999;font-size:14px;display:none;" id="username1">!!支持中文、字母、数字的组，4-20个字符</p>
 	 			</div>
 	 			<div class="txt"style="height:100px;">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="password" value="设置密码" onclick="f1('shuru2')" onblur="f2('shuru2')"/>
-	 				<p style="color:#999;font-size:14px;display:none;" id="shuru2">!!建议使用字母、数字和符号两种及以上的组合，6-20个字符</p>
+	 				<input class="input_test shuru" type="text" style="color:#777" id="password" value="设置密码" onclick="f1('password1','!!建议使用字母、数字和符号两种及以上的组合，6-20个字符')" onblur="f2('password1')"/>
+	 				<p style="color:#999;font-size:14px;display:none;" id="password1">!!建议使用字母、数字和符号两种及以上的组合，6-20个字符</p>
 	 			</div>
 	 			<div class="txt">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="repassword" value="确认密码" onclick="f1('shuru3')" onblur="fre('shuru3')"/>
-	 				<p style="color:#999;font-size:14px;display:none;" id="shuru3">!!请再次输入密码</p>
+	 				<input class="input_test shuru" type="text" style="color:#777" id="repassword" value="确认密码" onclick="f1('repassword1','!!请再次输入密码')" onblur="fre('repassword1')"/>
+	 				<p style="color:#999;font-size:14px;display:none;" id="repassword1">!!请再次输入密码</p>
 	 			</div>
 	 			<div class="txt">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="email" value="邮箱账号" onclick="f1('shuru4')" onblur="f3('shuru4')"/>
-	 				<p style="color:#999;font-size:14px;display:none;" id="shuru4">!!完成验证后可以使用该账号登陆和找回密码</p>
+	 				<input class="input_test shuru" type="text" style="color:#777" id="tel" value="手机号" onclick="f1('tel1','!!仔细核对手机号是否正确')" onblur="f2('tel1')"/>
+	 				<p style="color:#999;font-size:14px;display:none;" id="tel1">!!仔细核对手机号是否正确</p>
 	 			</div>
 	 			<div class="txt">
-				<!--<span class="input_test shuru">验证码：<input type="password" id="confirm" style="width:60px;" placeholder="验证码"/><img style="width:33.3333%;height:20px;position:relative;top:5px;" src="/e-market/index.php/home/Commen/verify" id="code" onclick="this.src=this.src+'?'+Math.random()" class="code" />-->
- 
-	 				<!--<input class="input_test shuru" type="text" style="color:#777" id="code" value="验证码" onclick="f1('shuru5')" onblur="f2('shuru5')"/>
-	 				<p style="color:999;font-size:14px;display:none;" id="shuru5">!!看不清？点击图片更换验证码</p>-->
+			        <input class="input_test shuru" type="text" style="color:#777" id="email" value="邮箱账号" onclick="f1('email1','!!完成验证后可以使用该账号登陆和找回密码')" onblur="f3('email1')"/>
+	 				<p style="color:#999;font-size:14px;display:none;" id="email1">!!完成验证后可以使用该账号登陆和找回密码</p>
 	 			</div>
 	 			<div class="txt">
-	 				<input class="input_test shuru2" type="text" style="color:#777" id="num" value="邮箱验证码" onclick="f1('shuru6')" onblur="f2('shuru6')"/>
+	 				<input class="input_test shuru2" type="text" style="color:#777" id="num" value="邮箱验证码"/>
 	 				<input class="button_code" id="zhuce" type="button" value="获取验证码"  onclick="sendmail('zhuce');"  />
 	 			</div>
 	 			<input class="submit"  type="button" value="立即注册" onclick="register();"/>
@@ -51,6 +49,7 @@
 	 	</div>
 	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
+			var k=0;
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			$(function(){
 			$('.input_test').bind({
@@ -66,7 +65,8 @@
 			}
 			});
 			})
-			function f1(id){
+			function f1(id,con){
+			    $("#"+id).html(con);
 				document.getElementById(id).style.display="block";
 			}
 			function f2(id){
@@ -83,8 +83,34 @@
 			function check_empty(id,con){
 			      var tr=trimStr(document.getElementById(id).value);
 				  if(tr==con||tr==''){
-				     alert(con+"不能为空");
-				}
+				     $("#"+id+"1").html(con+"不能为空");
+					 document.getElementById(id+"1").style.display="block";
+				  }else{
+				     k++;
+				  }
+			}
+			//检查用户名是否为空或被占用
+			function check_used(id,name){
+		       	var tr=trimStr(document.getElementById(id).value);
+			    check_empty(id,name);
+				$.get('/e-market/index.php/Home/Login/check_user',{
+						          zd:id,
+					              con:tr
+			    },function(res){
+						          if(res=="已存在"){
+								        k--;
+						                $("#"+id+"1").html("该"+name+"已存在");
+					                    document.getElementById(id+"1").style.display="block";
+						          }
+			   });
+			}
+			//检查用户名是否为空或被占用
+			function check_user(){
+		       check_used('username','用户名');
+			}
+			//检查手机号是否为空或被占用
+			function check_tel(){
+		       check_used('tel','手机号');
 			}
 			function check_repwd(){
 			     var pwd=trimStr(document.getElementById('password').value);
@@ -92,10 +118,13 @@
 				 if(pwd==repwd){
 				     
 				 }else{
-				    alert("密码不一致");
+				     $("#repassword1").html("密码不一致");
+					 document.getElementById("repassword1").style.display="block";
+					 k--;
 				 }
 			}
 			function check_pwd(){
+			     check_empty('password',"设置密码");
 			     check_empty("repassword","确认密码");
 			     check_repwd();
 			}
@@ -103,51 +132,89 @@
 			     var tr=trimStr(document.getElementById('email').value);
 				//alert(tr);
 			    if(tr=="邮箱账号"||tr==''){
-				     alert("邮箱不能为空");
+				    $("#email1").html("邮箱不能为空");
+					 document.getElementById("email1").style.display="block";
+					return 0;
 				}else{
 				    var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
                     if(!reg.test(tr)) {
-                           alert("请输入有效的邮箱地址！");		   
+                           alert("请输入有效的邮箱地址！");return 0;
                     }else{
 					        $.get('/e-market/index.php/Home/Login/check_user',{
 						          zd:"email",
 					              con:tr
 					        },function(res){
 						          if(res=="已存在"){
-						                alert(res);
+						                alert(res);return 0;
 						          }
 					        })
 					}
 				}
+				k++;
 			}
 			function sendmail(id){
-			                check_email();
-							var tr=trimStr(document.getElementById('email').value);
-					        $.post('/e-market/index.php/Home/Login/sendyzm',{
-					              con:tr
-					        },function(res){
-						          alert(res);
-					        });
-				 document.getElementById(id).disabled=true;
-				 var i=30;
-				 var time=setInterval(function(){
-				   if(i>0){
-				        $('#'+id).val(i+"秒后重发");
-						i--;
-				   }else{
-				      $('#'+id).val("获取验证码");
-				      document.getElementById(id).disabled=false;
-				      exit;
-				   }
-				 },1000);
-				 
+			                if(check_email()==0){
+							    
+							}else{
+							     	var tr=trimStr(document.getElementById('email').value);
+					                $.post('/e-market/index.php/Home/Login/sendyzm',{
+					                         con:tr
+					                },function(res){
+						                     alert(res);
+					                });
+				                    document.getElementById(id).disabled=true;
+				                    var i=30;
+				                    var time=setInterval(function(){
+				                      if(i>0){
+				                         $('#'+id).val(i+"秒后重发");
+						                 i--;
+				                      }else{
+				                         $('#'+id).val("获取验证码");
+				                         document.getElementById(id).disabled=false;
+				                         return;
+				                      }
+				                    },1000);
+							}
+			}
+			function check_yzm(){
+			    var tr=trimStr(document.getElementById('num').value);
+				$.post('/e-market/index.php/Home/Login/getyzm',{
+				      
+				},function(res){
+				    if(res==1){
+					    
+					}else{
+					   if(res==tr){
+					     // k++;
+					   }else{
+					      alert("邮箱验证码错误");return;
+					   }
+				    }
+				});
+				k++;
 			}
 			function register(){
-			    check_empty('username',"用户名");
-			    check_empty('password',"设置密码");
+			    k=0;
+			    check_user();
 			    check_pwd();
 				check_email();
-			    
+				check_yzm();
+				check_tel();
+				alert(k);
+			    if(k==6){
+				     var username=trimStr(document.getElementById('username').value);
+					 var password=trimStr(document.getElementById('password').value);
+					 var email=trimStr(document.getElementById('email').value);
+					 var tel=trimStr(document.getElementById('tel').value);
+					 $.post('/e-market/index.php/Home/Login/record_user',{
+					     username:username,
+						 password:password,
+						 email:email,
+						 tel:tel
+					 },function(res){
+					    alert(res);
+					 });
+				}
 			}
 			       /*var xhr=new XMLHttpRequest();
 		            xhr.onreadystatechange=function(){

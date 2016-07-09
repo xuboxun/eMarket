@@ -27,21 +27,26 @@ class LoginController extends Controller {
         $this->check($zd,$table,$con);
       }
      }
-     //注册  
-     public function record(){
-       // if($_POST){
+     public function record_user(){
         //$table='business';//商家注册
         $table='user';//用户注册
-        $data['username']="username";
-        $data['password']="password";
-        $data['email']="email"; 
-        $data['tel']="tel";
+        $data['username']=I('post.username');
+        $data['password']=I('post.password');
+        $data['email']=I('post.email');
+        $data['tel']=I('post.tel');
+        $this->record($table,$data);
+     }
+     //注册  
+     public function record($table,$data){
+       // if($_POST){
+        //$table='business';//商家注册
+       // $data['tel']="tel";
      // }
         $m=M($table);
         if($m->add($data)){
-        	echo "已存在";
+        	echo "注册成功";
         }else{
-        	echo "未使用";
+        	echo "注册失败";
         }
      }
      //判断该字段是否存在
@@ -72,11 +77,19 @@ class LoginController extends Controller {
          	echo "failure";
          }
       }
+      //ajax获取验证码
+      public function getyzm(){
+         if($_SESSION['yzm']){
+            echo $_SESSION['yzm'];
+         }else{
+            echo 1;
+         }
+      }
     //发送验证码至邮箱
      public function sendyzm(){
    //   $yx='shq2896935608@163.com'; 
      // $yx="2896935608@qq.com";
-      $yx=I('post.con'); 
+           $yx=I('post.con'); 
      
            $pt='电子商城验证码';
            $FromUser='电子商城';
@@ -87,8 +100,6 @@ class LoginController extends Controller {
            $_SESSION['yx']=$yx;
            $_SESSION['yzm']=$num;
            echo "发送成功";
-      
-     
      }
      //发送密码至邮箱
      public function sendpwd(){
