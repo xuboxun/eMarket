@@ -3,13 +3,13 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" href="/e-market/Public/css/register.css">
+		<link rel="stylesheet" href="/eMarket/Public/css/register.css">
 	</head>
 	<body>
 	 	<div class="main">
 	 		<div class="header">
-	 			<img src="/e-market/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/e-market/index.php/Home/Login/login">请登录</a>
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>
 	 		<div class="lcontant">
 			   <form name="form">
@@ -30,7 +30,7 @@
 	 				<p style="color:#999;font-size:14px;display:none;" id="shuru4">!!完成验证后可以使用该账号登陆和找回密码</p>
 	 			</div>
 	 			<div class="txt">
-				<!--<span class="input_test shuru">验证码：<input type="password" id="confirm" style="width:60px;" placeholder="验证码"/><img style="width:33.3333%;height:20px;position:relative;top:5px;" src="/e-market/index.php/home/Commen/verify" id="code" onclick="this.src=this.src+'?'+Math.random()" class="code" />-->
+				<!--<span class="input_test shuru">验证码：<input type="password" id="confirm" style="width:60px;" placeholder="验证码"/><img style="width:33.3333%;height:20px;position:relative;top:5px;" src="/eMarket/index.php/home/Commen/verify" id="code" onclick="this.src=this.src+'?'+Math.random()" class="code" />-->
  
 	 				<!--<input class="input_test shuru" type="text" style="color:#777" id="code" value="验证码" onclick="f1('shuru5')" onblur="f2('shuru5')"/>
 	 				<p style="color:999;font-size:14px;display:none;" id="shuru5">!!看不清？点击图片更换验证码</p>-->
@@ -44,12 +44,12 @@
 	 		</div>
 	 		<div class="rcontant">
 	 			<div class="right1">
-	 				<img src="/e-market/Public/image/register.png"/>
+	 				<img src="/eMarket/Public/image/register.png"/>
 	 			</div>
-	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
+	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			$(function(){
@@ -109,7 +109,7 @@
                     if(!reg.test(tr)) {
                            alert("请输入有效的邮箱地址！");		   
                     }else{
-					        $.get('/e-market/index.php/Home/Login/check_user',{
+					        $.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:"email",
 					              con:tr
 					        },function(res){
@@ -123,7 +123,7 @@
 			function sendmail(id){
 			                check_email();
 							var tr=trimStr(document.getElementById('email').value);
-					        $.post('/e-market/index.php/Home/Login/sendyzm',{
+					        $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					              con:tr
 					        },function(res){
 						          alert(res);
