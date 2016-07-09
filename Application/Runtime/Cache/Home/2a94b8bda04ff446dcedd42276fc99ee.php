@@ -120,7 +120,7 @@ descriptioin : 公有css
 	<!-- 中心区 start -->
 	<div id="main">
 		<div class="container">
-			<!-- 区块1 -->
+			<!-- 区块1 侧边导航、图片展示 -->
 			<div class="block1">
 				<!-- 侧边导航 -->
 				<div class="sidenav">
@@ -162,7 +162,51 @@ descriptioin : 公有css
 					</div>
 				</div>
 			</div>
-			
+			<!-- 区块2 -->
+			<div class="publicblock block2">
+				<div class="block-title">
+					<h5>猜你喜欢</h5>
+				</div>
+				<div class="block-main">
+					
+				</div>
+			</div>
+			<!-- 区块3 -->
+			<div class="publicblock block3">
+				<div class="block-title">
+					<h5>促销打折</h5>
+				</div>
+				<div class="block-main">
+					
+				</div>
+			</div>
+			<!-- 区块4 -->
+			<div class="publicblock block4">
+				<div class="block-title">
+					<h5>热销商品</h5>
+				</div>
+				<div class="block-main">
+					
+				</div>
+			</div>
+			<!-- 区块5 -->
+			<div class="publicblock block3">
+				<div class="block-title">
+					<h5>美食看看</h5>
+				</div>
+				<div class="block-main">
+					
+				</div>
+			</div>
+			<!-- 区块3 -->
+			<div class="publicblock block3">
+				<div class="block-title">
+					<h5>促销打折</h5>
+				</div>
+				<div class="block-main">
+					
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- 中心区 end -->
