@@ -30,15 +30,16 @@
 	 				<p style="color:#999;font-size:14px;display:none;" id="shuru4">!!完成验证后可以使用该账号登陆和找回密码</p>
 	 			</div>
 	 			<div class="txt">
-				<span class="input_test shuru">验证码：<input type="password" id="confirm" style="width:60px;" placeholder="验证码"/><img style="width:33.3333%;height:20px;position:relative;top:5px;" src="__APP__/home/Commen/verify" id="code" onclick="this.src=this.src+'?'+Math.random()" class="code" />
+				<!--<span class="input_test shuru">验证码：<input type="password" id="confirm" style="width:60px;" placeholder="验证码"/><img style="width:33.3333%;height:20px;position:relative;top:5px;" src="__APP__/home/Commen/verify" id="code" onclick="this.src=this.src+'?'+Math.random()" class="code" />-->
  
 	 				<!--<input class="input_test shuru" type="text" style="color:#777" id="code" value="验证码" onclick="f1('shuru5')" onblur="f2('shuru5')"/>
 	 				<p style="color:999;font-size:14px;display:none;" id="shuru5">!!看不清？点击图片更换验证码</p>-->
 	 			</div>
 	 			<div class="txt">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="num" value="邮箱验证码" onclick="f1('shuru6')" onblur="f2('shuru6')"/>
+	 				<input class="input_test shuru2" type="text" style="color:#777" id="num" value="邮箱验证码" onclick="f1('shuru6')" onblur="f2('shuru6')"/>
+	 				<input class="button_code" id="zhuce" type="button" value="获取验证码"  onclick="sendmail('zhuce');"  />
 	 			</div>
-	 			<input class="submit" type="button" value="立即注册" onclick="register();"/>
+	 			<input class="submit"  type="button" value="立即注册" onclick="register();"/>
 			  </form>
 	 		</div>
 	 		<div class="rcontant">
@@ -72,33 +73,20 @@
 				document.getElementById(id).style.display="none";
 			}
 			function f3(id){
-			    var tr=trimStr(document.getElementById('email').value);
-				//alert(tr);
-			    if(tr==""){
-				     alert("邮箱不能为空");
-					// $("#email").focus();
-				}else{
-				    var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
-                    //var value = "xxx@qq.com";
-                    if(!reg.test(tr)) {
-                           alert("请输入有效的邮箱地址！");
-						   
-                    }else{
-					        $.get('__URL__/check_user',{
-						          zd:"email",
-					              con:tr
-					        },function(res){
-						          if(res=="已存在"){
-						                alert(res);
-										$("#email").focus();
-						          }
-					        })
-					}
-				}
-				   
+			    check_email();
 				document.getElementById(id).style.display="none";
 			}
 			function fre(id){
+			     check_repwd();
+			     document.getElementById(id).style.display="none";
+			}
+			function check_empty(id,con){
+			      var tr=trimStr(document.getElementById(id).value);
+				  if(tr==con||tr==''){
+				     alert(con+"不能为空");
+				}
+			}
+			function check_repwd(){
 			     var pwd=trimStr(document.getElementById('password').value);
 				 var repwd=trimStr(document.getElementById('repassword').value);
 				 if(pwd==repwd){
@@ -106,12 +94,60 @@
 				 }else{
 				    alert("密码不一致");
 				 }
-			     document.getElementById(id).style.display="none";
+			}
+			function check_pwd(){
+			     check_empty("repassword","确认密码");
+			     check_repwd();
+			}
+			function check_email(){
+			     var tr=trimStr(document.getElementById('email').value);
+				//alert(tr);
+			    if(tr=="邮箱账号"||tr==''){
+				     alert("邮箱不能为空");
+				}else{
+				    var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                    if(!reg.test(tr)) {
+                           alert("请输入有效的邮箱地址！");		   
+                    }else{
+					        $.get('__URL__/check_user',{
+						          zd:"email",
+					              con:tr
+					        },function(res){
+						          if(res=="已存在"){
+						                alert(res);
+						          }
+					        })
+					}
+				}
+			}
+			function sendmail(id){
+			                check_email();
+							var tr=trimStr(document.getElementById('email').value);
+					        $.post('__URL__/sendyzm',{
+					              con:tr
+					        },function(res){
+						          alert(res);
+					        });
+				 document.getElementById(id).disabled=true;
+				 var i=30;
+				 var time=setInterval(function(){
+				   if(i>0){
+				        $('#'+id).val(i+"秒后重发");
+						i--;
+				   }else{
+				      $('#'+id).val("获取验证码");
+				      document.getElementById(id).disabled=false;
+				      exit;
+				   }
+				 },1000);
+				 
 			}
 			function register(){
-			   //alert('hello');
-			    var tr=document.getElementById('username').value;
-				//if()
+			    check_empty('username',"用户名");
+			    check_empty('password',"设置密码");
+			    check_pwd();
+				check_email();
+			    
 			}
 			       /*var xhr=new XMLHttpRequest();
 		            xhr.onreadystatechange=function(){

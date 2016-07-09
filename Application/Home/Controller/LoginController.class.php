@@ -72,11 +72,30 @@ class LoginController extends Controller {
          	echo "failure";
          }
       }
+    //发送验证码至邮箱
+     public function sendyzm(){
+   //   $yx='shq2896935608@163.com'; 
+     // $yx="2896935608@qq.com";
+      $yx=I('post.con'); 
+     
+           $pt='电子商城验证码';
+           $FromUser='电子商城';
+           $num=$this->create_md();
+           $con='您的验证码是'.$num;
+           import('Vendor.Mail');
+           SendMail($yx,$pt,$con,$FromUser);
+           $_SESSION['yx']=$yx;
+           $_SESSION['yzm']=$num;
+           echo "发送成功";
+      
+     
+     }
      //发送密码至邮箱
      public function sendpwd(){
    //   $yx='shq2896935608@163.com'; 
       $yx="2896935608@qq.com";
-      $this->checkemail($yx);
+      //$yx=I('post.con');
+      $this->checkyx($yx);
       $pt='电子商城密码找回';
       $FromUser='电子商城';
       $num=$this->create_md();
@@ -85,6 +104,7 @@ class LoginController extends Controller {
          SendMail($yx,$pt,$con,$FromUser);
       $_SESSION['yx']=$yx;
       $_SESSION['md']=$num;
+      echo "发送成功";
      }
     //随机生成密码
      public  function create_md($pw_length = 6){
@@ -99,7 +119,7 @@ class LoginController extends Controller {
          $map['email']=$yx;
          $m=M('user');
          if($m->where($map)->find()){
-
+            
          }else{
             echo "没有此邮箱，请检查或重新注册";
             exit;

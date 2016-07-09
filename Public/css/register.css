@@ -50,6 +50,19 @@ body{
 	height:90px;
 	background:;
 }
+.shuru2{
+	border:1px solid #ddd;
+	height:22px;
+	line-height:22px;
+	width:220px;
+    padding:11px 8px 11px 5px;
+    font-size: 14px;
+    text-align:center;
+    color:#666;
+    background:;
+    border-radius: 8px;
+    float:left;
+}
 .shuru{
 	border:1px solid #ddd;
 	height:22px;
@@ -61,6 +74,14 @@ body{
     color:#666;
     background:;
     border-radius: 8px;
+}
+.button_code{
+	background:#ddd;
+	width:80px;
+	height:45px;
+    color:#2283D2;
+    border:none;
+    border-radius:5px;
 }
 .submit{
 	
