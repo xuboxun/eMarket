@@ -86,6 +86,17 @@ $(function(){
 		AdImgPublic($(this).index());
 	});
 
+
+	// 侧边导航鼠标移入
+	$(".sidenav-ul li").mouseover(function(){
+		$(this).children(".sidenav-ul-li-a").addClass("sidenav-ul-li-current-a");
+		$(this).children(".show-side-area").addClass("show");
+	})
+	// 鼠标移出
+	$(".sidenav-ul li").mouseout(function(){
+		$(this).children(".sidenav-ul-li-a").removeClass("sidenav-ul-li-current-a");
+		$(this).children(".show-side-area").removeClass("show");
+	})
 	
 })
 

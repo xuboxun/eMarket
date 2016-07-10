@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" href="/e-market/Public/css/register.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/register.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
 	</head>
 	<body>
 	 	<div class="main">
@@ -145,7 +146,7 @@
 					              con:tr
 					        },function(res){
 						          if(res=="已存在"){
-						                alert(res);return 0;
+						                alert("该邮箱已存在");return 0;
 						          }
 					        })
 					}
@@ -200,7 +201,7 @@
 				check_email();
 				check_yzm();
 				check_tel();
-				alert(k);
+				//alert(k);
 			    if(k==6){
 				     var username=trimStr(document.getElementById('username').value);
 					 var password=trimStr(document.getElementById('password').value);
@@ -230,6 +231,30 @@
 		            xhr.send("null"); -->*/
 					//var time=setInterval(function(){},1000);
 			</script>
-			
+			 <!-- 尾部引入 -->
+	   <!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+-->
+
+<!-- 尾部 start -->
+	<div id="footer">
+		<div class="container">
+			<div class="footer-top"></div>
+			<div class="footer-bottom">
+				<div class="footer-bottom-line1">
+					<span><a href="">关于我们</a></span>
+					<span><a href="">联系客服</a></span>
+					<span><a href="">商家入驻</a></span>
+					<span><a href="">沸点工作室</a></span>
+				</div>
+				<div class="copyright">Copyright © 2016 <a href="http://www.52feidian.com/" target="blanket">沸点工作室 </a>版权所有</div>
+				<div>招商引资  合作qq：123456789</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 end -->
 	</body>
 </html>

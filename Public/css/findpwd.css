@@ -1,14 +1,14 @@
 body{
 	margin:0 auto;
 	color:#6c6c6c;
-	font-size:14px;
+	font-size:16px;
 	font-family: ;
 }
 /*整体布局*/
 .main{
 	width:100%;
 	min-width: 1100px;
- 	min-height:710px;
+ 	min-height:610px;
  	background:;	
 }
 /*头部*/
