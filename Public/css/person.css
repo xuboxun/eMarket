@@ -157,6 +157,7 @@ thead th input{
 	margin-left: 10px;
 	width:120px;
 	height:120px;
+	cursor: pointer;
 }
 .link{
 	margin-top: 30px;
@@ -175,4 +176,46 @@ thead th input{
 }
 .three td span a:hover{
 	color:#FF4400;
+}
+.count{
+	color:#666;
+}
+.count td{
+	text-align: center;
+}
+.count td a{
+	color:#666;
+}
+.count td a:hover{
+	color:#FF4400;
+	text-decoration:none;
+}
+.count td strong{
+	color:#CF3436;
+	font-size:19px;
+}
+.count input{
+	color:#fff;
+	height:40px;
+	line-height: 40px;
+	width:80px;
+	background-color: #666;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+/*collect页面css*/
+.collect_things{
+	margin-top: 30px;
+	float:left;
+	width:100%;
+	min-height:790px;
+	background-color:#FFFFFF;
+	border-radius: 5px;
+}
+.liebiao{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
 }

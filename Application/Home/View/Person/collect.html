@@ -1,0 +1,62 @@
+<!-- 
+author : sudonglin
+version : 1.0
+date : 2016.7.10
+description : 个人中的收藏页面
+-->
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>好食光</title>
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/person.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
+	</head>
+	<body>
+		<!--头部包含-->
+		<include file="./Application/Home/View/Public/p_header.html" />
+		<!-- 总体布局 -->
+		<div class="contant">
+			<div class="contanter">
+			<!-- 侧边栏 -->
+				<div class="left">
+					<ul>
+						<li><a href="">收藏的商品</a></li>
+						<li><a href="">收藏的店铺</a></li>
+					</ul>
+				</div>
+				<!--订单内容-->
+				<div class="right"> 
+				 	<div class="collect_things">
+				 	<!-- 列表布局 -->
+				 	<div class="liebiao">
+				 		<ul>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<img src="__PUBLIC__/image/goods/collect.jpg"/>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title=""></a>
+				 					</div>
+									<div>
+										<strong price="49.90">49.90</strong>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>
+						            	<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 		</ul>
+				 	 </div>
+				 </div>
+			</div>
+		</div>
+	</div>
+		<!-- 引入尾部 -->
+<include file="./Application/Home/View/Public/footer.html" />
+</body>
+</html>

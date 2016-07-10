@@ -83,7 +83,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/>
+				 								<a href=""><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -108,7 +108,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/>
+				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -126,8 +126,16 @@ descriptioin : 个人页面的头部
 				 					<td width="170px"><span>70</span></td>
 				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
 				 				</tr>
+				 				
 				 			</tbody>
-				 		
+				 		    <tr class="count">
+				 					 <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
+				 					<td colspan="1"></td>
+				 					<td>已选择<strong>2</strong>件商品</td>
+				 					<td>总价<strong>￥120</strong></td>
+				 					<td><input type="submit" name="" value="去结算"/></td>
+				 				</tr>
 				 		</table>
 				 	</div>
 				</div>
