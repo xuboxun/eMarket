@@ -2,11 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-<<<<<<< HEAD
-		<title>电子商城</title>
-=======
 		<title>好食光</title>
->>>>>>> e9ef20d460072aa9aa528d595367c04dabfa11fa
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
@@ -112,17 +108,10 @@ descriptioin : 公有css
 	<!-- <div id="nav"></div> -->
 	<!-- 导航栏 end -->
 	 	<div class="main">
-<<<<<<< HEAD
-	 		<div class="header">
-	 			<img src="/eMarket/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
-	 		</div>
-=======
 	 		<!--<div class="header">
 	 			<img src="/eMarket/Public/image/logoletter.png"/>
 	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>-->
->>>>>>> e9ef20d460072aa9aa528d595367c04dabfa11fa
 	 		<div class="lcontant">
 			   <form name="form">
 	 			<div class="txt">
@@ -259,18 +248,18 @@ descriptioin : 公有css
 						          if(res=="已存在"){
 						                alert("该邮箱已存在");return 0;
 						          }
-					        },true)
+					        },false)
 					}
 				}
 				
 				k++;
-				//return 1;
+				return 1;
 			}
 			function sendmail(id){
-			alert(check_email());
+		//	alert(check_email());
 			                if(check_email()==0){
 							    
-							}/*else{
+							}else{
 							     	var tr=trimStr(document.getElementById('email').value);
 					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
@@ -289,7 +278,7 @@ descriptioin : 公有css
 				                         return;
 				                      }
 				                    },1000);
-							}*/
+							}
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);

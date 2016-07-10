@@ -2,11 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-<<<<<<< HEAD
-		<title>电子商城</title>
-=======
 		<title>好食光</title>
->>>>>>> e9ef20d460072aa9aa528d595367c04dabfa11fa
 		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
@@ -162,7 +158,7 @@ descriptioin : 公有css
 				     if(password){
 					     $.ajax({
 						    asnyc:false,
-							url:"/e-market/index.php/Home/Login/do_login",
+							url:"/eMarket/index.php/Home/Login/do_login",
 							type:"post",
 						    data:"username="+username+"&password="+password,
                             success:function(res){
