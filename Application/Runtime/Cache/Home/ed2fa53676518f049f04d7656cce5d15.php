@@ -9,7 +9,7 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/bought.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
 	</head>
 	<body>

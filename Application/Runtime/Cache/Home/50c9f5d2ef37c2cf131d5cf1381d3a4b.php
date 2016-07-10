@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
+<<<<<<< HEAD
 		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+=======
+		<link rel="stylesheet" href="/emarket/Public/css/login.css">
+>>>>>>> f6f934b80e82c0abbf12084889f0ce2f399ca462
 	</head>
 	<body>
 	    <!--整体布局-->
@@ -22,8 +26,13 @@
 			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" name="password" />
 			 </div>            
              <div class="link">
+<<<<<<< HEAD
 			 	<a class="forgetpsw" href="/eMarket/index.php/Home/Login/findpwd">忘记密码</a>
 			 	<a class="sign" href="/eMarket/index.php/Home/Login/register">注册</a>
+=======
+			 	<a class="forgetpsw" href="/emarket/index.php/Home/Login/findpwd">忘记密码</a>
+			 	<a class="sign" href="/emarket/index.php/Home/Login/register">注册</a>
+>>>>>>> f6f934b80e82c0abbf12084889f0ce2f399ca462
 			 </div>
              <div> 
              	<input class="submit" type="submit" value="登录" />

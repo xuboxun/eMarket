@@ -3,8 +3,12 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+=======
+		<link rel="stylesheet" href="/eMarket/Public/css/register.css">
+>>>>>>> f6f934b80e82c0abbf12084889f0ce2f399ca462
 	</head>
 	<body>
 	 	<div class="main">

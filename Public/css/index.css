@@ -71,9 +71,78 @@ a.sidenav-ul-li-current-a {
 .side-area-detail{
 	width:98%;
 	margin-left:2%;
-	background: yellow;
 	height:100%;
+	text-indent: 0px;
 	float: left;
+}
+/*导航区域列表*/
+.side-area-detail-ul-area {
+	width:72%;
+	height:100%;
+	float: left;	
+}
+.side-area-detail-ul {
+	width:100%;
+	height:35px;
+	display: inline-block;
+	float: left;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+.side-area-detail ul:nth-child(1){
+	margin-top:10px;
+}
+.side-area-detail-ul span{
+	width:12%;
+	height:35px;
+	margin-right:4%;
+	font-size: 0.86em;
+	/*background: blue;*/
+	line-height: 35px;
+	display: inline-block;
+	float: left;
+	text-align: right;
+}
+.side-area-detail-ul span a{
+	font-weight: bold;
+	color: #666;
+}
+.side-area-detail-ul span a i{
+	font-size: 0.8em;
+	font-style: normal;
+	font-family: consolas;
+}
+.side-area-detail-ul-li {
+	width:auto;
+	height:20px;
+	padding-left:8px; 
+	padding-right:8px; 
+	display: inline-block;
+	margin-top:7px;
+	float: left:
+	background:wheat;
+	border-left:1px solid #ccc;
+	text-align: center;
+	overflow: hidden;
+}
+.side-area-detail-ul-li a {
+	width:100%;
+	height:20px;
+	color:#777;
+	line-height: 20px;
+	font-size: 0.86em;
+}
+.side-area-detail-ul-li a:hover{
+	color: #b61d1d;
+}
+
+/*详细导航区域 广告*/
+.side-area-detail-ads{
+	width:26%;
+	height:100%;
+	margin-left: 2%;
+	float: right;
+	background: #ddd;
 }
 /*图片区域*/
 .ad-img {
