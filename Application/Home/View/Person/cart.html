@@ -18,26 +18,26 @@ description : 个人中的购物车页面
 		<include file="./Application/Home/View/Public/p_header.html" />
 		<!-- 总体布局 -->
 		<div class="contant">
-			<div class="contanter">
-				 	<div class="things">
+			<div class="cart_contanter">
+				 	<div class="cart_things">
 				 	<!-- 表格控制布局 -->
 				 		<table class="tab">
 				 		<!-- 表头 -->
 				 			<thead>
 				 				<tr>
-				 					<th width="80px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" check="checked" name=""/>全选</th>
-				 					<th width="395px">宝贝</th>
-				 					<th width="150px">单价</th>
-				 					<th widyh="150px">数量</th>
-				 					<th width="150px">小计(元)</th>
-				 					<th width="150px">全部操作</th>
+				 					<th width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" check="checked" name=""/>全选</th>
+				 					<th width="460px">宝贝</th>
+				 					<th width="170px">单价</th>
+				 					<th widyh="170px">数量</th>
+				 					<th width="170px">小计(元)</th>
+				 					<th width="170px">全部操作</th>
 				 				</tr>
 				 			</thead>
 				 			<!-- 表主体内容 -->
 				 			<tbody>
 				 				<tr class="cart_three">
-				 			        <td width="80px"><input type="radio"/></td>
-				 					<td width="440px">
+				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
 				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="__PUBLIC__/image/goods/fruit.jpg"/>
@@ -47,10 +47,41 @@ description : 个人中的购物车页面
 				 							</div>
 				 						</div>
 				 					</td>
-				 					<td width="150px"><span>70</span></td>
-				 					<td width="150px"><span>1</span></td>
-				 					<td width="150px"><span>70</span></td>
-				 					<td width="150px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px">
+				 						<div class="sum">
+				 							<a class="decrement" href="">-&nbsp;</a>
+				 							<input type="text" value="1"/>
+				 							<a class="increment" href="">&nbsp;+</a>
+				 						</div>
+				 					</td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
+				 				</tr>
+				 			</tbody>
+				 			<tbody>
+				 				<tr class="cart_three">
+				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+				 					<td width="460px">
+				 						<div class="goods-item">
+				 							<div class="cafa">
+				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="__PUBLIC__/image/goods/fruit.jpg"/>
+				 							</div>
+				 							<div class="link">
+				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
+				 							</div>
+				 						</div>
+				 					</td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px">
+				 						<div class="sum">
+				 							<a class="decrement" href="">-&nbsp;</a>
+				 							<input type="text" value="1"/>
+				 							<a class="increment" href="">&nbsp;+</a>
+				 						</div>
+				 					</td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
 				 				</tr>
 				 			</tbody>
 				 		

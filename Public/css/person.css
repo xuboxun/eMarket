@@ -5,15 +5,17 @@
 /*整体布局*/
 .contant{
 	width:100%;
-	min-height:860px;
+	min-height:920px;
 	background-color:#F1F1F1;
 }
+/*第二层布局*/
 .contanter{
 	width:86%;
-	min-height:700px;
-	margin-left: 7%;
+	min-height:880px;
+	margin-left:7%;
 	background:;
 }
+/*bought页面中侧边栏效果*/
 .left{
 	float:left;
 	width:8%;
@@ -30,6 +32,7 @@
 	color:#FF4400;
 	text-decoration: underline;
 }
+/*右边主体内容bought页面和cart页面重用*/
 .right{
 	float:left;
 	width:85%;
@@ -53,10 +56,11 @@
 	margin-top: 30px;
 	float:left;
 	width:100%;
-	min-height:640px;
+	min-height:680px;
 	background-color:#FFFFFF;
 	border-radius: 5px;
 }
+/*表格属性*/
 .tab{
 	margin-top:30px;
 	margin-left: 25px;
@@ -72,8 +76,9 @@
 	width:;
 }
 thead th input{
-	opacity: 0;
+    cursor: pointer;
 }
+/*bought页面的表格中商品列表属性*/
 .first{
 	height:30px;
 	border:0 none;
@@ -99,6 +104,20 @@ thead th input{
 	text-align: center;
 }
 /*购物车页面中表格单独的的css属性*/
+.cart_contanter{
+	width:100%;
+	min-height:890px;
+	/*background-color:red;*/
+}
+.cart_things{
+	margin-top: 30px;
+	float:left;
+	width:90%;
+	margin-left: 5%;
+	min-height:800px;
+	background-color:#FFFFFF;
+	border-radius: 5px;
+}
 .cart_three{
 	height:150px;
 	background:#fff;
@@ -112,6 +131,20 @@ thead th input{
 	text-align: center;
 }
 .cart_three td span a:hover{
+	color:#FF4400;
+}
+.sum input{
+	color:#666;
+	width:50px;
+	height:18px;
+	line-height: 18px;
+	text-align: center;
+}
+.sum a{
+	font-size: 20px;
+	color:#666;
+}
+.sum a:hover{
 	color:#FF4400;
 }
 /*结束*/
