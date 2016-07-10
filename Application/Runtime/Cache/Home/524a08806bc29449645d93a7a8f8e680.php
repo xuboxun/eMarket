@@ -2,16 +2,116 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>电子商城</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/register.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<title>好食光</title>
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
 	<body>
+		<!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+-->
+
+<!-- 顶部 start -->
+	<div id="banner">
+		<div class="container">
+			<div class="banner-user">
+				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
+					<li><a href="">客服中心</a></li>
+					<li><a href="">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 end -->
+	<!-- 头部 start -->
+	<div id="header">
+		<div class="container">
+			<div class="logo">
+				<img src="/eMarket/Public/image/system/logo.png">
+			</div>
+			<div class="search">
+				<form action="" mathod="post" > 
+					<div class="guide">
+						<span class="guide-active">吃的</span>
+						<span>喝的</span>
+						<span>玩的</span>
+					</div>
+					<div class="search-input">
+						<input type="text" name="search" id="searchValue"><input type="submit" name="submit" value="搜索">
+					</div>
+					<script type="text/javascript">
+						// 即时搜索
+						var timer = setInterval(function(){
+							var search = $.trim($("#searchValue").val());
+							if(search != null && search != ""){
+								// 向服务器传数据
+								$.post('/eMarket/index.php/Home/Index/search',{
+									search:search
+								},function(ans){
+									$(".search-ul li").html(ans);
+								})
+								$(".search-answer").show();
+							}else{
+								$(".search-answer").hide();
+							}
+						},500)
+					</script>
+					<div class="search-answer">
+						<!-- 搜索关键词 左侧 -->
+						<div class="search-answer-left">
+							<ul class="search-ul">
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<!-- <li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li> -->
+							</ul>
+						</div>
+						<!-- 关键词细化 右侧 -->
+						<div class="search-answer-right">
+							<ul class="search-ul">
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 end -->
+
+	<!-- 导航栏 start -->
+	<!-- <div id="nav"></div> -->
+	<!-- 导航栏 end -->
 	 	<div class="main">
-	 		<div class="header">
-	 			<img src="/e-market/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/e-market/index.php/Home/Login/login">请登录</a>
-	 		</div>
+	 		<!--<div class="header">
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
+	 		</div>-->
 	 		<div class="lcontant">
 			   <form name="form">
 	 			<div class="txt">
@@ -43,12 +143,12 @@
 	 		</div>
 	 		<div class="rcontant">
 	 			<div class="right1">
-	 				<img src="/e-market/Public/image/register.png"/>
+	 				<img src="/eMarket/Public/image/register.png"/>
 	 			</div>
-	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
+	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			var k=0;
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
@@ -94,7 +194,7 @@
 			function check_used(id,name){
 		       	var tr=trimStr(document.getElementById(id).value);
 			    check_empty(id,name);
-				$.get('/e-market/index.php/Home/Login/check_user',{
+				$.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:id,
 					              con:tr
 			    },function(res){
@@ -141,7 +241,7 @@
                     if(!reg.test(tr)) {
                            alert("请输入有效的邮箱地址！");return 0;
                     }else{
-					        $.get('/e-market/index.php/Home/Login/check_user',{
+					        $.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:"email",
 					              con:tr
 					        },function(res){
@@ -161,7 +261,7 @@
 							    
 							}/*else{
 							     	var tr=trimStr(document.getElementById('email').value);
-					                $.post('/e-market/index.php/Home/Login/sendyzm',{
+					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
 					                },function(res){
 						                     alert(res);
@@ -182,7 +282,7 @@
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
-				$.post('/e-market/index.php/Home/Login/getyzm',{
+				$.post('/eMarket/index.php/Home/Login/getyzm',{
 				      
 				},function(res){
 				    if(res==1){
@@ -210,7 +310,7 @@
 					 var password=trimStr(document.getElementById('password').value);
 					 var email=trimStr(document.getElementById('email').value);
 					 var tel=trimStr(document.getElementById('tel').value);
-					 $.post('/e-market/index.php/Home/Login/record_user',{
+					 $.post('/eMarket/index.php/Home/Login/record_user',{
 					     username:username,
 						 password:password,
 						 email:email,

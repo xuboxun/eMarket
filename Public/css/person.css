@@ -19,7 +19,7 @@
 	width:8%;
 	height:740px;
 	padding:30px;
-	background-color:#666;
+	/*background-color:#666;*/
 }
 .left ul li a{
 	font-size: 18px;
@@ -34,7 +34,7 @@
 	float:left;
 	width:85%;
 	height:800px;
-	background-color:#ccc;
+	/*background-color:#ccc;*/
 }
 .series{
 	margin-top: 30px;
@@ -71,6 +71,9 @@
 	text-align: center;
 	width:;
 }
+thead th input{
+	opacity: 0;
+}
 .first{
 	height:30px;
 	border:0 none;
@@ -85,13 +88,58 @@
 	border-right:1px solid #E5E5E5;
 }
 .three{
-	height:100px;
-	background: #fff none repeat scroll 0 0;
+	height:150px;
+	background:#fff;
 	color:#666;
 	border-left:1px solid #E5E5E5;
 	border-right:1px solid #E5E5E5;
 	border-bottom:1px solid #E5E5E5;
 }
-.good td span{
+.three td{
 	text-align: center;
+}
+/*购物车页面中表格单独的的css属性*/
+.cart_three{
+	height:150px;
+	background:#fff;
+	color:#666;
+	border-top: 3px solid #5e5e5e;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+}
+.cart_three td{
+	text-align: center;
+}
+.cart_three td span a:hover{
+	color:#FF4400;
+}
+/*结束*/
+.cafa{
+	float:left;
+	margin-bottom: 15px;
+	background-color:;
+}
+.cafa img{
+	margin-left: 10px;
+	width:120px;
+	height:120px;
+}
+.link{
+	margin-top: 30px;
+	width:270px;
+	height:70px;
+	float:left;
+	background-color:;
+}
+.link a{
+	color:#666;
+	text-decoration: none;
+}
+.link a:hover{
+	
+	color:#FF4400;
+}
+.three td span a:hover{
+	color:#FF4400;
 }
