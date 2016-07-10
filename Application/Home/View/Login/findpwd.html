@@ -21,13 +21,14 @@
 	   			</div>
 				<p style="color:red;" id="yxts"></p>
 	   			<div>
-<<<<<<< HEAD
+
 	   				验证码：<input  class="shuru" type="text" name="code" style="width:140px" id="code"/><input type="button" name="" id="yzm"	onclick="sendmail();" value="获取验证码" style="width:80px;margin-left:20px;height:42px;background:#2283D2;color:#444"/>
-=======
-	   				验证码：<input  class="shuru" type="text" name="code" style="width:140px"/><input type="button" name=""	 value="获取验证码" style="width:80px;margin-left:20px;height:42px;background:#C22830;color:#fff;cursor: pointer;"/>
->>>>>>> 4872b5c06ac8ff5412e84f9b194120203c575bfb
+	   				
 	   			</div>
 				<p style="color:red;" id="yzmts"></p>
+				<div id="password" style="display:none;">
+	   				密&nbsp&nbsp&nbsp码：<input  class="shuru" type="text"  style="color:#666" placeholder="请输入密码" id="pwd">
+	   			</div>
 	   			<div>
 	   				<input class="submit" type="button" value="确定" onclick="f1();"/>
 	   			</div>
@@ -37,7 +38,26 @@
 	   <script type="text/javascript">
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+			var pl=0;
 			function f1(){
+			if(pl>0){
+			   var password=trimStr($("#pwd").val());
+			  
+			                    $.ajax({
+						               asnyc:false,
+							           url:"__URL__/repwd",
+							           type:"post",
+						               data:"pwd="+password,
+                                       success:function(res){
+							               if(res=="success"){
+									           
+									       }else{
+										      alert("请重试");
+									          window.location.href="__URL__/findpwd";
+									       }
+							           },
+						         });
+			}
 			   var username=trimStr($("#username").val());
 			   var code=trimStr($("#code").val());
 			   if(username){
@@ -47,7 +67,20 @@
                     }else{
 					       if(code){
 				                 $("#yzmts").html("");
-								 
+								 $.ajax({
+						               asnyc:false,
+							           url:"__URL__/getmd",
+							           type:"post",
+						               data:"con="+code,
+                                       success:function(res){
+							               if(res=="success"){
+									           $("#password").css("display","block");
+											   pl++;
+									       }else{
+									           $("#yzmts").html("验证码错误，请重试");
+									       }
+							           },
+						         });
 					       }else{
 				                 $("#yzmts").html("请您填写验证码");
 				           }
@@ -73,7 +106,7 @@
 							        if(res=="发送成功"){
 									  alert("发送成功");
 									  $("#yzm").attr("disabled","true");
-									  var i=10;
+									  var i=60;
 				                      var time=setInterval(function(){
 				                         if(i>0){
 				                            $('#yzm').val(i+"秒后重发");

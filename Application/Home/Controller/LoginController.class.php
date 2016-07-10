@@ -94,10 +94,12 @@ class LoginController extends Controller {
       }
       //ajax获取
       public function getmd(){
-         if($_SESSION['md']){
-            echo $_SESSION['md'];
+         $md=I('post.con');
+
+         if($md==$_SESSION['md']){
+             echo "success";
          }else{
-            echo 1;
+            echo "failure";
          }
       }
     //发送验证码至邮箱
@@ -163,12 +165,16 @@ class LoginController extends Controller {
      //重置密码
      public function repwd(){
          $data['password']=I('post.pwd');
+         $map['email']= $_SESSION['yx'];
+         //echo  $map['username'];
+        
          $m=M('user');
          $str=$m->where($map)->find();
          if($str){
-             $m->where("aid=".$str['aid'])->save($data);
+             $m->where("uid=".$str['uid'])->save($data);
+             echo "success";
          }else{
-             echo "重置密码，请重试";
+             echo "failure";
          }
      }
  }
