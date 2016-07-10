@@ -13,25 +13,28 @@
 		<div class="owner">
 		<!--登陆表格-->
 		<div class="contant">
+		
 		<div class="login_title">账户登录</div>
-		 <form  method="post" action="" name="form">
+		<p style="color:red;" id="ts"></p>
+		 <form name="form" method="post">
 		     <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="手机号/会员名/qq邮箱" name="username"/>
+			 	<input class="input_test" type="text" style="color:#666;" placeholder="手机号/会员名/qq邮箱" id="username"/>
 			 </div>
 			 <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" name="password" />
+			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" id="password" />
 			 </div>            
              <div class="link">
 			 	<a class="forgetpsw" href="/e-market/index.php/Home/Login/findpwd">忘记密码</a>
 			 	<a class="sign" href="/e-market/index.php/Home/Login/register">注册</a>
 			 </div>
              <div> 
-             	<input class="submit" type="submit" value="登录" />
+             	<input class="submit" type="button" value="登录" onclick="f1();"/>
 			 </div>		
 		 </form>
 			<!--输入框文字隐藏功能-->
 			<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
+			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			$(function(){
 			$('.input_test').bind({
 			focus:function(){
@@ -46,6 +49,33 @@
 			}
 			});
 			})
+			function f1(){
+			     var username=trimStr($("#username").val());
+				 var password=trimStr($("#password").val());
+				
+				 if(username){
+				     if(password){
+					     $.ajax({
+						    asnyc:false,
+							url:"/e-market/index.php/Home/Login/do_login",
+							type:"post",
+						    data:"username="+username+"&password="+password,
+                            success:function(res){
+							          if(res=="failure"){
+									       $("#ts").html("账户或密码错误");
+									  }else{
+									    
+									  }
+							    },
+						 });
+					 }else{
+					    $("#ts").html("密码不能为空");
+					 }
+				 }else{
+				 
+				     $("#ts").html("用户名不能为空");
+				 }
+			}
 			</script>
 
 		 </div>

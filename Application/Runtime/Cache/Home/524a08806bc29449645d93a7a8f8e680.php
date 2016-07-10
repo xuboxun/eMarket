@@ -131,7 +131,7 @@
 			}
 			function check_email(){
 			     var tr=trimStr(document.getElementById('email').value);
-				//alert(tr);
+				alert(tr);
 			    if(tr=="邮箱账号"||tr==''){
 				    $("#email1").html("邮箱不能为空");
 					 document.getElementById("email1").style.display="block";
@@ -148,15 +148,18 @@
 						          if(res=="已存在"){
 						                alert("该邮箱已存在");return 0;
 						          }
-					        })
+					        },true)
 					}
 				}
+				
 				k++;
+				//return 1;
 			}
 			function sendmail(id){
+			alert(check_email());
 			                if(check_email()==0){
 							    
-							}else{
+							}/*else{
 							     	var tr=trimStr(document.getElementById('email').value);
 					                $.post('/e-market/index.php/Home/Login/sendyzm',{
 					                         con:tr
@@ -175,7 +178,7 @@
 				                         return;
 				                      }
 				                    },1000);
-							}
+							}*/
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
