@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>电子商城</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/register.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
 	<body>
 	 	<div class="main">
 	 		<div class="header">
-	 			<img src="/e-market/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/e-market/index.php/Home/Login/login">请登录</a>
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>
 	 		<div class="lcontant">
 			   <form name="form">
@@ -43,12 +43,12 @@
 	 		</div>
 	 		<div class="rcontant">
 	 			<div class="right1">
-	 				<img src="/e-market/Public/image/register.png"/>
+	 				<img src="/eMarket/Public/image/register.png"/>
 	 			</div>
-	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
+	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			var k=0;
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
@@ -94,7 +94,7 @@
 			function check_used(id,name){
 		       	var tr=trimStr(document.getElementById(id).value);
 			    check_empty(id,name);
-				$.get('/e-market/index.php/Home/Login/check_user',{
+				$.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:id,
 					              con:tr
 			    },function(res){
@@ -141,7 +141,7 @@
                     if(!reg.test(tr)) {
                            alert("请输入有效的邮箱地址！");return 0;
                     }else{
-					        $.get('/e-market/index.php/Home/Login/check_user',{
+					        $.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:"email",
 					              con:tr
 					        },function(res){
@@ -158,7 +158,7 @@
 							    
 							}else{
 							     	var tr=trimStr(document.getElementById('email').value);
-					                $.post('/e-market/index.php/Home/Login/sendyzm',{
+					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
 					                },function(res){
 						                     alert(res);
@@ -179,7 +179,7 @@
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
-				$.post('/e-market/index.php/Home/Login/getyzm',{
+				$.post('/eMarket/index.php/Home/Login/getyzm',{
 				      
 				},function(res){
 				    if(res==1){
@@ -207,7 +207,7 @@
 					 var password=trimStr(document.getElementById('password').value);
 					 var email=trimStr(document.getElementById('email').value);
 					 var tel=trimStr(document.getElementById('tel').value);
-					 $.post('/e-market/index.php/Home/Login/record_user',{
+					 $.post('/eMarket/index.php/Home/Login/record_user',{
 					     username:username,
 						 password:password,
 						 email:email,
