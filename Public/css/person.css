@@ -5,21 +5,23 @@
 /*整体布局*/
 .contant{
 	width:100%;
-	min-height:860px;
+	min-height:920px;
 	background-color:#F1F1F1;
 }
+/*第二层布局*/
 .contanter{
 	width:86%;
-	min-height:700px;
-	margin-left: 7%;
+	min-height:880px;
+	margin-left:7%;
 	background:;
 }
+/*bought页面中侧边栏效果*/
 .left{
 	float:left;
 	width:8%;
 	height:740px;
 	padding:30px;
-	background-color:#666;
+	/*background-color:#666;*/
 }
 .left ul li a{
 	font-size: 18px;
@@ -30,11 +32,12 @@
 	color:#FF4400;
 	text-decoration: underline;
 }
+/*右边主体内容bought页面和cart页面重用*/
 .right{
 	float:left;
 	width:85%;
 	height:800px;
-	background-color:#ccc;
+	/*background-color:#ccc;*/
 }
 .series{
 	margin-top: 30px;
@@ -53,10 +56,11 @@
 	margin-top: 30px;
 	float:left;
 	width:100%;
-	min-height:640px;
+	min-height:680px;
 	background-color:#FFFFFF;
 	border-radius: 5px;
 }
+/*表格属性*/
 .tab{
 	margin-top:30px;
 	margin-left: 25px;
@@ -71,6 +75,10 @@
 	text-align: center;
 	width:;
 }
+thead th input{
+    cursor: pointer;
+}
+/*bought页面的表格中商品列表属性*/
 .first{
 	height:30px;
 	border:0 none;
@@ -85,13 +93,86 @@
 	border-right:1px solid #E5E5E5;
 }
 .three{
-	height:100px;
-	background: #fff none repeat scroll 0 0;
+	height:150px;
+	background:#fff;
 	color:#666;
 	border-left:1px solid #E5E5E5;
 	border-right:1px solid #E5E5E5;
 	border-bottom:1px solid #E5E5E5;
 }
-.good td span{
+.three td{
 	text-align: center;
+}
+/*购物车页面中表格单独的的css属性*/
+.cart_contanter{
+	width:100%;
+	min-height:890px;
+	/*background-color:red;*/
+}
+.cart_things{
+	margin-top: 30px;
+	float:left;
+	width:90%;
+	margin-left: 5%;
+	min-height:800px;
+	background-color:#FFFFFF;
+	border-radius: 5px;
+}
+.cart_three{
+	height:150px;
+	background:#fff;
+	color:#666;
+	border-top: 3px solid #5e5e5e;
+	border-left:1px solid #E5E5E5;
+	border-right:1px solid #E5E5E5;
+	border-bottom:1px solid #E5E5E5;
+}
+.cart_three td{
+	text-align: center;
+}
+.cart_three td span a:hover{
+	color:#FF4400;
+}
+.sum input{
+	color:#666;
+	width:50px;
+	height:18px;
+	line-height: 18px;
+	text-align: center;
+}
+.sum a{
+	font-size: 20px;
+	color:#666;
+}
+.sum a:hover{
+	color:#FF4400;
+}
+/*结束*/
+.cafa{
+	float:left;
+	margin-bottom: 15px;
+	background-color:;
+}
+.cafa img{
+	margin-left: 10px;
+	width:120px;
+	height:120px;
+}
+.link{
+	margin-top: 30px;
+	width:270px;
+	height:70px;
+	float:left;
+	background-color:;
+}
+.link a{
+	color:#666;
+	text-decoration: none;
+}
+.link a:hover{
+	
+	color:#FF4400;
+}
+.three td span a:hover{
+	color:#FF4400;
 }

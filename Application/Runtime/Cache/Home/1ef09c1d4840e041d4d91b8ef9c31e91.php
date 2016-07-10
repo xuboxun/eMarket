@@ -1,4 +1,4 @@
-<!-- 
+<?php if (!defined('THINK_PATH')) exit();?><!-- 
 author : sudonglin
 version : 1.0
 date : 2016.7.10
@@ -9,13 +9,56 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/person.css">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
 	</head>
 	<body>
 		<!--头部包含-->
-		<include file="./Application/Home/View/Public/p_header.html" />
+		<!-- 
+author : sudonglin
+version : 1.0
+date : 2016.7.9
+descriptioin : 个人页面的头部
+-->
+
+<!-- 顶部 start -->
+	<div id="banner">
+		<div class="container">
+			<div class="banner-user">
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
+					<li><a href="">客服中心</a></li>
+					<li><a href="">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 顶部 end -->
+	<!--头部开始-->
+		<div class="header">
+			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
+			<div class="letter">
+				<ul>
+					<li><a  href="/e-market/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/e-market/index.php/Home/Person/setting.html">个人设置</a></li>
+				</ul>				
+			</div>
+			<div class="search">
+			     
+				<input type="text" name="" placeholder="柠檬"/>
+				<button type="submit" class="">搜索</button>
+			</div>
+		</div>
+		<!--头部结束-->
 		<!-- 总体布局 -->
 		<div class="contant">
 			<div class="cart_contanter">
@@ -34,40 +77,38 @@ description : 个人中的购物车页面
 				 				</tr>
 				 			</thead>
 				 			<!-- 表主体内容 -->
-							<volist name="list" id="vo">
-				 			<tbody>
+							<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tbody>
 				 				<tr class="cart_three"> 
 				 			        <td width="100px"><input type="checkbox" check="checked" name="check_list"/></td>
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<img title="【好食光】" src="__PUBLIC__/image/goods/{$vo.g_img}"/>
+				 								<img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/>
 				 							</div>
 				 							<div class="link">
-				 								<a href="">【好食光】{$vo.g_name}</a>
+				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
 				 							</div>
 				 						</div>
 				 					</td>
-				 					<td width="170px"><span>{$vo.price}</span></td>
+				 					<td width="170px"><span><?php echo ($vo["price"]); ?></span></td>
 				 					<td width="170px">
 				 						<div class="sum">
-				 							<a class="decrement" href="javascript:sub('num{$i}',{$vo.price});">-&nbsp;</a>
-				 							<input type="text" value="1" id="num{$i}" onblur="f1('num{$i}',{$vo.price})"/>
-				 							<a class="increment" href="javascript:add('num{$i}',{$vo.price});">&nbsp;+</a>
+				 							<a class="decrement" href="javascript:sub('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>);">-&nbsp;</a>
+				 							<input type="text" value="1" id="num<?php echo ($i); ?>" onblur="f1('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>)"/>
+				 							<a class="increment" href="javascript:add('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>);">&nbsp;+</a>
 				 						</div>
 				 					</td>
-				 					<td width="170px" id="pricenum{$i}">{$vo.price}</td>
+				 					<td width="170px" id="pricenum<?php echo ($i); ?>"><?php echo ($vo["price"]); ?></td>
 				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
 				 				</tr>
-				 			</tbody>
-							</volist>
+				 			</tbody><?php endforeach; endif; else: echo "" ;endif; ?>
 				 		<!--	<tbody>
 				 				<tr class="cart_three">
 				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="__PUBLIC__/image/goods/fruit.jpg"/>
+				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -137,6 +178,29 @@ description : 个人中的购物车页面
 			</script>
 
 		<!-- 引入尾部 -->
-		<include file="./Application/Home/View/Public/footer.html" />
+		<!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+-->
+
+<!-- 尾部 start -->
+	<div id="footer">
+		<div class="container">
+			<div class="footer-top"></div>
+			<div class="footer-bottom">
+				<div class="footer-bottom-line1">
+					<span><a href="">关于我们</a></span>
+					<span><a href="">联系客服</a></span>
+					<span><a href="">商家入驻</a></span>
+					<span><a href="">沸点工作室</a></span>
+				</div>
+				<div class="copyright">Copyright © 2016 <a href="http://www.52feidian.com/" target="blanket">沸点工作室 </a>版权所有</div>
+				<div>招商引资  合作qq：123456789</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 end -->
 	</body>
 </html>

@@ -67,11 +67,18 @@ class LoginController extends Controller {
       }
       //用户登录判断
       public function do_login(){
-         $where['user']="username";
-         $where['password']="password";
-         $m=M('user');
-         $num=$m->where($where)->find();
-         if($num){
+         $username=I('post.username');
+         $password=I('post.password');
+        // $username="2222222222";
+        // $password="22";
+        //select * from user where (username='2896935608@qq.com' and password='22') or (tel='2896935608@qq.com'and password='22') or (email='2896935608@qq.com' and password='22')
+         $sql="select * from user where (username='".$username."' and password='".$password."') or (tel='".$username."' and password='".$password."') or (email='".$username."' and password='".$password."')";
+         $Model = new \Think\Model();// 实例化一个model对象 没有对应任何数据表
+         $arr= $Model->query($sql);
+        // var_dump($sql);
+        // var_dump($arr);
+        // echo $password;
+         if($arr){
          	echo "success";
          }else{
          	echo "failure";
@@ -85,12 +92,21 @@ class LoginController extends Controller {
             echo 1;
          }
       }
+      //ajax获取
+      public function getmd(){
+         $md=I('post.con');
+
+         if($md==$_SESSION['md']){
+             echo "success";
+         }else{
+            echo "failure";
+         }
+      }
     //发送验证码至邮箱
      public function sendyzm(){
    //   $yx='shq2896935608@163.com'; 
      // $yx="2896935608@qq.com";
            $yx=I('post.con'); 
-     
            $pt='电子商城验证码';
            $FromUser='电子商城';
            $num=$this->create_md();
@@ -104,7 +120,7 @@ class LoginController extends Controller {
      //发送密码至邮箱
      public function sendpwd(){
    //   $yx='shq2896935608@163.com'; 
-      $yx="2896935608@qq.com";
+      $yx=I('post.con'); 
       //$yx=I('post.con');
       $this->checkyx($yx);
       $pt='电子商城密码找回';
@@ -149,12 +165,16 @@ class LoginController extends Controller {
      //重置密码
      public function repwd(){
          $data['password']=I('post.pwd');
+         $map['email']= $_SESSION['yx'];
+         //echo  $map['username'];
+        
          $m=M('user');
          $str=$m->where($map)->find();
          if($str){
-             $m->where("aid=".$str['aid'])->save($data);
+             $m->where("uid=".$str['uid'])->save($data);
+             echo "success";
          }else{
-             echo "重置密码，请重试";
+             echo "failure";
          }
      }
  }

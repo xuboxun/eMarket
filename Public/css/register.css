@@ -12,7 +12,7 @@ body{
  	background:;	
 }
 /*头部*/
-.header{
+/*.header{
 	width:100%;
 	height:102px;
 	background:#F0F0F0;
@@ -33,13 +33,13 @@ body{
 }
 .header a:hover{
 	color:orange;
-}
+}*/
 /*主体左边内容*/
 .lcontant{
 	width:33%;
 	margin-left: 18%;
 	margin-top: 35px;
-	height:570px;
+	height:620px;
 	background:;
 	font-size:17px;
 	border-right: 1px solid #ccc;
@@ -79,24 +79,26 @@ body{
 	background:#ddd;
 	width:80px;
 	height:45px;
-    color:#2283D2;
+    color:#C22830;
     border:none;
     border-radius:5px;
+    cursor: pointer;
 }
 .submit{
 	
-	background:#2283D2;
+	background:#C22830;
 	color:#fff;
 	font-size:18px;
 	width:315px;
 	height:40px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 /*主题内容右边布局*/
 .rcontant{
     width:49%;
 	margin-left: 51%;
-	height:580px;
+	height:620px;
 	font-size:17px;
 	background:;
 }

@@ -2,16 +2,127 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
+<<<<<<< HEAD
 		<title>电子商城</title>
+=======
+		<title>好食光</title>
+>>>>>>> e9ef20d460072aa9aa528d595367c04dabfa11fa
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
 	<body>
+		<!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有css
+-->
+
+<!-- 顶部 start -->
+	<div id="banner">
+		<div class="container">
+			<div class="banner-user">
+				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
+					<li><a href="">客服中心</a></li>
+					<li><a href="">网站导航</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 end -->
+	<!-- 头部 start -->
+	<div id="header">
+		<div class="container">
+			<div class="logo">
+				<img src="/eMarket/Public/image/system/logo.png">
+			</div>
+			<div class="search">
+				<form action="" mathod="post" > 
+					<div class="guide">
+						<span class="guide-active">吃的</span>
+						<span>喝的</span>
+						<span>玩的</span>
+					</div>
+					<div class="search-input">
+						<input type="text" name="search" id="searchValue"><input type="submit" name="submit" value="搜索">
+					</div>
+					<script type="text/javascript">
+						// 即时搜索
+						var timer = setInterval(function(){
+							var search = $.trim($("#searchValue").val());
+							if(search != null && search != ""){
+								// 向服务器传数据
+								$.post('/eMarket/index.php/Home/Index/search',{
+									search:search
+								},function(ans){
+									$(".search-ul li").html(ans);
+								})
+								$(".search-answer").show();
+							}else{
+								$(".search-answer").hide();
+							}
+						},500)
+					</script>
+					<div class="search-answer">
+						<!-- 搜索关键词 左侧 -->
+						<div class="search-answer-left">
+							<ul class="search-ul">
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<!-- <li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li> -->
+							</ul>
+						</div>
+						<!-- 关键词细化 右侧 -->
+						<div class="search-answer-right">
+							<ul class="search-ul">
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 end -->
+
+	<!-- 导航栏 start -->
+	<!-- <div id="nav"></div> -->
+	<!-- 导航栏 end -->
 	 	<div class="main">
+<<<<<<< HEAD
 	 		<div class="header">
 	 			<img src="/eMarket/Public/image/logoletter.png"/>
 	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>
+=======
+	 		<!--<div class="header">
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
+	 		</div>-->
+>>>>>>> e9ef20d460072aa9aa528d595367c04dabfa11fa
 	 		<div class="lcontant">
 			   <form name="form">
 	 			<div class="txt">
@@ -131,7 +242,7 @@
 			}
 			function check_email(){
 			     var tr=trimStr(document.getElementById('email').value);
-				//alert(tr);
+				alert(tr);
 			    if(tr=="邮箱账号"||tr==''){
 				    $("#email1").html("邮箱不能为空");
 					 document.getElementById("email1").style.display="block";
@@ -148,15 +259,18 @@
 						          if(res=="已存在"){
 						                alert("该邮箱已存在");return 0;
 						          }
-					        })
+					        },true)
 					}
 				}
+				
 				k++;
+				//return 1;
 			}
 			function sendmail(id){
+			alert(check_email());
 			                if(check_email()==0){
 							    
-							}else{
+							}/*else{
 							     	var tr=trimStr(document.getElementById('email').value);
 					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
@@ -175,7 +289,7 @@
 				                         return;
 				                      }
 				                    },1000);
-							}
+							}*/
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
