@@ -1,7 +1,7 @@
 <?php if (!defined('THINK_PATH')) exit();?><!-- 
 author : sudonglin
 version : 1.0
-date : 2016.7.9
+date : 2016.7.10
 description : 个人中的购物车页面
 -->
 <!doctype html>
@@ -62,98 +62,46 @@ descriptioin : 个人页面的头部
 		<!-- 总体布局 -->
 		<div class="contant">
 			<div class="contanter">
-			<!-- 侧边栏 -->
-				<div class="left">
-					<ul>
-						<li><a href="/eMarket/index.php/Home/Person/bought.html">所有订单</a></li>
-						<li><a href="">待评价</a></li>
-						<li><a href="">待付款</a></li>
-						<li><a href="">待发货</a></li>
-						<li><a href="">待收货</a></li>
-					</ul>
-				</div>
-				<!--订单内容-->
-				<div class="right">
-				 	<div class="series"><p>所有订单</p></div> 
 				 	<div class="things">
 				 	<!-- 表格控制布局 -->
 				 		<table class="tab">
 				 		<!-- 表头 -->
 				 			<thead>
 				 				<tr>
-				 					<th width="440px">宝贝</th>
+				 					<th width="80px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"/>全选</th>
+				 					<th width="395px">宝贝</th>
 				 					<th width="150px">单价</th>
 				 					<th widyh="150px">数量</th>
-				 					<th width="150px">交易状态</th>
+				 					<th width="150px">小计(元)</th>
 				 					<th width="150px">全部操作</th>
 				 				</tr>
 				 			</thead>
 				 			<!-- 表主体内容 -->
 				 			<tbody>
-				 			<!-- 表第一行 -->
-				 				<tr class="first">
-				 					<td colspan="5"></td>
-				 				</tr>
-								<!-- 表第二行 -->
-				 				<tr class="two">
-				 					<td colspan="5">
-				 						<span class="dealtime" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-07-09 21:50:39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				 						<span class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：20152763431</span>
-				 					</td>
-				 				</tr>
-								<!-- 表第三行 -->
-				 				<tr class="three">
+				 				<tr class="cart_three">
+				 			        <td width="80px"><input type="radio"/></td>
 				 					<td width="440px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<img title="【好食光】雀巢(Nestle)咖啡1+2特浓30条390克"src="/eMarket/Public/image/goods/cafa.jpg"/>
+				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/>
 				 							</div>
 				 							<div class="link">
-				 								<a href="">【好食光】雀巢(Nestle)咖啡1+2特浓30条390克</a>
+				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
 				 							</div>
 				 						</div>
 				 					</td>
-				 					<td width="150px"><span>39.9</span></td>
+				 					<td width="150px"><span>70</span></td>
 				 					<td width="150px"><span>1</span></td>
-				 					<td width="150px"><span>交易成功</span></td>
-				 					<td width="150px"><span><a href="">追加评论</a><br><a href="">再次购买</a></span></td>
+				 					<td width="150px"><span>70</span></td>
+				 					<td width="150px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
 				 				</tr>
 				 			</tbody>
-				 			<tbody>
-				 			<!-- 表第一行 -->
-				 				<tr class="first">
-				 					<td colspan="5"></td>
-				 				</tr>
-								<!-- 表第二行 -->
-				 				<tr class="two">
-				 					<td colspan="5">
-				 						<span class="dealtime" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016-07-09 21:50:39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-				 						<span class="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;订单号：20152763431</span>
-				 					</td>
-				 				</tr>
-								<!-- 表第三行 -->
-				 				<tr class="three">
-				 					<td width="440px">
-				 						<div class="goods-item">
-				 							<div class="cafa">
-				 								<img title="【好食光】雀巢(Nestle)咖啡1+2特浓30条390克"src="/eMarket/Public/image/goods/cafa.jpg"/>
-				 							</div>
-				 							<div class="link">
-				 								<a href="">【好食光】雀巢(Nestle)咖啡1+2特浓30条390克</a>
-				 							</div>
-				 						</div>
-				 					</td>
-				 					<td width="150px"><span>39.9</span></td>
-				 					<td width="150px"><span>1</span></td>
-				 					<td width="150px"><span>交易成功</span></td>
-				 					<td width="150px"><span><a href="">追加评论</a><br><a href="">再次购买</a></span></td>
-				 				</tr>
-				 			</tbody>
+				 		
 				 		</table>
 				 	</div>
 				</div>
 			</div>
-		</div>
+		
 		<!-- 引入尾部 -->
 		<!-- 
 author : huangyifan
