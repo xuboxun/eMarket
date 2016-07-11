@@ -1,0 +1,12 @@
+[ 2016-07-11T11:51:36+08:00 ] 127.0.0.1 /eMarket/index.php/Goods/classa.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001024s ]
+ERR: 无法加载模块:Goods
+
+[ 2016-07-11T12:25:42+08:00 ] 127.0.0.1 /eMarket/index.php/Person/collect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000964s ]
+ERR: 无法加载模块:Person
+

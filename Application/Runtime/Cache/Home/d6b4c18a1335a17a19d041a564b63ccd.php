@@ -2,7 +2,7 @@
 author : sudonglin
 version : 1.0
 date : 2016.7.10
-description : 个人中的收藏页面
+description : 个人中的收藏商品页面
 -->
 <!doctype html>
 <html>
@@ -61,12 +61,12 @@ descriptioin : 个人页面的头部
 		<!--头部结束-->
 		<!-- 总体布局 -->
 		<div class="contant">
-			<div class="contanter">
+			<div class="collect_contanter">
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="">收藏的商品</a></li>
-						<li><a href="">收藏的店铺</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/collect">收藏的商品</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/collect2">收藏的店铺</a></li>
 					</ul>
 				</div>
 				<!--订单内容-->
@@ -78,21 +78,178 @@ descriptioin : 个人页面的头部
 				 			<li>
 				 				<div class="c_goods">
 				 					<div class="p_img">
+<<<<<<< HEAD
 				 						<img src="/eMarket/Public/image/goods/collect.jpg"/>
+=======
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+>>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 				 					</div>
 				 					<div class="p_name">
 				 						<input type="checkbox" value="" name="">
-				 						<a href="" title=""></a>
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
 				 					</div>
-									<div>
-										<strong price="49.90">49.90</strong>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
 									</div>
 						            <div>
-						            	<a class="btn" href="">加入购物车</a>
-						            	<a class="btn" href="">取消关注</a>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
 						            </div>
 				 				</div>
 				 			</li>
+
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+				 			<li>
+				 				<div class="c_goods">
+				 					<div class="p_img">
+				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
+				 					</div>
+				 					<div class="p_name">
+				 						<input type="checkbox" value="" name="">
+				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 					</div>
+									<div class="price">
+										<strong price="49.90">￥142.00</strong>
+									</div>
+									<div class="value">
+										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+									</div>
+						            <div>
+						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            </div>
+				 				</div>
+				 			</li>
+
+
 				 		</ul>
 				 	 </div>
 				 </div>

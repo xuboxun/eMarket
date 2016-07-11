@@ -34,8 +34,13 @@ descriptioin : 公有头部
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+<<<<<<< HEAD
 					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
 					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+=======
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
+>>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -74,6 +79,7 @@ descriptioin : 公有头部
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
+<<<<<<< HEAD
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -100,6 +106,19 @@ descriptioin : 公有头部
 									$(".search-answer").hide();
 								}
 								oldsearch = search;
+=======
+							var search = $.trim($("#searchValue").val());
+							if(search != null && search != ""){
+								// 向服务器传数据
+								$.post('/eMarket/index.php/Home/Index/search',{
+									search:search
+								},function(ans){
+									$(".search-ul li").html(ans);
+								})
+								$(".search-answer").show();
+							}else{
+								$(".search-answer").hide();
+>>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 							}
 						},500)
 					</script>

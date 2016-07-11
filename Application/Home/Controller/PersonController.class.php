@@ -49,6 +49,34 @@ class PersonController extends Controller {
         }else{
             echo "failure";
         }
-
+     }
+     public function sold_goods(){
+        $arr=I("post.con");
+        echo $arr;
+        exit;
+        $uid=1;
+        $gid=1;
+        $number=1;
+        $p=A("Commen");
+        if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
+            $data['uid']=$uid;
+            $data['gid']=$gid;  
+            $m=M("goodsorder");
+            $str=$m->where($data)->find();
+            if($str){
+                $map['number']=$number+intval($str['number']);
+                $m->where($data)->save($map);
+                echo "success";
+            }else{
+                $data['number']=$number;
+                if($m->add($data)){
+                       echo "success";
+               }else{
+                  echo "failure";
+               }
+            }
+        }else{
+            echo "failure";
+        }
      }
 }

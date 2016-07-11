@@ -1,0 +1,42 @@
+*{
+	margin:0 auto;
+	padding:0;
+}
+/*整体布局*/
+.contant{
+	width:100%;
+	min-height:800px;
+	float:left;
+	background-color:#F1F1F1;
+}
+/*第二层布局*/
+.contanter{
+	width:86%;
+	min-height:800px;
+	margin-left:7%;
+	background:;
+}
+/*bought页面中侧边栏效果*/
+.left{
+	float:left;
+	width:8%;
+	height:770px;
+	padding:30px;
+	/*background-color:#666;*/
+}
+.right{
+	float:left;
+	width:85%;
+	min-height:800px;
+	margin-bottom: 10px;
+	/*background-color:#ccc;*/
+}
+.things{
+	margin-top: 30px;
+	float:left;
+	width:100%;
+	min-height:780px;
+	background-color:#FFFFFF;
+	border-radius: 5px;
+	
+}
