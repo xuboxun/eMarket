@@ -202,7 +202,11 @@ ul {
 .search-ul li:hover {
 	background: #E6E6E6;
 }
-
+.search-ul li a{
+	width:100%;
+	height:100%;
+	float: left;
+}
 /*尾部*/
 #footer {
 	width:100%;

@@ -78,7 +78,7 @@ descriptioin : 个人页面的头部
 				 			<li>
 				 				<div class="c_goods">
 				 					<div class="p_img">
-				 						<img/>
+				 						<img src="/eMarket/Public/image/goods/collect.jpg"/>
 				 					</div>
 				 					<div class="p_name">
 				 						<input type="checkbox" value="" name="">
@@ -104,7 +104,7 @@ descriptioin : 个人页面的头部
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有尾部
 -->
 
 <!-- 尾部 start -->

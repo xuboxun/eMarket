@@ -18,7 +18,6 @@ description : 商品详情页面
 <div id="wrapper">
 	<!-- 引入头部 -->
 	<include file="./Application/Home/View/Public/header.html" />
-
 	<!-- 中心区 start -->
 	<div id="main">
 		<div class="container goods-detail-container">
@@ -26,7 +25,7 @@ description : 商品详情页面
 				<!-- 图片展示区域 -->
 				<div class="goods-detail-imgarea">
 					<div class="goods-detail-imgarea-bigimg">
-						<img src="__PUBLIC__/image/goods/goodsimg.jpg">
+						<img src="__PUBLIC__/image/goods/{$goods['g_img']}">
 					</div>
 					<div class="goods-detail-imgarea-thumbnail">
 						<span><</span>
@@ -39,9 +38,9 @@ description : 商品详情页面
 				</div>
 				<!-- 购买区域，价格，选择数量 -->
 				<div class="goods-detail-buyarea">
-					<div class="goods-detail-title">耐烁灯饰照明 炫彩LED吸顶灯客厅奢华卧室灯餐厅灯书房间灯主卧灯走廊阳台遥控调光 有网格 气泡 茉莉花 枫叶款 请联系客服备注所需款 七彩+白光</div>
-					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥999.00 </i></h2></div>
-					<div class="goods-detail-restnum">库存数量：1000件</div>
+					<div class="goods-detail-title">{$goods['g_name']}</div>
+					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥{$goods['price']} </i></h2></div>
+					<div class="goods-detail-restnum">库存数量：{$goods['count']}件</div>
 					<div class="goods-detail-buynum"><font>购买量</font> <button id="minus">-</button><input type="text" name="buynum" id="buynum" value="1"><button id="add">+</button></div>
 					<div class="goods-detail-operate">
 						<span>收藏</span>
@@ -52,13 +51,13 @@ description : 商品详情页面
 				<!-- 商家信息 -->
 				<div class="shop-information">
 					<h2>店铺信息</h2>
-					<img src="">
-					<h3>店名：阿萨德撒</h3>
-					<h3>掌柜：阿萨德撒</h3>
-					<h3>联系：和我联系</h3>
+					<img src="__PUBLIC__/image/shop/{$shop['s_img']}">
+					<h3>店名：{$shop['sname']}</h3>
+					<h3>掌柜：{$business['username']}</h3>
+					<h3>联系：{$business['tel']}</h3>
 					<hr>
-					<div class="eva-kind"><font>好评</font><i>10</i></div>
-					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i>100</i></div>
+					<div class="eva-kind"><font>好评</font><i>{$goods['g_evaluate']}</i></div>
+					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i>{$goods['g_evaluate']}</i></div>
 					<span><a href="">进入店铺</a></span>
 					<span><a href="">收藏店铺</a></span>
 				</div>

@@ -3,12 +3,19 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+
         $this->display();
      }
      
     public function search(){
         $search = $_POST['search'];
-        $ans = $search;
+        $db1 = M('goods');
+        $db2 = M('shop');
+        $where['g_name'] = array('like',"%$search%");
+        // $where['gname'] = array('like',"%$search%");
+
+        $ans = $db1 -> where($where) -> limit(5) -> select();
+        // $ans += $db2 -> where($where) -> limit(5) -> select();
         $this->ajaxReturn($ans);
     }
     //模糊查询

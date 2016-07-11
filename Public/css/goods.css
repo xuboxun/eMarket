@@ -12,7 +12,6 @@ descriptioin : 商品模块css
 	margin-top:50px;
 	/*margin-left: 50px;*/
 	float:right;
-	/*border:1px solid black;*/
 }
 .guide {
 	display: none;
@@ -376,7 +375,6 @@ div.good-area-content-col:hover {
 	margin-left:5%;
 	height:300px;
 	margin-top:15px;
-	background: #000;
 	float: left;
 }
 .goods-detail-imgarea-bigimg img {

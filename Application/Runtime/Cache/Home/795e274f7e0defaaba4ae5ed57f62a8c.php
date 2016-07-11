@@ -33,8 +33,8 @@ descriptioin : 公有头部
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -49,50 +49,60 @@ descriptioin : 公有头部
 				<img src="/eMarket/Public/image/system/logo.png">
 			</div>
 			<div class="search">
-				<form action="" mathod="post" > 
+				<form> 
 					<div class="guide">
 						<span class="guide-active">吃的</span>
 						<span>喝的</span>
-						<span>玩的</span>
+						<!-- <span>玩的</span> -->
 					</div>
 					<div class="search-input">
-						<input type="text" name="search" id="searchValue"><input type="submit" name="submit" value="搜索">
+						<input type="text" name="search" id="searchValue"><input id="submit_search" type="submit" name="submit" value="搜索">
 					</div>
 					<script type="text/javascript">
+						$("#submit_search").click(function(){
+							window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+							return false;
+						})
 						// 即时搜索
+						var oldsearch = null;
+						var search = null;
 						var timer = setInterval(function(){
-							var search = $.trim($("#searchValue").val());
-							if(search != null && search != ""){
-								// 向服务器传数据
-								$.post('/eMarket/index.php/Home/Index/search',{
-									search:search
-								},function(ans){
-									$(".search-ul li").html(ans);
-								})
-								$(".search-answer").show();
-							}else{
-								$(".search-answer").hide();
+							search = $.trim($("#searchValue").val());
+							if(oldsearch != search) {
+								if(search != null && search != ""){
+									// 向服务器传数据
+									$.post('/eMarket/index.php/Home/Index/search',{
+										search:search
+									},function(ans){
+										if(ans.length != 0) {
+											$(".search-ul").html("");//清除旧的搜索答案
+											// alert($(".search-ul").html(""))
+											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
+												addhtml = $(".search-ul").html();
+												for(var i = 0;i < ans.length;i++) {
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+													$(".search-ul").html(addhtml);
+												}
+											}
+											$(".search-answer").show();
+										}else{
+											$(".search-answer").hide();
+										}										
+									})
+								}else{
+									$(".search-answer").hide();
+								}
+								oldsearch = search;
 							}
 						},500)
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
 						<div class="search-answer-left">
-							<ul class="search-ul">
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<!-- <li>asd</li>
-								<li>asd</li>
-								<li>asd</li>
-								<li>asd</li>
-								<li>asd</li> -->
-							</ul>
+							<ul class="search-ul"></ul>
 						</div>
 						<!-- 关键词细化 右侧 -->
-						<div class="search-answer-right">
+						<!-- <div class="search-answer-right">
 							<ul class="search-ul">
 								<li>asd</li>
 								<li>asd</li>
@@ -105,7 +115,7 @@ descriptioin : 公有头部
 								<li>asd</li>
 								<li>asd</li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</form>
 			</div>
@@ -115,8 +125,7 @@ descriptioin : 公有头部
 
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
-	<!-- 导航栏 end -->
-
+	<!-- 导航栏 end
 	<!-- 中心区 start -->
 	<div id="main">
 		<div class="container goods-detail-container">
@@ -124,7 +133,7 @@ descriptioin : 公有头部
 				<!-- 图片展示区域 -->
 				<div class="goods-detail-imgarea">
 					<div class="goods-detail-imgarea-bigimg">
-						<img src="/eMarket/Public/image/goods/goodsimg.jpg">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
 					</div>
 					<div class="goods-detail-imgarea-thumbnail">
 						<span><</span>
@@ -137,9 +146,9 @@ descriptioin : 公有头部
 				</div>
 				<!-- 购买区域，价格，选择数量 -->
 				<div class="goods-detail-buyarea">
-					<div class="goods-detail-title">耐烁灯饰照明 炫彩LED吸顶灯客厅奢华卧室灯餐厅灯书房间灯主卧灯走廊阳台遥控调光 有网格 气泡 茉莉花 枫叶款 请联系客服备注所需款 七彩+白光</div>
-					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥999.00 </i></h2></div>
-					<div class="goods-detail-restnum">库存数量：1000件</div>
+					<div class="goods-detail-title"><?php echo ($goods['g_name']); ?></div>
+					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥<?php echo ($goods['price']); ?> </i></h2></div>
+					<div class="goods-detail-restnum">库存数量：<?php echo ($goods['count']); ?>件</div>
 					<div class="goods-detail-buynum"><font>购买量</font> <button id="minus">-</button><input type="text" name="buynum" id="buynum" value="1"><button id="add">+</button></div>
 					<div class="goods-detail-operate">
 						<span>收藏</span>
@@ -150,13 +159,13 @@ descriptioin : 公有头部
 				<!-- 商家信息 -->
 				<div class="shop-information">
 					<h2>店铺信息</h2>
-					<img src="">
-					<h3>店名：阿萨德撒</h3>
-					<h3>掌柜：阿萨德撒</h3>
-					<h3>联系：和我联系</h3>
+					<img src="/eMarket/Public/image/shop/<?php echo ($shop['s_img']); ?>">
+					<h3>店名：<?php echo ($shop['sname']); ?></h3>
+					<h3>掌柜：<?php echo ($business['username']); ?></h3>
+					<h3>联系：<?php echo ($business['tel']); ?></h3>
 					<hr>
-					<div class="eva-kind"><font>好评</font><i>10</i></div>
-					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i>100</i></div>
+					<div class="eva-kind"><font>好评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
+					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
 					<span><a href="">进入店铺</a></span>
 					<span><a href="">收藏店铺</a></span>
 				</div>

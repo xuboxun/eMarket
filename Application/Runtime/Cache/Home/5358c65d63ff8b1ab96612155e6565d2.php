@@ -33,8 +33,8 @@ descriptioin : 公有头部
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -49,60 +49,50 @@ descriptioin : 公有头部
 				<img src="/eMarket/Public/image/system/logo.png">
 			</div>
 			<div class="search">
-				<form> 
+				<form action="" mathod="post" > 
 					<div class="guide">
 						<span class="guide-active">吃的</span>
 						<span>喝的</span>
-						<!-- <span>玩的</span> -->
+						<span>玩的</span>
 					</div>
 					<div class="search-input">
-						<input type="text" name="search" id="searchValue"><input id="submit_search" type="submit" name="submit" value="搜索">
+						<input type="text" name="search" id="searchValue"><input type="submit" name="submit" value="搜索">
 					</div>
 					<script type="text/javascript">
-						$("#submit_search").click(function(){
-							window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
-							return false;
-						})
 						// 即时搜索
-						var oldsearch = null;
-						var search = null;
 						var timer = setInterval(function(){
-							search = $.trim($("#searchValue").val());
-							if(oldsearch != search) {
-								if(search != null && search != ""){
-									// 向服务器传数据
-									$.post('/eMarket/index.php/Home/Index/search',{
-										search:search
-									},function(ans){
-										if(ans.length != 0) {
-											$(".search-ul").html("");//清除旧的搜索答案
-											// alert($(".search-ul").html(""))
-											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
-												addhtml = $(".search-ul").html();
-												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
-													$(".search-ul").html(addhtml);
-												}
-											}
-											$(".search-answer").show();
-										}else{
-											$(".search-answer").hide();
-										}										
-									})
-								}else{
-									$(".search-answer").hide();
-								}
-								oldsearch = search;
+							var search = $.trim($("#searchValue").val());
+							if(search != null && search != ""){
+								// 向服务器传数据
+								$.post('/eMarket/index.php/Home/Index/search',{
+									search:search
+								},function(ans){
+									$(".search-ul li").html(ans);
+								})
+								$(".search-answer").show();
+							}else{
+								$(".search-answer").hide();
 							}
 						},500)
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
 						<div class="search-answer-left">
-							<ul class="search-ul"></ul>
+							<ul class="search-ul">
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<li>ans</li>
+								<!-- <li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li>
+								<li>asd</li> -->
+							</ul>
 						</div>
 						<!-- 关键词细化 右侧 -->
-						<!-- <div class="search-answer-right">
+						<div class="search-answer-right">
 							<ul class="search-ul">
 								<li>asd</li>
 								<li>asd</li>
@@ -115,7 +105,7 @@ descriptioin : 公有头部
 								<li>asd</li>
 								<li>asd</li>
 							</ul>
-						</div> -->
+						</div>
 					</div>
 				</form>
 			</div>
@@ -125,7 +115,7 @@ descriptioin : 公有头部
 
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
-	<!-- 导航栏 end
+	<!-- 导航栏 end -->
 
 	<!-- 中心区 start -->
 	<div id="main">

@@ -21,9 +21,8 @@ description : 一级商品页面
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
@@ -68,32 +67,31 @@ descriptioin : 公有css
 								$.post('/eMarket/index.php/Home/Index/search',{
 									search:search
 								},function(ans){
-									$(".search-ul li").html(ans);
+									var addhtml = null;
+									$(".search-ul").html("")
+									for(var i = 0;i < ans.length;i++) {
+										addhtml = $(".search-ul").html();
+										addhtml += "<li>"+ans[i][g_name]+"</li>";
+										alert(addhtml);
+										// $(".search-ul").html(addhtml);
+									}
+									
 								})
 								$(".search-answer").show();
 							}else{
 								$(".search-answer").hide();
 							}
-						},500)
+						},3000)
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
 						<div class="search-answer-left">
 							<ul class="search-ul">
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<li>ans</li>
-								<!-- <li>asd</li>
-								<li>asd</li>
-								<li>asd</li>
-								<li>asd</li>
-								<li>asd</li> -->
+								
 							</ul>
 						</div>
 						<!-- 关键词细化 右侧 -->
-						<div class="search-answer-right">
+						<!-- <div class="search-answer-right">
 							<ul class="search-ul">
 								<li>asd</li>
 								<li>asd</li>
@@ -106,7 +104,7 @@ descriptioin : 公有css
 								<li>asd</li>
 								<li>asd</li>
 							</ul>
-						</div>
+						</div> -->
 					</div>
 				</form>
 			</div>
@@ -116,7 +114,7 @@ descriptioin : 公有css
 
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
-	<!-- 导航栏 end -->
+	<!-- 导航栏 end
 
 	<!-- 中心区 start -->
 	<div id="main">
@@ -279,7 +277,7 @@ descriptioin : 公有css
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有尾部
 -->
 
 <!-- 尾部 start -->
