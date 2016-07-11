@@ -68,7 +68,7 @@ descriptioin : 个人页面的头部
 				 		<!-- 表头 -->
 				 			<thead>
 				 				<tr>
-				 					<th width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" check="checked" name="check_list" onclick="f2();"/>全选</th>
+				 					<th width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="check_list" onclick="f2();" value=""/>全选</th>
 				 					<th width="460px">宝贝</th>
 				 					<th width="170px">单价</th>
 				 					<th widyh="170px">数量</th>
@@ -79,7 +79,7 @@ descriptioin : 个人页面的头部
 				 			<!-- 表主体内容 -->
 							<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tbody>
 				 				<tr class="cart_three"> 
-				 			        <td width="100px"><input type="checkbox" check="checked" name="check_list"/></td>
+				 			        <td width="100px"><input type="checkbox"  name="check_list" value="num<?php echo ($i); ?>" onclick="f4();"/></td>
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
@@ -93,6 +93,7 @@ descriptioin : 个人页面的头部
 				 							</div>
 				 						</div>
 				 					</td>
+									<input type="hidden" id="gidnum<?php echo ($i); ?>" value="<?php echo ($vo["gid"]); ?>" />
 				 					<td width="170px"><span><?php echo ($vo["price"]); ?></span></td>
 				 					<td width="170px">
 				 						<div class="sum">
@@ -131,17 +132,17 @@ descriptioin : 个人页面的头部
 				 				</tr>
 				 				
 				 			</tbody>
-<<<<<<< HEAD
+-->
 				 		    <tr class="count">
-				 					 <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+				 					 <td width="100px"><input type="checkbox" name="check_list" onclick="f3();" value=""/></td>
 				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
 				 					<td colspan="1"></td>
-				 					<td>已选择<strong>2</strong>件商品</td>
-				 					<td>总价<strong>￥120</strong></td>
-				 					<td><input type="submit" name="" value="去结算"/></td>
+				 					<td id="numprice">已选择<strong>0</strong>件商品</td>
+				 					<td id="sumprice">总价<strong>￥0</strong></td>
+				 					<td><input type="submit" name="" value="去结算" id="submit" onclick="submit();" /></td>
 				 				</tr>
-=======
-				 		-->
+
+				 		
 
 				 		</table>
 				 	</div>
@@ -150,12 +151,16 @@ descriptioin : 个人页面的头部
 		    <script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			       function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+				   $(document).ready(function(){ 
+　　                        $("#submit").attr("disabled","true");
+　                　}); 
 				   var k=0;var sum=0;
 			       function add(id,price){
 				       k=Number($("#"+id).val())+1;
 				       $("#"+id).val(k);
 				       sum=Number(price)*k;
 					   $("#price"+id).html(sum);
+					    f4();
 				   }
 				   function sub(id,price){
 				       var num=Number($("#"+id).val());
@@ -167,6 +172,7 @@ descriptioin : 个人页面的头部
 					   }else{
 					     $("#"+id).val(1);
 					   }
+					   f4();
 				   }
 				   function f1(id,price){
 				       k=Number($("#"+id).val());
@@ -182,13 +188,76 @@ descriptioin : 个人页面的头部
 					           $("#price"+id).html(sum);
 						  }
 					   }
+					    f4();
 				   }
+				   var bz=0;
 				   function f2(){
-				      if($("input[name='chk_list']").is(':checked')){
-					     $("input[name='check_list']").attr("checked",false); 
+				      if(bz==1){
+					     bz=0;
+					     $("input[name='check_list']").removeAttr("checked"); 
+						
+						 <!-- alert(bz); -->
+						
 					  }else{
-					     $("input[name='check_list']").attr("checked",true); 
+					     bz=1;
+					     $("input[name='check_list']").attr("checked","true"); 
+						 <!-- alert(bz); -->
 					  }
+				   }
+				   function f3(){
+				     f2();
+					 f4();
+				   }
+				   function f4(){
+				      var t=0;
+					  var str="";
+					  var pricesum=0;
+                              $("input[name='check_list']:checked").each(function(){
+							          str=$(this).val();  
+							          if(str){
+                                         pricesum+=Number($("#price"+str).html());
+										 t++;
+									  }
+                                 })
+						if(t==0){
+						    $("#submit").attr("disabled","true");
+							$(".count input").css("background-color","#666");
+						}else{
+						    $("#submit").removeAttr("disabled");
+							$(".count input").css("background-color","#AE3345");
+						}
+					  $("#numprice").html("已选择<strong>"+t+"</strong>件商品");
+					  $("#sumprice").html("总价<strong>￥"+pricesum+"</strong>");
+				   }
+				   function submit(){
+				      var t=0;
+					  var num=0;
+					  var gid;
+					  var str="";
+					  var arr= new Array();;
+				       $("input[name='check_list']:checked").each(function(){
+							          str=$(this).val();  
+							          if(str){
+									    arr[t]= new Array();
+                                        num=Number($("#"+str).val());
+										gid=Number($("#gid"+str).val());
+										arr[t]['num']=num;
+										arr[t]['gid']=gid;
+										t++;
+									  }
+                                 });
+					 //windows.location.href="/e-market/index.php/Home/Person/sold_goods"
+					 alert(arr[t]);
+					  $.ajax({
+						    asnyc:false,
+							url:"/e-market/index.php/Home/Person/sold_goods",
+							type:"post",
+							traditional :true,
+						    data:{'con':arr}, 
+                            success:function(res){
+							         alert(res);
+							    },
+						 });
 				   }
 			</script>
 
