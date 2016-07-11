@@ -29,7 +29,7 @@ descriptioin : 公有头部
 		<div class="container">
 			<div class="banner-user">
 				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
-				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">

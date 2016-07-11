@@ -14,10 +14,10 @@ class PublicController extends Controller {
             // $where['username']=$_SESSION['username'];
             // $data=$con->where($where)->select();
 
-            $nav['state'][1]="欢迎你 "."$_SESSION[username]";
-            $nav['url'][1]="javascript:;";
-            $nav['state'][0]="";
+            $nav['state'][0]="欢迎你 "."$_SESSION[username]";
             $nav['url'][0]="javascript:;";
+            $nav['state'][1] = "退出";
+            $nav['url'][1] = U('Login/logout');
 
             // $this->assign('user',$data);
         }
