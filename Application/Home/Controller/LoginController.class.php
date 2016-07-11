@@ -79,6 +79,7 @@ class LoginController extends Controller {
         // var_dump($arr);
         // echo $password;
          if($arr){
+          session('username',$username);
          	echo "success";
          }else{
          	echo "failure";

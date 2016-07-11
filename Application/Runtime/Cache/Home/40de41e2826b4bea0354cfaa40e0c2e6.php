@@ -60,13 +60,18 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
-							window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
-							return false;
+							if($.trim($("#searchValue").val()) != ""){
+								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								return false;
+							}else{
+								return false;
+							}
 						})
 						// 即时搜索
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
+
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -80,7 +85,8 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -95,6 +101,12 @@ descriptioin : 公有头部
 								oldsearch = search;
 							}
 						},500)
+						$("#searchValue").focusout(function(){
+							$(".search-answer").slideUp();
+						});
+						$("#searchValue").focus(function(){
+							$(".search-answer").show();
+						})
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->

@@ -9,15 +9,9 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-<<<<<<< HEAD
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-=======
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 	</head>
 	<body>
 		<!--头部包含-->
@@ -89,14 +83,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-<<<<<<< HEAD
-
-				 								
 				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
-
-=======
-				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>

@@ -5,6 +5,7 @@
 		<title>好食光</title>
 		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- 引入头部 -->
@@ -18,8 +19,8 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/login"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
@@ -51,13 +52,18 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
-							window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
-							return false;
+							if($.trim($("#searchValue").val()) != ""){
+								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								return false;
+							}else{
+								return false;
+							}
 						})
 						// 即时搜索
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
+
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -71,7 +77,8 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -86,6 +93,12 @@ descriptioin : 公有头部
 								oldsearch = search;
 							}
 						},500)
+						$("#searchValue").focusout(function(){
+							$(".search-answer").slideUp();
+						});
+						$("#searchValue").focus(function(){
+							$(".search-answer").show();
+						})
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
@@ -162,8 +175,8 @@ descriptioin : 公有头部
 			function f1(){
 			     var username=trimStr($("#username").val());
 				 var password=trimStr($("#password").val());
-				
 				 if(username){
+
 				     if(password){
 					     $.ajax({
 						    asnyc:false,
@@ -174,7 +187,7 @@ descriptioin : 公有头部
 							          if(res=="failure"){
 									       $("#ts").html("账户或密码错误");
 									  }else{
-									    
+									    	window.location.href = "/eMarket/index.php/Home/Index/index";
 									  }
 							    },
 						 });
