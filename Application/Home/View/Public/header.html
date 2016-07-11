@@ -8,8 +8,8 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="__APP__/Home/Login/login">请登录</a></span>
-				<span><a href="__APP__/Home/Login/register">注册</a></span>
+				<span><a href="{$nav.url.0}">{$nav.state.0}</a></span>
+				<span><a href="{$nav.url.1}">{$nav.state.1}</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
@@ -41,19 +41,18 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
-							window.location.href="__APP__/Home/Goods/classb?key="+$.trim($("#searchValue").val());
-							return false;
-						})
-						$("#searchValue").focusout(function(){
-							$(".search-answer").hide();
-						})
-						$("#searchValue").focuson(function(){
-							$(".search-answer").show();
+							if($.trim($("#searchValue").val()) != ""){
+								window.location.href="__APP__/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								return false;
+							}else{
+								return false;
+							}
 						})
 						// 即时搜索
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
+
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -67,7 +66,8 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='__APP__/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+													addhtml += "<li><a href='__APP__/Home/Goods/detail.html?gid="
+													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -82,6 +82,12 @@ descriptioin : 公有头部
 								oldsearch = search;
 							}
 						},500)
+						$("#searchValue").focusout(function(){
+							$(".search-answer").slideUp();
+						});
+						$("#searchValue").focus(function(){
+							$(".search-answer").show();
+						})
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->

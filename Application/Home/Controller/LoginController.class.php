@@ -16,6 +16,11 @@ class LoginController extends Controller {
         $this->display();
      }
      //
+     public function logout(){
+
+        session('username',null);
+        $this->redirect('login');
+     }
 
      //----------具体操作-----------------
      //检查用户是否存在
@@ -79,6 +84,7 @@ class LoginController extends Controller {
         // var_dump($arr);
         // echo $password;
          if($arr){
+          session('username',$username);
          	echo "success";
          }else{
          	echo "failure";

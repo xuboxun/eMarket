@@ -28,6 +28,7 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
+<<<<<<< HEAD
 				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
 				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
@@ -36,6 +37,16 @@ descriptioin : 公有头部
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
 					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+=======
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+>>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -61,6 +72,7 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
+<<<<<<< HEAD
 							window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 							return false;
 						})
@@ -69,11 +81,23 @@ descriptioin : 公有头部
 						})
 						$("#searchValue").focuson(function(){
 							$(".search-answer").show();
+=======
+							if($.trim($("#searchValue").val()) != ""){
+								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								return false;
+							}else{
+								return false;
+							}
+>>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 						})
 						// 即时搜索
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -87,7 +111,12 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
+<<<<<<< HEAD
 													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+=======
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+>>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -102,6 +131,12 @@ descriptioin : 公有头部
 								oldsearch = search;
 							}
 						},500)
+						$("#searchValue").focusout(function(){
+							$(".search-answer").slideUp();
+						});
+						$("#searchValue").focus(function(){
+							$(".search-answer").show();
+						})
 					</script>
 					<div class="search-answer">
 						<!-- 搜索关键词 左侧 -->
@@ -139,248 +174,88 @@ descriptioin : 公有头部
 		<div class="container">
 			<!-- 区块1 侧边导航、图片展示 -->
 			<div class="block1">
+
 				<!-- 侧边导航 -->
-				<div class="sidenav">
-					<ul class="sidenav-ul">
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">水果</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">苹果阿啊　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">红苹果</a></li>
-											<li class="side-area-detail-ul-li"><a href="">青苹果</a></li>
-											<li class="side-area-detail-ul-li"><a href="">大苹果</a></li>
-											<li class="side-area-detail-ul-li"><a href="">小苹果</a></li>
-											<li class="side-area-detail-ul-li"><a href="">红富士</a></li>
-											<li class="side-area-detail-ul-li"><a href="">澳洲青苹</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">蔬菜</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">白菜　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">大白菜</a></li>
-											<li class="side-area-detail-ul-li"><a href="">小白菜</a></li>
-											<li class="side-area-detail-ul-li"><a href="">烂白菜</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">小吃零食</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">辣条　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">卫龙</a></li>
-											<li class="side-area-detail-ul-li"><a href="">棒棒鸡</a></li>
-											<li class="side-area-detail-ul-li"><a href="">口水鸭</a></li>
-											<li class="side-area-detail-ul-li"><a href="">牛板筋</a></li>
-											<li class="side-area-detail-ul-li"><a href="">香菇肥牛</a></li>
-											<li class="side-area-detail-ul-li"><a href="">大刀肉</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">海鲜水产</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">淡水鱼　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">鲫鱼</a></li>
-											<li class="side-area-detail-ul-li"><a href="">鲤鱼</a></li>
-											<li class="side-area-detail-ul-li"><a href="">草鱼</a></li>
-											<li class="side-area-detail-ul-li"><a href="">鲸鱼</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">禽类蛋品</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">鸡　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">老母鸡</a></li>
-											<li class="side-area-detail-ul-li"><a href="">大公鸡</a></li>
-											<li class="side-area-detail-ul-li"><a href="">小鸡</a></li>
-											<li class="side-area-detail-ul-li"><a href="">野鸡</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">冷冻食饮</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">酸奶　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">蒙牛</a></li>
-											<li class="side-area-detail-ul-li"><a href="">伊利</a></li>
-											<li class="side-area-detail-ul-li"><a href="">老酸奶</a></li>
-											<li class="side-area-detail-ul-li"><a href="">光明</a></li>
-											<li class="side-area-detail-ul-li"><a href="">三鹿</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">中外名酒</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">啤酒　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">青岛</a></li>
-											<li class="side-area-detail-ul-li"><a href="">雪花</a></li>
-											<li class="side-area-detail-ul-li"><a href="">哈尔滨</a></li>
-											<li class="side-area-detail-ul-li"><a href="">燕京</a></li>
-											<li class="side-area-detail-ul-li"><a href="">黑啤</a></li>
-											<li class="side-area-detail-ul-li"><a href="">菠萝啤</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">进口食品</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">巧克力　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">德芙</a></li>
-											<li class="side-area-detail-ul-li"><a href="">进口**</a></li>
-											<li class="side-area-detail-ul-li"><a href="">进口**</a></li>
-											<li class="side-area-detail-ul-li"><a href="">进口**</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">地方特产</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">武汉　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">热干面</a></li>
-											<li class="side-area-detail-ul-li"><a href="">周黑鸭</a></li>
-											<li class="side-area-detail-ul-li"><a href="">小胡鸭</a></li>
-											<li class="side-area-detail-ul-li"><a href="">武昌鱼</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">饮料冲调</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">茶　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">绿茶</a></li>
-											<li class="side-area-detail-ul-li"><a href="">红茶</a></li>
-											<li class="side-area-detail-ul-li"><a href="">乌龙茶</a></li>
-											<li class="side-area-detail-ul-li"><a href="">龙井茶</a></li>
-											<li class="side-area-detail-ul-li"><a href="">太平猴魁</a></li>
-											<li class="side-area-detail-ul-li"><a href="">黄山毛峰</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">养生保健</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">保健品　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">脑白金</a></li>
-											<li class="side-area-detail-ul-li"><a href="">黄金搭档</a></li>
-											<li class="side-area-detail-ul-li"><a href="">富硒康</a></li>
-											<li class="side-area-detail-ul-li"><a href="">雪源康</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="sidenav-ul-li">
-							<a href="" class="sidenav-ul-li-a">粮油调味</a>
-							<div class="show-side-area">
-								<div class="side-area-detail">
-									<div class="side-area-detail-ul-area">
-										<ul class="side-area-detail-ul">
-											<span><a href="">油　<i>></i></a></span>
-											<li class="side-area-detail-ul-li"><a href="">酱油</a></li>
-											<li class="side-area-detail-ul-li"><a href="">香油</a></li>
-											<li class="side-area-detail-ul-li"><a href="">润滑油</a></li>
-											<li class="side-area-detail-ul-li"><a href="">菜籽油</a></li>
-											<li class="side-area-detail-ul-li"><a href="">地沟油</a></li>
-										</ul>
-									</div>
-									<div class="side-area-detail-ads">
-										
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
+<div class="sidenav">
+	<ul class="sidenav-ul">
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">水果</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">家常菜</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">小吃零食</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">海鲜水产</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">禽类蛋品</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">冷冻食饮</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">中外名酒</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">进口食品</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">地方特产</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">饮料冲调</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">养生保健</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">粮油调味</a>
+		</li>
+	</ul>
+</div>
+<script>
+	// 侧边导航鼠标移入
+	var node = "";
+	$(".sidenav-ul .sidenav-ul-li").mouseover(function(){
+		$(this).children(".sidenav-ul-li-a").addClass("sidenav-ul-li-current-a");
+		// 发送数据
+		$.ajax({
+	        url: '/eMarket/index.php/Home/Index/side',
+	        async: false, //改为同步方式
+	        type: "POST",
+	        data: {
+				guidea : $(this).children(".sidenav-ul-li-a").html()
+			},
+	        success: function(guide){
+	        			node += '<div class="show-side-area"><div class="side-area-detail">'+
+						        		'<div class="side-area-detail-ul-area">';
+						for(var i = 0;i < guide[0].length;i++){
+							node += '<ul class="side-area-detail-ul">'+
+							'<span><a href="">'+guide[0][i]+' <i>></i></a></span>';
+							for(var j = 0;j < guide[1][i].length;j++){
+								node += '<li class="side-area-detail-ul-li"><a href="">'+guide[1][i][j]+'</a></li>';
+							}
+							node += '</ul>';
+						}
+						node += '</div><div class="side-area-detail-ads"></div></div></div>';
+					},
+	        dataType:"json"
+	    });
+		// 创建节点
+		$(this).append(node);
+		node = "";
+    })
+	// 鼠标移出
+	$(".sidenav-ul .sidenav-ul-li").mouseout(function(){
+		node = "";
+		$(this).children(".sidenav-ul-li-a").removeClass("sidenav-ul-li-current-a");
+		$(this).children(".show-side-area").remove();
+	})
+</script>
+
 				<!-- 宣传图片区 -->
 				<div class="ad-img">
 					<!-- 中心大图片 -->

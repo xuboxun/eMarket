@@ -3,10 +3,35 @@ namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
     public function index(){
+        $header=A('Public'); 
+        $header->header();
 
         $this->display();
      }
      
+    public function side(){
+        $where['guidea'] = $_POST['guidea'];
+        $db = M('system');
+        $guide = $db -> where($where) -> select();//选择所有
+        $guideb = $db -> where($where) -> order('sysid asc') -> group('guideb') -> select();//B级
+        $guidebnum = count($guideb);//计算多少B级
+        for($i = 0;$i < $guidebnum;$i++){
+            $arrb[$i] = $guideb[$i]['guideb'];
+            $whereb['guideb'] = $arrb[$i];
+            $guidec = $db -> where($whereb) -> order('sysid asc') -> select();//C级
+            $guidecnum = count($guidec);
+            for($j = 0;$j < $guidecnum;$j++){
+                $arrc[$i][$j] = $guidec[$j]['guidec'];
+            }
+            // for()
+        }
+        // var_dump($resultnum);
+        // var_dump($guideb);
+        $arr[0] = $arrb;
+        $arr[1] = $arrc;
+        $this->ajaxReturn($arr);
+    }
+
     public function search(){
         $search = $_POST['search'];
         $db1 = M('goods');

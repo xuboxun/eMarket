@@ -136,6 +136,18 @@ create table user
    primary key (uid)
 );
 
+/*==============================================================*/
+/* Table: system                                                */
+/*==============================================================*/
+create table system
+(
+   sysid                int not null AUTO_INCREMENT,
+   guidea               varchar(10) not null,
+   guideb               varchar(10) not null,
+   guidec               varchar(10) not null,
+   primary key (sysid)
+);
+
 alter table cart add constraint FK_cart foreign key (uid)
       references user (uid) on delete restrict on update restrict;
 

@@ -1,0 +1,80 @@
+<!-- 侧边导航 -->
+<div class="sidenav">
+	<ul class="sidenav-ul">
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">水果</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">家常菜</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">小吃零食</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">海鲜水产</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">禽类蛋品</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">冷冻食饮</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">中外名酒</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">进口食品</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">地方特产</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">饮料冲调</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">养生保健</a>
+		</li>
+		<li class="sidenav-ul-li">
+			<a href="" class="sidenav-ul-li-a">粮油调味</a>
+		</li>
+	</ul>
+</div>
+<script>
+	// 侧边导航鼠标移入
+	var node = "";
+	$(".sidenav-ul .sidenav-ul-li").mouseover(function(){
+		$(this).children(".sidenav-ul-li-a").addClass("sidenav-ul-li-current-a");
+		// 发送数据
+		$.ajax({
+	        url: '__APP__/Home/Index/side',
+	        async: false, //改为同步方式
+	        type: "POST",
+	        data: {
+				guidea : $(this).children(".sidenav-ul-li-a").html()
+			},
+	        success: function(guide){
+	        			node += '<div class="show-side-area"><div class="side-area-detail">'+
+						        		'<div class="side-area-detail-ul-area">';
+						for(var i = 0;i < guide[0].length;i++){
+							node += '<ul class="side-area-detail-ul">'+
+							'<span><a href="">'+guide[0][i]+' <i>></i></a></span>';
+							for(var j = 0;j < guide[1][i].length;j++){
+								node += '<li class="side-area-detail-ul-li"><a href="">'+guide[1][i][j]+'</a></li>';
+							}
+							node += '</ul>';
+						}
+						node += '</div><div class="side-area-detail-ads"></div></div></div>';
+					},
+	        dataType:"json"
+	    });
+		// 创建节点
+		$(this).append(node);
+		node = "";
+    })
+	// 鼠标移出
+	$(".sidenav-ul .sidenav-ul-li").mouseout(function(){
+		node = "";
+		$(this).children(".sidenav-ul-li-a").removeClass("sidenav-ul-li-current-a");
+		$(this).children(".show-side-area").remove();
+	})
+</script>
