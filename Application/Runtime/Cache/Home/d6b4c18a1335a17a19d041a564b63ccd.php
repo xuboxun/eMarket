@@ -78,11 +78,7 @@ descriptioin : 个人页面的头部
 				 			<!-- <li>
 				 				<div class="c_goods">
 				 					<div class="p_img">
-<<<<<<< HEAD
 				 						<a href=""><img src="/e-market/Public/image/goods/collect.jpg"/></a>
-=======
-				 						<a href=""><img src="/eMarket/Public/image/goods/collect.jpg"/></a>
->>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 				 					</div>
 				 					<div class="p_name">
 				 						<input type="checkbox" value="" name="">

@@ -2,7 +2,14 @@
 namespace Home\Controller;
 use Think\Controller;
 class PersonController extends Controller {
-    
+    //判断是否已登录
+    public function is_login(){
+        if($_SESSION['username']){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
     public function bought(){
        $uid=1;
  //        Select 
@@ -26,7 +33,12 @@ class PersonController extends Controller {
         $this->display();
      }
      public function cart(){
-        $uid=1;
+        if($this->is_login()==1){
+           $uid=$_SESSION['uid'];
+        }else{
+            $this->redirect("Login/login");
+        }
+        
         $m=M("cart");
         $where["uid"]=$uid;
         $arr=$m->where($where)->select();
@@ -110,7 +122,7 @@ class PersonController extends Controller {
            $number=$arr[$i];
            $this->sold_goods_do($uid,$gid,$number);
         }
-       echo "success";
+        echo "success";
         exit;
       
      }

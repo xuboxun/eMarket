@@ -28,25 +28,14 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-<<<<<<< HEAD
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
 					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
-=======
-				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
-				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
-			</div>
-			<div class="banner-right">
-				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
->>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -72,32 +61,18 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
-<<<<<<< HEAD
-							window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
-							return false;
-						})
-						$("#searchValue").focusout(function(){
-							$(".search-answer").hide();
-						})
-						$("#searchValue").focuson(function(){
-							$(".search-answer").show();
-=======
 							if($.trim($("#searchValue").val()) != ""){
-								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 								return false;
 							}else{
 								return false;
 							}
->>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 						})
 						// 即时搜索
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
-<<<<<<< HEAD
-=======
 
->>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
@@ -111,12 +86,8 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-<<<<<<< HEAD
-													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
-=======
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="
 													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
->>>>>>> 8ab153b0c1905def3bc03603417d31479cb30244
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -223,7 +194,7 @@ descriptioin : 公有头部
 		$(this).children(".sidenav-ul-li-a").addClass("sidenav-ul-li-current-a");
 		// 发送数据
 		$.ajax({
-	        url: '/eMarket/index.php/Home/Index/side',
+	        url: '/e-market/index.php/Home/Index/side',
 	        async: false, //改为同步方式
 	        type: "POST",
 	        data: {

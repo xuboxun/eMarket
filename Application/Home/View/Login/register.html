@@ -217,7 +217,12 @@
 						 email:email,
 						 tel:tel
 					 },function(res){
-					    alert(res);
+					   alert(res);
+					   if(res=="注册成功"){
+					      window.location.href="Index/index";		
+					   }else{
+					      window.location.href="__URL__/register";		
+					   }   
 					 });
 				}
 			}
