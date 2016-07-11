@@ -9,11 +9,11 @@ description : 首页
 <head>
 	<meta charset="utf-8">
 	<title>好食光</title>
-	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/index.css">
-	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/eMarket/Public/js/base.js"></script>
-	<!-- <script type="text/javascript" src="/eMarket/Public/js/index.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/e-market/Public/css/index.css">
+	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/e-market/Public/js/base.js"></script>
+	<!-- <script type="text/javascript" src="/e-market/Public/js/index.js"></script> -->
 </head>
 <body>
 <div id="wrapper">
@@ -28,19 +28,14 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-<<<<<<< HEAD
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
-=======
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -52,7 +47,7 @@ descriptioin : 公有头部
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/eMarket/Public/image/system/logo.png">
+				<img src="/e-market/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form> 
@@ -66,7 +61,7 @@ descriptioin : 公有头部
 					</div>
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
-							window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+							window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 							return false;
 						})
 						$("#searchValue").focusout(function(){
@@ -79,12 +74,11 @@ descriptioin : 公有头部
 						var oldsearch = null;
 						var search = null;
 						var timer = setInterval(function(){
-<<<<<<< HEAD
 							search = $.trim($("#searchValue").val());
 							if(oldsearch != search) {
 								if(search != null && search != ""){
 									// 向服务器传数据
-									$.post('/eMarket/index.php/Home/Index/search',{
+									$.post('/e-market/index.php/Home/Index/search',{
 										search:search
 									},function(ans){
 										if(ans.length != 0) {
@@ -93,7 +87,7 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
+													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
 											}
@@ -106,19 +100,6 @@ descriptioin : 公有头部
 									$(".search-answer").hide();
 								}
 								oldsearch = search;
-=======
-							var search = $.trim($("#searchValue").val());
-							if(search != null && search != ""){
-								// 向服务器传数据
-								$.post('/eMarket/index.php/Home/Index/search',{
-									search:search
-								},function(ans){
-									$(".search-ul li").html(ans);
-								})
-								$(".search-answer").show();
-							}else{
-								$(".search-answer").hide();
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
 							}
 						},500)
 					</script>
@@ -404,7 +385,7 @@ descriptioin : 公有头部
 				<div class="ad-img">
 					<!-- 中心大图片 -->
 					<div class="big-ad-img">
-						<a href=""><img src="/eMarket/Public/image/system/adimg1.jpg" index="0" class="big-ad-img-main"></a>
+						<a href=""><img src="/e-market/Public/image/system/adimg1.jpg" index="0" class="big-ad-img-main"></a>
 						<span class="big-ad-img-change left"><</span>
 						<span class="big-ad-img-change right">></span>
 						<div class="ad-img-icon">
@@ -416,10 +397,10 @@ descriptioin : 公有头部
 					</div>
 					<!-- 缩略图 -->
 					<div class="small-ad-img">
-						<div class="small-ad-img-datail small-ad-img-datail-active"><img src="/eMarket/Public/image/system/adimg1.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg2.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg3.jpg"></div>
-						<div class="small-ad-img-datail"><img src="/eMarket/Public/image/system/adimg4.jpg"></div>
+						<div class="small-ad-img-datail small-ad-img-datail-active"><img src="/e-market/Public/image/system/adimg1.jpg"></div>
+						<div class="small-ad-img-datail"><img src="/e-market/Public/image/system/adimg2.jpg"></div>
+						<div class="small-ad-img-datail"><img src="/e-market/Public/image/system/adimg3.jpg"></div>
+						<div class="small-ad-img-datail"><img src="/e-market/Public/image/system/adimg4.jpg"></div>
 					</div>
 				</div>
 			</div>
@@ -430,7 +411,7 @@ descriptioin : 公有头部
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -438,21 +419,21 @@ descriptioin : 公有头部
 					</div>
 					<!-- repeat from sql -->
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -460,14 +441,14 @@ descriptioin : 公有头部
 					</div>
 
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -483,7 +464,7 @@ descriptioin : 公有头部
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -491,21 +472,21 @@ descriptioin : 公有头部
 					</div>
 					<!-- repeat from sql -->
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -513,14 +494,14 @@ descriptioin : 公有头部
 					</div>
 
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -536,7 +517,7 @@ descriptioin : 公有头部
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -544,21 +525,21 @@ descriptioin : 公有头部
 					</div>
 					<!-- repeat from sql -->
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -566,14 +547,14 @@ descriptioin : 公有头部
 					</div>
 
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -589,7 +570,7 @@ descriptioin : 公有头部
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -597,21 +578,21 @@ descriptioin : 公有头部
 					</div>
 					<!-- repeat from sql -->
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -619,14 +600,14 @@ descriptioin : 公有头部
 					</div>
 
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -642,7 +623,7 @@ descriptioin : 公有头部
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -650,21 +631,21 @@ descriptioin : 公有头部
 					</div>
 					<!-- repeat from sql -->
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
@@ -672,14 +653,14 @@ descriptioin : 公有头部
 					</div>
 
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>
 						</div>
 					</div>
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<a href=""><div class="goods-block-img"><img src="/e-market/Public/image/goods/goodsimg.jpg"></div></a>
 						<div class="goods-block-description">
 							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 							<div class="goods-price">¥16.90</div>

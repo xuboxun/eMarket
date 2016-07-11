@@ -9,15 +9,9 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-<<<<<<< HEAD
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-=======
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -32,12 +26,12 @@ descriptioin : 个人页面的头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
@@ -49,13 +43,13 @@ descriptioin : 个人页面的头部
 	<!-- 顶部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
 			<div class="letter">
 				<ul>
-					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
-					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
+					<li><a  href="/e-market/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/e-market/index.php/Home/Person/setting.html">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -89,14 +83,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-<<<<<<< HEAD
-
-				 								
-				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
-
-=======
-				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
->>>>>>> 3f82a1a2ae2bfecd5d60301f547febb3a6c2b127
+				 								<a href=""><img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
@@ -122,7 +109,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
+				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -246,32 +233,33 @@ descriptioin : 个人页面的头部
 					  $("#sumprice").html("总价<strong>￥"+pricesum+"</strong>");
 				   }
 				   function submit(){
-				      var t=0;
+				      var t=0;var er=1;
 					  var num=0;
 					  var gid;
 					  var str="";
-					  var arr= new Array();;
+					  var arr= "";
+					
 				       $("input[name='check_list']:checked").each(function(){
 							          str=$(this).val();  
 							          if(str){
 									    arr[t]= new Array();
                                         num=Number($("#"+str).val());
 										gid=Number($("#gid"+str).val());
-										arr[t]['num']=num;
-										arr[t]['gid']=gid;
-										t++;
+										arr+=er+"="+num+"&"+(er+1)+"="+gid+"&";
+										t++;er=er+2;
 									  }
                                  });
-					 //windows.location.href="/eMarket/index.php/Home/Person/sold_goods"
-					 alert(arr);
+					arr+="t="+(er-1);
 					  $.ajax({
 						    asnyc:false,
-							url:"/eMarket/index.php/Home/Person/sold_goods",
+							url:"/e-market/index.php/Home/Person/sold_goods",
 							type:"post",
 							traditional :true,
-						    data:{'con':arr}, 
+						    data:arr,
                             success:function(res){
-							         alert(res);
+							        if(res=="success"){
+                                        window.location.href="/e-market/index.php/Home/Person/bought";									
+ 									}
 							    },
 						 });
 				   }

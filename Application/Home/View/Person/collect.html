@@ -32,7 +32,7 @@ description : 个人中的收藏商品页面
 				 	<!-- 列表布局 -->
 				 	<div class="liebiao">
 				 		<ul>
-				 			<li>
+				 			<!-- <li>
 				 				<div class="c_goods">
 				 					<div class="p_img">
 				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
@@ -53,21 +53,22 @@ description : 个人中的收藏商品页面
 						            </div>
 				 				</div>
 				 			</li>
-
-				 			<li>
+ -->
+                            <volist name="list" id="vo">
+				 		    <li>
 				 				<div class="c_goods">
 				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
+				 						<a href=""><img src="__PUBLIC__/image/goods/{$vo.img}"/></a>
 				 					</div>
 				 					<div class="p_name">
 				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
+				 						<a href="" title="西西卖诺 水果蛋糕 ">{$vo.name}</a>
 				 					</div>
 									<div class="price">
-										<strong price="49.90">￥142.00</strong>
+										<strong price="49.90">￥{$vo.price}</strong>
 									</div>
 									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
+										<span><a href="">{$vo.number}人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度{$vo.evaluate}%</b></span>
 									</div>
 						            <div>
 						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -75,133 +76,7 @@ description : 个人中的收藏商品页面
 						            </div>
 				 				</div>
 				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-				 			<li>
-				 				<div class="c_goods">
-				 					<div class="p_img">
-				 						<a href=""><img src="__PUBLIC__/image/goods/collect.jpg"/></a>
-				 					</div>
-				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
-				 						<a href="" title="西西卖诺 水果蛋糕 ">&nbsp;&nbsp;西西卖诺&nbsp;&nbsp;水果蛋糕 </a>
-				 					</div>
-									<div class="price">
-										<strong price="49.90">￥142.00</strong>
-									</div>
-									<div class="value">
-										<span><a href="">4990人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度95%</b></span>
-									</div>
-						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
-						            </div>
-				 				</div>
-				 			</li>
-
+                            </volist>
 
 				 		</ul>
 				 	 </div>
