@@ -1,14 +1,23 @@
-<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!-- 
+author : huangyifan
+version : 1.0
+date : 2016.7.10
+description : 二级商品页面
+-->
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>好食光</title>
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-	</head>
-	<body>
-		<!-- 引入头部 -->
-		<!-- 
+<head>
+	<meta charset="utf-8">
+	<title>好食光</title>
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/goods.css">
+	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/eMarket/Public/js/base.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<!-- 引入头部 -->
+	<!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
@@ -108,82 +117,40 @@ descriptioin : 公有css
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
 	<!-- 导航栏 end -->
-	    <!--整体布局-->
-		<div class="main">
-		<!--中间部分-->
-		<div class="owner">
-		<!--登陆表格-->
-		<div class="contant">
-		
-		<div class="login_title">账户登录</div>
-		<p style="color:red;" id="ts"></p>
-		 <form name="form" method="post">
-		     <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="手机号/会员名/qq邮箱" id="username"/>
-			 </div>
-			 <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" id="password" />
-			 </div>            
-             <div class="link">
-			 	<a class="forgetpsw" href="/eMarket/index.php/Home/Login/findpwd">忘记密码</a>
-			 	<a class="sign" href="/eMarket/index.php/Home/Login/register">注册</a>
-			 </div>
-             <div> 
-             	<input class="submit" type="button" value="登录" onclick="f1();"/>
-			 </div>		
-		 </form>
-			<!--输入框文字隐藏功能-->
-			<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
-			<script type="text/javascript">
-			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
-			$(function(){
-			$('.input_test').bind({
-			focus:function(){
-			if (this.value == this.defaultValue){
-			this.value="";
-			}
-			},
-			blur:function(){
-			if (this.value == ""){
-			this.value = this.defaultValue;
-			}
-			}
-			});
-			})
-			function f1(){
-			     var username=trimStr($("#username").val());
-				 var password=trimStr($("#password").val());
-				
-				 if(username){
-				     if(password){
-					     $.ajax({
-						    asnyc:false,
-							url:"/eMarket/index.php/Home/Login/do_login",
-							type:"post",
-						    data:"username="+username+"&password="+password,
-                            success:function(res){
-							          if(res=="failure"){
-									       $("#ts").html("账户或密码错误");
-									  }else{
-									    
-									  }
-							    },
-						 });
-					 }else{
-					    $("#ts").html("密码不能为空");
-					 }
-				 }else{
-				 
-				     $("#ts").html("用户名不能为空");
-				 }
-			}
-			</script>
 
-		 </div>
+	<!-- 中心区 start -->
+	<div id="main">
+		<div class="main-banner">
+			<img src="/eMarket/Public/image/system/goodbanner.png">
 		</div>
+		<div class="container classb">
+			<div class="classb-content">
+				<div class="good-area-content-col goods-block">
+					<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+					<div class="goods-block-description">
+						<div class="goods-price">¥16.90</div>
+						<div class="goods-sold-num">已售<i>4</i>件</div>
+						<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+						<div class="goods-location">浙江 金华</div>
+					</div>
+				</div>
+				<div class="good-area-content-col goods-block">
+					<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+					<div class="goods-block-description">
+						<div class="goods-price">¥16.90</div>
+						<div class="goods-sold-num">已售<i>4</i>件</div>
+						<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+						<div class="goods-location">浙江 金华</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
-		</div>
-		<!-- 
+	</div>
+	<!-- 中心区 end -->
+
+	<!-- 引入尾部 -->
+	<!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
@@ -207,5 +174,6 @@ descriptioin : 公有css
 		</div>
 	</div>
 	<!-- 尾部 end -->
-	</body>
+</div>
+</body>
 </html>

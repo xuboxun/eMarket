@@ -97,6 +97,28 @@ $(function(){
 		$(this).children(".sidenav-ul-li-a").removeClass("sidenav-ul-li-current-a");
 		$(this).children(".show-side-area").removeClass("show");
 	})
+
+
+	/***********************************
+	****** Goods/datail.html页面
+	************************************/
+	$("#buynum").change(function(){
+		if(parseInt($("#buynum").val())<1){
+			$("#buynum").val("1");
+		}
+	})
+	// 减1
+	$("#minus").click(function(){
+		if(parseInt($("#buynum").val())>1){
+			$("#buynum").val(parseInt($("#buynum").val())-1);
+		}
+	})
+	// 加1
+	$("#add").click(function(){
+		
+			$("#buynum").val(parseInt($("#buynum").val())+1);
+		
+	})
 	
 })
 

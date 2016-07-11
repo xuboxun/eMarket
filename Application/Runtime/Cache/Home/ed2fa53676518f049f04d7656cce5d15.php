@@ -159,7 +159,7 @@ descriptioin : 个人页面的头部
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有尾部
 -->
 
 <!-- 尾部 start -->

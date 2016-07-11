@@ -9,9 +9,9 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -26,12 +26,12 @@ descriptioin : 个人页面的头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
@@ -43,13 +43,13 @@ descriptioin : 个人页面的头部
 	<!-- 顶部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
 			<div class="letter">
 				<ul>
-					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
-					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
+					<li><a  href="/e-market/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/e-market/index.php/Home/Person/setting.html">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -68,7 +68,7 @@ descriptioin : 个人页面的头部
 				 		<!-- 表头 -->
 				 			<thead>
 				 				<tr>
-				 					<th width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" check="checked" name=""/>全选</th>
+				 					<th width="100px">&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" check="checked" name="check_list" onclick="f2();"/>全选</th>
 				 					<th width="460px">宝贝</th>
 				 					<th width="170px">单价</th>
 				 					<th widyh="170px">数量</th>
@@ -77,38 +77,46 @@ descriptioin : 个人页面的头部
 				 				</tr>
 				 			</thead>
 				 			<!-- 表主体内容 -->
-				 			<tbody>
-				 				<tr class="cart_three">
-				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+							<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tbody>
+				 				<tr class="cart_three"> 
+				 			        <td width="100px"><input type="checkbox" check="checked" name="check_list"/></td>
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
+<<<<<<< HEAD
 				 								<a href=""><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
+=======
+				 								<img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/>
+>>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
 				 							</div>
 				 							<div class="link">
-				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
+				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
 				 							</div>
 				 						</div>
 				 					</td>
-				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px"><span><?php echo ($vo["price"]); ?></span></td>
 				 					<td width="170px">
 				 						<div class="sum">
-				 							<a class="decrement" href="">-&nbsp;</a>
-				 							<input type="text" value="1"/>
-				 							<a class="increment" href="">&nbsp;+</a>
+				 							<a class="decrement" href="javascript:sub('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>);">-&nbsp;</a>
+				 							<input type="text" value="1" id="num<?php echo ($i); ?>" onblur="f1('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>)"/>
+				 							<a class="increment" href="javascript:add('num<?php echo ($i); ?>',<?php echo ($vo["price"]); ?>);">&nbsp;+</a>
 				 						</div>
 				 					</td>
-				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px" id="pricenum<?php echo ($i); ?>"><?php echo ($vo["price"]); ?></td>
 				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
 				 				</tr>
-				 			</tbody>
-				 			<tbody>
+				 			</tbody><?php endforeach; endif; else: echo "" ;endif; ?>
+				 		<!--	<tbody>
 				 				<tr class="cart_three">
 				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
+<<<<<<< HEAD
 				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
+=======
+				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/>
+>>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -128,6 +136,7 @@ descriptioin : 个人页面的头部
 				 				</tr>
 				 				
 				 			</tbody>
+<<<<<<< HEAD
 				 		    <tr class="count">
 				 					 <td width="100px"><input type="checkbox" check="checked" name=""/></td>
 				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
@@ -136,11 +145,58 @@ descriptioin : 个人页面的头部
 				 					<td>总价<strong>￥120</strong></td>
 				 					<td><input type="submit" name="" value="去结算"/></td>
 				 				</tr>
+=======
+				 		-->
+>>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
 				 		</table>
 				 	</div>
 				</div>
 			</div>
-		
+		    <script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			       function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+				   var k=0;var sum=0;
+			       function add(id,price){
+				       k=Number($("#"+id).val())+1;
+				       $("#"+id).val(k);
+				       sum=Number(price)*k;
+					   $("#price"+id).html(sum);
+				   }
+				   function sub(id,price){
+				       var num=Number($("#"+id).val());
+					   k=num-1;
+					   if(num>1){
+					       $("#"+id).val(k);
+						   sum=Number(price)*k;
+					       $("#price"+id).html(sum);
+					   }else{
+					     $("#"+id).val(1);
+					   }
+				   }
+				   function f1(id,price){
+				       k=Number($("#"+id).val());
+					   if(isNaN(k)){
+					      alert("请输入有效数字");
+						  $("#"+id).val(1);
+					   }else{
+					      if(k<=0){
+						       alert("请输入有效数字");
+							   $("#"+id).val(1);
+						  }else{
+						       sum=Number(price)*k;
+					           $("#price"+id).html(sum);
+						  }
+					   }
+				   }
+				   function f2(){
+				      if($("input[name='chk_list']").is(':checked')){
+					     $("input[name='check_list']").attr("checked",false); 
+					  }else{
+					     $("input[name='check_list']").attr("checked",true); 
+					  }
+				   }
+			</script>
+
 		<!-- 引入尾部 -->
 		<!-- 
 author : huangyifan

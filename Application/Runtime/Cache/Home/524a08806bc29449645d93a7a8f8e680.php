@@ -248,18 +248,18 @@ descriptioin : 公有css
 						          if(res=="已存在"){
 						                alert("该邮箱已存在");return 0;
 						          }
-					        },true)
+					        },false)
 					}
 				}
 				
 				k++;
-				//return 1;
+				return 1;
 			}
 			function sendmail(id){
-			alert(check_email());
+		//	alert(check_email());
 			                if(check_email()==0){
 							    
-							}/*else{
+							}else{
 							     	var tr=trimStr(document.getElementById('email').value);
 					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
@@ -278,7 +278,7 @@ descriptioin : 公有css
 				                         return;
 				                      }
 				                    },1000);
-							}*/
+							}
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);

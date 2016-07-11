@@ -43,4 +43,15 @@ class CommenController extends Controller {
         $arr= $Model->query($sql);
         var_dump($arr);
      }
+     //判断某一字段是否存在
+     public function check($zd,$table,$con){
+        $where[$zd]=$con;
+        $m=M($table);
+        $str=$m->where($where)->find();
+        if($str){
+           return "success";
+        }else{
+           return "failure";
+        }
+     }
 }

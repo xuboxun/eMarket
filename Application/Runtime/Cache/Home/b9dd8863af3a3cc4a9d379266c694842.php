@@ -2,15 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-<<<<<<< HEAD
-		<title>电子商城</title>
+		<title>好食光</title>
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/findpwd.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-=======
-		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/findpwd.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
->>>>>>> 4872b5c06ac8ff5412e84f9b194120203c575bfb
 	</head>
 	<body>
 	   <!-- 
@@ -24,12 +18,12 @@ descriptioin : 公有css
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
@@ -43,7 +37,7 @@ descriptioin : 公有css
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/eMarket/Public/image/system/logo.png">
+				<img src="/e-market/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form action="" mathod="post" > 
@@ -61,7 +55,7 @@ descriptioin : 公有css
 							var search = $.trim($("#searchValue").val());
 							if(search != null && search != ""){
 								// 向服务器传数据
-								$.post('/eMarket/index.php/Home/Index/search',{
+								$.post('/e-market/index.php/Home/Index/search',{
 									search:search
 								},function(ans){
 									$(".search-ul li").html(ans);
@@ -115,17 +109,10 @@ descriptioin : 公有css
 	<!-- 导航栏 end -->
 	   <div class="main">
 	   		<!--头部-->
-<<<<<<< HEAD
-	   		<div class="header">
+	   		<!--<div class="header">
 	   			<img src="/e-market/Public/image/logoletter.png"/>
 	   			<a href="/e-market/index.php/Home/Login/login">登录</a><a href="/e-market/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
-	   		</div>
-=======
-	   		<!--<div class="header">
-	   			<img src="/eMarket/Public/image/logoletter.png"/>
-	   			<a href="/eMarket/index.php/Home/Login/login">登录</a><a href="/eMarket/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
 	   		</div>-->
->>>>>>> 4872b5c06ac8ff5412e84f9b194120203c575bfb
 	   		<!--主题内容-->
 	   		<div class="contant">
 	   			<div>
@@ -133,13 +120,14 @@ descriptioin : 公有css
 	   			</div>
 				<p style="color:red;" id="yxts"></p>
 	   			<div>
-<<<<<<< HEAD
+
 	   				验证码：<input  class="shuru" type="text" name="code" style="width:140px" id="code"/><input type="button" name="" id="yzm"	onclick="sendmail();" value="获取验证码" style="width:80px;margin-left:20px;height:42px;background:#2283D2;color:#444"/>
-=======
-	   				验证码：<input  class="shuru" type="text" name="code" style="width:140px"/><input type="button" name=""	 value="获取验证码" style="width:80px;margin-left:20px;height:42px;background:#C22830;color:#fff;cursor: pointer;"/>
->>>>>>> 4872b5c06ac8ff5412e84f9b194120203c575bfb
+	   				
 	   			</div>
 				<p style="color:red;" id="yzmts"></p>
+				<div id="password" style="display:none;">
+	   				密&nbsp&nbsp&nbsp码：<input  class="shuru" type="text"  style="color:#666" placeholder="请输入密码" id="pwd">
+	   			</div>
 	   			<div>
 	   				<input class="submit" type="button" value="确定" onclick="f1();"/>
 	   			</div>
@@ -149,7 +137,27 @@ descriptioin : 公有css
 	   <script type="text/javascript">
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 			var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+			var pl=0;
 			function f1(){
+			if(pl>0){
+			   var password=trimStr($("#pwd").val());
+			  
+			                    $.ajax({
+						               asnyc:false,
+							           url:"/e-market/index.php/Home/Login/repwd",
+							           type:"post",
+						               data:"pwd="+password,
+                                       success:function(res){
+									   
+							               if(res=="success"){
+									           
+									       }else{
+										      alert(res+"请重试");
+									          //window.location.href="/e-market/index.php/Home/Login/findpwd";
+									       }
+							           },
+						         });
+			}
 			   var username=trimStr($("#username").val());
 			   var code=trimStr($("#code").val());
 			   if(username){
@@ -159,7 +167,20 @@ descriptioin : 公有css
                     }else{
 					       if(code){
 				                 $("#yzmts").html("");
-								 
+								 $.ajax({
+						               asnyc:false,
+							           url:"/e-market/index.php/Home/Login/getmd",
+							           type:"post",
+						               data:"con="+code,
+                                       success:function(res){
+							               if(res=="success"){
+									           $("#password").css("display","block");
+											   pl++;
+									       }else{
+									           $("#yzmts").html("验证码错误，请重试");
+									       }
+							           },
+						         });
 					       }else{
 				                 $("#yzmts").html("请您填写验证码");
 				           }
@@ -185,7 +206,7 @@ descriptioin : 公有css
 							        if(res=="发送成功"){
 									  alert("发送成功");
 									  $("#yzm").attr("disabled","true");
-									  var i=10;
+									  var i=60;
 				                      var time=setInterval(function(){
 				                         if(i>0){
 				                            $('#yzm').val(i+"秒后重发");
