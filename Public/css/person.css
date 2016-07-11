@@ -5,13 +5,14 @@
 /*整体布局*/
 .contant{
 	width:100%;
-	min-height:920px;
+	min-height:800px;
+	float:left;
 	background-color:#F1F1F1;
 }
 /*第二层布局*/
 .contanter{
 	width:86%;
-	min-height:880px;
+	min-height:800px;
 	margin-left:7%;
 	background:;
 }
@@ -19,7 +20,7 @@
 .left{
 	float:left;
 	width:8%;
-	height:740px;
+	height:770px;
 	padding:30px;
 	/*background-color:#666;*/
 }
@@ -36,7 +37,8 @@
 .right{
 	float:left;
 	width:85%;
-	height:800px;
+	min-height:800px;
+	margin-bottom: 10px;
 	/*background-color:#ccc;*/
 }
 .series{
@@ -106,7 +108,7 @@ thead th input{
 /*购物车页面中表格单独的的css属性*/
 .cart_contanter{
 	width:100%;
-	min-height:890px;
+	min-height:880px;
 	/*background-color:red;*/
 }
 .cart_things{
@@ -114,7 +116,7 @@ thead th input{
 	float:left;
 	width:90%;
 	margin-left: 5%;
-	min-height:800px;
+	min-height:830px;
 	background-color:#FFFFFF;
 	border-radius: 5px;
 }
@@ -199,23 +201,157 @@ thead th input{
 	height:40px;
 	line-height: 40px;
 	width:80px;
-	background-color: #666;
+	background-color:#CF3436;
 	border-radius: 5px;
 	cursor: pointer;
+}
+.count input:hover{
+	background-color:#912227;
 }
 
 
 /*collect页面css*/
+.collect_contanter{
+	width:86%;
+	float:left;
+	min-height:1000px;
+	margin-left:7%;
+	background:;
+}
 .collect_things{
 	margin-top: 30px;
 	float:left;
 	width:100%;
-	min-height:790px;
+	min-height:930px;
 	background-color:#FFFFFF;
 	border-radius: 5px;
+	
 }
 .liebiao{
-	margin-left: 20px;
-	margin-top: 20px;
-	margin-right: 20px;
+	margin-left: 45px;
+	margin-top: 40px;
+	background-color:;
 }
+ul li .c_goods{
+	float:left;
+	width:260px;
+	height:400px;
+	/*background-color: #666;*/
+}
+.p_img a{
+	cursor: pointer;
+}
+.p_name a{
+	color:#005EA7;
+}
+.p_name a:hover{
+	cursor: pointer;
+}
+.c_goods div strong{
+	font-size: 17px;
+	color:#CF3436;
+}
+.price{
+	margin-top: 8px;
+	margin-bottom: 10px;
+}
+.btn{
+	width:100px;
+	width:40px;
+	background-color: #F8F8F8;
+	border:1px solid #999;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 14px;
+	padding:3px;
+}
+.value{
+	color:#999;
+	margin-bottom: 8px;
+}
+.value a{
+	color:#999;
+}
+.value span a:hover{
+	color:#CF3436;
+}
+/*collect收藏商品页面css结束*/
+
+/*collect收藏店铺页面css开始*/
+.c2_goods{
+	float:left;
+	width:95%;
+	height:270px;
+	/*background-color:#666;*/
+	border-top: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+.c2_brand{
+	margin-top: 10px;
+	width:240px;
+	height:260px;
+	/*background:red;*/
+	border-right:1px solid #ddd;
+	float:left;
+}
+.c2_material{
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.material{
+	float:left;
+	width:190px;
+	height:260px;
+}
+.material img{
+	margin-left: 30px;
+	width:170px;
+	height:200px;
+}
+.p2_img img{
+	width:103px;
+	height:50px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	/*margin-top: 10px;*/
+}
+.p2_name a{
+	margin-left: 15px;
+}
+.price strong{
+	color:#E4393C;
+
+}
+.null{
+	width:180px;
+	height:20px;
+	border-bottom:1px solid #ddd;
+	margin-bottom:20px;
+}
+.p2_name a:hover{
+	color: #E4393C;
+}
+.submit{
+	background:;
+	border:1px solid #999; 
+	font-size:14px;
+	width:201px;
+	height:30px;
+	margin-top:5px;
+	border-radius:5px;
+	cursor: pointer;
+	color:#666;
+}
+.submit2{
+	background:;
+	border:1px solid #999; 
+	font-size:14px;
+	width:98px;
+	height:30px;
+	margin-top:5px;
+	border-radius:5px;
+	cursor: pointer;
+	color:#666;
+}
+
+/*collect收藏店铺页面css结束*/

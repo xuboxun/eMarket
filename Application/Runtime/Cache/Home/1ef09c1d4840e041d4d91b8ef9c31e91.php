@@ -9,9 +9,9 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -26,12 +26,12 @@ descriptioin : 个人页面的头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
@@ -43,13 +43,13 @@ descriptioin : 个人页面的头部
 	<!-- 顶部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
 			<div class="letter">
 				<ul>
-					<li><a  href="/e-market/index.php/Home/Person/cart.html">购物车</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/collect.html">收藏夹</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/bought.html">已买宝贝</a></li>		
-					<li><a  href="/e-market/index.php/Home/Person/setting.html">个人设置</a></li>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -83,10 +83,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-
-				 								
-				 								<a href=""><img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
-
+				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
@@ -112,7 +109,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/></a>
+				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -131,8 +128,12 @@ descriptioin : 个人页面的头部
 				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
 				 				</tr>
 				 				
+<<<<<<< Updated upstream
 				 			</tbody>
 -->
+
+				 			</tbody>
+
 				 		    <tr class="count">
 				 					 <td width="100px"><input type="checkbox" name="check_list" onclick="f3();" value=""/></td>
 				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
@@ -142,7 +143,9 @@ descriptioin : 个人页面的头部
 				 					<td><input type="submit" name="" value="去结算" id="submit" onclick="submit();" /></td>
 				 				</tr>
 
+
 				 		
+
 
 				 		</table>
 				 	</div>
@@ -246,11 +249,11 @@ descriptioin : 个人页面的头部
 										t++;
 									  }
                                  });
-					 //windows.location.href="/e-market/index.php/Home/Person/sold_goods"
-					 alert(arr[t]);
+					 //windows.location.href="/eMarket/index.php/Home/Person/sold_goods"
+					 alert(arr);
 					  $.ajax({
 						    asnyc:false,
-							url:"/e-market/index.php/Home/Person/sold_goods",
+							url:"/eMarket/index.php/Home/Person/sold_goods",
 							type:"post",
 							traditional :true,
 						    data:{'con':arr}, 
