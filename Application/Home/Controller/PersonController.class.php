@@ -28,6 +28,7 @@ class PersonController extends Controller {
         $this->display();
      }
      public function add_cart(){
+
         $uid=1;
         $gid=1;
         $p=A("Commen");
@@ -48,5 +49,6 @@ class PersonController extends Controller {
         }else{
             echo "failure";
         }
+
      }
 }

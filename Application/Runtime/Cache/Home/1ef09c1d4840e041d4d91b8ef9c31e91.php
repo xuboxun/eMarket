@@ -83,11 +83,10 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-<<<<<<< HEAD
-				 								<a href=""><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
-=======
-				 								<img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/>
->>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
+
+				 								
+				 								<a href=""><img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
+
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
@@ -112,11 +111,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-<<<<<<< HEAD
-				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
-=======
-				 								<img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/>
->>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
+				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
@@ -147,7 +142,7 @@ descriptioin : 个人页面的头部
 				 				</tr>
 =======
 				 		-->
->>>>>>> 9ef89d90fbf733b530e5483ac7bab21d94753846
+
 				 		</table>
 				 	</div>
 				</div>
@@ -202,7 +197,7 @@ descriptioin : 个人页面的头部
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有尾部
 -->
 
 <!-- 尾部 start -->

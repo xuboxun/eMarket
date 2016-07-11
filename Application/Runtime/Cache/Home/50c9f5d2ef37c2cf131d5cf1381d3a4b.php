@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" href="/e-market/Public/css/login.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
 	</head>
 	<body>
 		<!-- 引入头部 -->
@@ -12,19 +12,18 @@
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
@@ -38,7 +37,7 @@ descriptioin : 公有css
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/eMarket/Public/image/system/logo.png">
+				<img src="/e-market/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form action="" mathod="post" > 
@@ -56,7 +55,7 @@ descriptioin : 公有css
 							var search = $.trim($("#searchValue").val());
 							if(search != null && search != ""){
 								// 向服务器传数据
-								$.post('/eMarket/index.php/Home/Index/search',{
+								$.post('/e-market/index.php/Home/Index/search',{
 									search:search
 								},function(ans){
 									$(".search-ul li").html(ans);
@@ -125,8 +124,8 @@ descriptioin : 公有css
 			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" id="password" />
 			 </div>            
              <div class="link">
-			 	<a class="forgetpsw" href="/eMarket/index.php/Home/Login/findpwd">忘记密码</a>
-			 	<a class="sign" href="/eMarket/index.php/Home/Login/register">注册</a>
+			 	<a class="forgetpsw" href="/e-market/index.php/Home/Login/findpwd">忘记密码</a>
+			 	<a class="sign" href="/e-market/index.php/Home/Login/register">注册</a>
 			 </div>
              <div> 
              	<input class="submit" type="button" value="登录" onclick="f1();"/>
@@ -158,7 +157,7 @@ descriptioin : 公有css
 				     if(password){
 					     $.ajax({
 						    asnyc:false,
-							url:"/eMarket/index.php/Home/Login/do_login",
+							url:"/e-market/index.php/Home/Login/do_login",
 							type:"post",
 						    data:"username="+username+"&password="+password,
                             success:function(res){
@@ -187,7 +186,7 @@ descriptioin : 公有css
 author : huangyifan
 version : 1.0
 date : 2016.7.8
-descriptioin : 公有css
+descriptioin : 公有尾部
 -->
 
 <!-- 尾部 start -->

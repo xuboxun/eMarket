@@ -49,9 +49,15 @@ class CommenController extends Controller {
         $m=M($table);
         $str=$m->where($where)->find();
         if($str){
+<<<<<<< Updated upstream
            return "success";
         }else{
            return "failure";
+=======
+            echo "success";
+        }else{
+            echo "failure";
+>>>>>>> Stashed changes
         }
      }
 }

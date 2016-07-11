@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class GoodsController extends Controller {
+<<<<<<< Updated upstream
     public function classa(){
         $this->show();
     }
@@ -14,6 +15,11 @@ class GoodsController extends Controller {
     public function index(){
      
     }
+=======
+    public function index(){
+     
+     }
+>>>>>>> Stashed changes
      //添加商品
      public function create_goods(){
      	     $data['sid']=1;
