@@ -3,9 +3,14 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
+<<<<<<< Updated upstream
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
 		
+=======
+		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+>>>>>>> Stashed changes
 		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 	</head>
 	<body>

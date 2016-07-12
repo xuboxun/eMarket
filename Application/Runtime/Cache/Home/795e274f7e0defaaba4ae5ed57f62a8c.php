@@ -145,39 +145,39 @@ descriptioin : 公有头部
 				<!-- 图片展示区域 -->
 				<div class="goods-detail-imgarea">
 					<div class="goods-detail-imgarea-bigimg">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
 					</div>
 					<div class="goods-detail-imgarea-thumbnail">
 						<span><</span>
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
 						<span>></span>
 					</div>
 				</div>
 				<!-- 购买区域，价格，选择数量 -->
 				<div class="goods-detail-buyarea">
-					<div class="goods-detail-title"><?php echo ($goods['g_name']); ?></div>
-					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥<?php echo ($goods['price']); ?> </i></h2></div>
-					<div class="goods-detail-restnum">库存数量：<?php echo ($goods['count']); ?>件</div>
+					<div class="goods-detail-title"><?php echo ($goods["g_name"]); ?></div>
+					<div class="goods-detail-price"><h2>好 食 光 价：<i id="price">￥<?php echo ($goods["price"]); ?> </i></h2></div>
+					<div class="goods-detail-restnum">库存数量：<?php echo ($goods["count"]); ?>件</div>
 					<div class="goods-detail-buynum"><font>购买量</font> <button id="minus">-</button><input type="text" name="buynum" id="buynum" value="1"><button id="add">+</button></div>
 					<div class="goods-detail-operate">
-						<span>收藏</span>
-						<span>加入购物车</span>
-						<span>立即购买</span>
+						<span id="collect">收藏</span>
+						<span id="addcart">加入购物车</span>
+						<span id="buynow">立即购买</span>
 					</div>
 				</div>
 				<!-- 商家信息 -->
 				<div class="shop-information">
 					<h2>店铺信息</h2>
-					<img src="/eMarket/Public/image/shop/<?php echo ($shop['s_img']); ?>">
-					<h3>店名：<?php echo ($shop['sname']); ?></h3>
-					<h3>掌柜：<?php echo ($business['username']); ?></h3>
-					<h3>联系：<?php echo ($business['tel']); ?></h3>
+					<img src="/eMarket/Public/image/shop/<?php echo ($shop["s_img"]); ?>">
+					<h3>店名：<?php echo ($shop["sname"]); ?></h3>
+					<h3>掌柜：<?php echo ($business["username"]); ?></h3>
+					<h3>联系：<?php echo ($business["tel"]); ?></h3>
 					<hr>
-					<div class="eva-kind"><font>好评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
-					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
+					<div class="eva-kind"><font>好评</font><i><?php echo ($goods["g_evaluate"]); ?></i></div>
+					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i><?php echo ($goods["g_evaluate"]); ?></i></div>
 					<span><a href="">进入店铺</a></span>
 					<span><a href="">收藏店铺</a></span>
 				</div>
@@ -206,54 +206,90 @@ descriptioin : 公有头部
 				</div>
 				<!-- 推荐内容 -->
 				<div class="other-goods-content">
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
+					<?php if(is_array($other)): $i = 0; $__LIST__ = $other;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$other): $mod = ($i % 2 );++$i;?><div class="good-area-content-col goods-block">
+							<a href="/eMarket/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><div class="goods-block-img"><img src="/eMarket/Public/image/goods/<?php echo ($other["g_img"]); ?>" title="<?php echo ($other["g_name"]); ?>"></div></a>
+							<div class="goods-block-description">
+								<div class="goods-title"><a href="/eMarket/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><?php echo ($other["g_name"]); ?></a></div>
+								<div class="goods-price"><?php echo ($other["price"]); ?></div>
+							</div>
+						</div><?php endforeach; endif; else: echo "" ;endif; ?>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- 中心区 end -->
-
+	<!-- 模态框 -->
+	<script>
+	jQuery(document).ready(function($){
+		$('#buynow').click(function(){
+			$(".model-form-price-span1").html($(".goods-detail-title").html()+" x"+$("#buynum").val());
+			$(".model-form-price-span2").html("￥"+<?php echo ($goods['price']); ?>*$("#buynum").val());
+			$("#final-price").html("￥"+<?php echo ($goods['price']); ?>*$("#buynum").val());
+		    $('.model-mask').fadeIn(100);
+		    $('.model').slideDown(200);
+		})
+		$('.model-head .close').click(function(){
+		    $('.model-mask').fadeOut(100);
+		    $('.model').slideUp(200);
+		})
+	})
+	</script>
+	<div class="model">
+	     <div class="model-head">
+	          <a href="javascript:;" title="关闭" class="close">×</a>
+	          <label for="image_file" class="choose-img"></a>购买商品</label>     
+	     </div>
+	     <div class="model-form-div">
+			<div class="model-form">
+                <form>
+                	<div>
+                		<h2 class="model-form-h2">确认收货地址</h2>
+                		<div class="model-form-address"><input type="radio" name value="address"><?php echo ($user["address"]); ?></div>
+                	</div>
+                	<div>
+                		<h2 class="model-form-h2">确认订单信息</h2>
+                		<div>
+                			<div class="model-form-img">
+                				<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
+                			</div>
+                			<div class="model-form-price">
+                				<span class="model-form-price-span1"></span>
+                				<span class="model-form-price-span2"></span>
+                			</div>
+                		</div>
+                	</div>
+                	<div class="final">
+                		<span>实付款： <i id="final-price"></i> </span>
+                		<span>寄送至： <?php echo ($user["address"]); ?> </span>
+                		<span>收货人： <?php echo ($user["username"]); ?> <?php echo ($user["tel"]); ?> </span>
+                		<input id="order-submit" type="button" name="submit" value="提交订单">
+                	</div>
+                	<script>
+                		$("#order-submit").click(function(){
+                			if($('input:radio:checked').val() == null){
+                				alert("请确认收货地址")
+                			}else{
+                				$.post('/eMarket/index.php/Home/Goods/buy',{
+                					uid : <?php echo ($user["uid"]); ?>,
+                					gid : <?php echo ($goods['gid']); ?>,
+                					number : $("#buynum").val()
+                				},function(res){
+                					if(res != 0){
+                						window.location.href = "/eMarket/index.php/Home/Person/bought";
+                					}else{
+                						alert("服务器开小差了，订单未成功，请稍后再试");
+                					}
+                				})
+                			}
+                		})
+                	</script>
+                </form>
+            </div>
+	     </div>
+	</div>
+	<div class="model-mask"></div>
+	<!-- 模态框 -->
 	<!-- 引入尾部 -->
 	<!-- 
 author : huangyifan

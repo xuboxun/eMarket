@@ -25,14 +25,24 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
+<<<<<<< Updated upstream
 				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
 				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+=======
+				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+>>>>>>> Stashed changes
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+<<<<<<< Updated upstream
 					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
 					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+=======
+					<li><a href="">购物车</a></li>
+					<li><a href="">收藏夹</a></li>
+>>>>>>> Stashed changes
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -98,7 +108,11 @@ descriptioin : 公有头部
  -->
                             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
 				 				<div class="c_goods">
+<<<<<<< Updated upstream
 				 					<div class="p1_img">
+=======
+				 					<div class="p_img">
+>>>>>>> Stashed changes
 				 						<a href=""><img src="/eMarket/Public/image/goods/<?php echo ($vo["img"]); ?>"/></a>
 				 					</div>
 				 					<div class="p_name">

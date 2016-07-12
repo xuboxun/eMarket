@@ -3,15 +3,23 @@ namespace Home\Controller;
 use Think\Controller;
 class GoodsController extends Controller {
 
+    public function _initialize(){
+        $header=A('Public'); 
+        $header->header();
+    }
+
     public function index(){
      
     }
 
     public function classa(){
-
+      
         $this->show();
     }
     public function classb(){
+         $header=A('Public'); 
+        $header->header();
+
         $kind = $_GET['key'];
         $db1 = M('goods');
         $db2 = M('shop');
@@ -27,19 +35,33 @@ class GoodsController extends Controller {
     }
     public function detail(){
         $gid = $_GET['gid'];
+
         $db1 = M('goods');
         $db2 = M('shop');
         $db3 = M('business');
-        $data['gid'] = $gid;
+        $db4 = M('user');
         // 查找商品
+        $data['gid'] = $gid;
         $goods = $db1 -> where($data) -> find();
         $this->assign("goods",$goods);
         // 查找店铺
-        $shop = $db2 -> where('sid='.$goods['sid']) -> find();
+        $data2['sid'] = $goods['sid'];
+        $shop = $db2 -> where($data2) -> find();
          $this->assign("shop",$shop);
         // 查找店主
         $business = $db3 -> where('bid='.$shop['bid']) -> find();
         $this->assign("business",$business);
+
+        // 推荐
+        $kind = $goods['g_name'];
+        $data4['g_name'] = array('like',"%$kind%");
+        $other = $db1 -> where($data4) -> limit(6) -> select();
+        $this->assign('other',$other);
+
+        $user['username'] = $_SESSION['username'];
+        $user = $db4 -> where($user) -> find();
+        $this->assign('user',$user);
+
         $this->show();
     }
 
@@ -66,6 +88,15 @@ class GoodsController extends Controller {
            }else{
                   echo "failure";
            }
+     }
+
+     public function buy(){
+        $data['uid'] = $_POST['uid'];
+        $data['gid'] = $_POST['gid'];
+        $data['number'] = $_POST['number'];
+        $db = M('goodsorder');
+        $res = $db->add($data);
+        $this->ajaxReturn($res);
      }
      
 }
