@@ -30,15 +30,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-<<<<<<< Updated upstream
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
 					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
-=======
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
->>>>>>> Stashed changes
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>

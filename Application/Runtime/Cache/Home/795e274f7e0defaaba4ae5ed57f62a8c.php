@@ -163,8 +163,8 @@ descriptioin : 公有头部
 					<div class="goods-detail-restnum">库存数量：<?php echo ($goods["count"]); ?>件</div>
 					<div class="goods-detail-buynum"><font>购买量</font> <button id="minus">-</button><input type="text" name="buynum" id="buynum" value="1"><button id="add">+</button></div>
 					<div class="goods-detail-operate">
-						<span id="collect">收藏</span>
-						<span id="addcart">加入购物车</span>
+						<span id="collect" onclick="collect(<?php echo ($goods["gid"]); ?>);">收藏</span>
+						<span id="addcart" onclick="cart(<?php echo ($goods["gid"]); ?>)">加入购物车</span>
 						<span id="buynow">立即购买</span>
 					</div>
 				</div>
@@ -283,6 +283,21 @@ descriptioin : 公有头部
                 				})
                 			}
                 		})
+						function collect(gid){
+						   $.post("/e-market/index.php/Home/person/add_collect",{
+						      id:gid,
+						   },function(res){
+						      alert(res);
+						   });
+						}
+						function cart(gid){
+						  $.post("/e-market/index.php/Home/person/add_cart",{
+						      id:gid,
+						   },function(res){
+						      alert(res);
+						   });
+						}
+					
                 	</script>
                 </form>
             </div>

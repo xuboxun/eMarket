@@ -62,19 +62,18 @@ class PersonController extends Controller {
      }
       public function collect2(){
         $uid=$_SESSION['uid'];
-        // $sql="Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
-        //       goods.gid as gid
-        //       from user JOIN shop JOIN collect_shop JOIN goods
-        //       where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid AND goods.sid=shop.sid";
-        $sql="select * from goods,
-             (Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
-              from user JOIN shop JOIN collect_shop
-              where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid) as newtable
-          where  goods.sid=newtable.sid";
+        $sql="Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
+              from user JOIN shop JOIN collect_shop 
+              where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid";
+        // $sql="select * from goods,
+        //      (Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
+        //       from user JOIN shop JOIN collect_shop
+        //       where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid) as newtable
+        //   where  goods.sid=newtable.sid";
         //var_dump($sql);exit;
          $Model = new \Think\Model();// 实例化一个model对象 没有对应任何数据表
          $arr= $Model->query($sql);
-         var_dump($arr);
+         //var_dump($arr);
          $this->assign("list",$arr);
         
         $this->display();
@@ -100,7 +99,7 @@ class PersonController extends Controller {
         $uid=$_SESSION['uid'];
         $gid=I("post.id");
         $this->delete_collect($uid,$gid);
-        $this->add_cart($uid,$gid);
+        $this->add_cart_do($uid,$gid);
      }
      //在收藏夹取消关注
      public function collect_delete(){
@@ -113,7 +112,7 @@ class PersonController extends Controller {
         }
      }
      //添加购物车
-     public function add_cart($uid,$gid){
+     public function add_cart_do($uid,$gid){
         $p=A("Commen");
         if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
             $data['uid']=$uid;
@@ -184,6 +183,35 @@ class PersonController extends Controller {
         }else{
             return 0;
         }
+     }
+     //添加收藏
+     public function add_collect(){
+         $uid=$_SESSION['uid'];
+         $gid=I("post.id");
+         $p=A("Commen");
+        if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
+            $data['uid']=$uid;
+            $data['gid']=$gid;
+            $m=M("collect_goods");
+            $str=$m->where($data)->find();
+            if($str){
+                echo "success";
+            }else{
+                if($m->add($data)){
+                    echo "success";
+                }else{
+                    echo "failure";
+                }
+            }
+        }else{
+            echo "failure";
+        }
+     }
+     //添加到购物车
+     public function add_cart(){
+        $uid=$_SESSION['uid'];
+        $gid=I("post.id");
+        $this->add_cart_do($uid,$gid);
      }
      //交易购买
      public function sold_goods(){
