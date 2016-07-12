@@ -58,44 +58,17 @@ description : 个人中的购物车页面
 				 						</div>
 				 					</td>
 				 					<td width="170px" id="pricenum{$i}">{$vo.price}</td>
-				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
+				 					<td width="170px"><span><a href="javascript:delete_cart({$vo.gid});">删除</a><br></span></td>
 				 				</tr>
 				 			</tbody>
 							</volist>
-				 		<!--	<tbody>
-				 				<tr class="cart_three">
-				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
-				 					<td width="460px">
-				 						<div class="goods-item">
-				 							<div class="cafa">
-				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="__PUBLIC__/image/goods/fruit.jpg"/></a>
-				 							</div>
-				 							<div class="link">
-				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
-				 							</div>
-				 						</div>
-				 					</td>
-				 					<td width="170px"><span>70</span></td>
-				 					<td width="170px">
-				 						<div class="sum">
-				 							<a class="decrement" href="">-&nbsp;</a>
-				 							<input type="text" value="1"/>
-				 							<a class="increment" href="">&nbsp;+</a>
-				 						</div>
-				 					</td>
-				 					<td width="170px"><span>70</span></td>
-				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
-				 				</tr>
-				 				
-<<<<<<< Updated upstream
-				 			</tbody>
--->
+				 		
 
 				 			</tbody>
 
 				 		    <tr class="count">
 				 					 <td width="100px"><input type="checkbox" name="check_list" onclick="f3();" value=""/></td>
-				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
+				 					<td width="100px"><a href="javascript:delete_cart_all();">删除选中的物品</a></td>
 				 					<td colspan="1"></td>
 				 					<td id="numprice">已选择<strong>0</strong>件商品</td>
 				 					<td id="sumprice">总价<strong>￥0</strong></td>
@@ -114,6 +87,7 @@ description : 个人中的购物车页面
 			<script type="text/javascript">
 			       function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 				   $(document).ready(function(){ 
+				            $("#cart").css("background-color","#E43D00");
 　　                        $("#submit").attr("disabled","true");
 　                　}); 
 				   var k=0;var sum=0;
@@ -218,6 +192,40 @@ description : 个人中的购物车页面
                             success:function(res){
 							        if(res=="success"){
                                         window.location.href="__URL__/bought";									
+ 									}
+							    },
+						 });
+				   }
+				   function delete_cart(gid){
+				      $.post("__URL__/delete_cart_one",{
+					       id:gid,
+					  },function(res){
+					       alert(res);
+						   window.location.href="__URL__/cart";
+					  })
+				   }
+				   function delete_cart_all(){
+				       var str= "";
+					   var arr="";
+					   var t=0;
+				       $("input[name='check_list']:checked").each(function(){
+							          str=$(this).val();  
+							          if(str){
+										gid=Number($("#gid"+str).val());
+										arr+=t+"="+gid+"&";
+										t++;
+									  }
+                                 });
+								 arr+="num="+t;
+				   	    $.ajax({
+						    asnyc:false,
+							url:"__URL__/delete_cart_all",
+							type:"post",
+						    data:arr,
+                            success:function(res){
+							        alert(res);
+							        if(res=="success"){
+                                        window.location.href="__URL__/cart";									
  									}
 							    },
 						 });

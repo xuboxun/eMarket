@@ -23,7 +23,7 @@ description : 个人中的收藏店铺页面
 				<div class="left">
 					<ul>
 						<li><a href="__URL__/collect">收藏的商品</a></li>
-						<li><a href="__URL__/collect2">收藏的店铺</a></li>
+						<li><a href="__URL__/collect2" id="collect_shop">收藏的店铺</a></li>
 					</ul>
 				</div>
 				<!--订单内容-->
@@ -174,6 +174,31 @@ description : 个人中的收藏店铺页面
 					</div>
 				</div>
 			</div>
+			<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			    $(document).ready(function(){ 
+				            $("#collect").css("background-color","#E43D00");
+						    $("#collect_shop").css("color","#FF4400");
+　                　}); 
+                
+               function f1(gid){
+			       //alert(gid);
+				   $.post("__URL__/add_delete_collect",{
+				       id:gid
+				   },function(res){
+				       alert(res);
+					   window.location.href="__URL__/collect";
+				   });
+			   }
+			   function f2(gid){
+			      $.post("__URL__/collect_delete",{
+				       id:gid
+				   },function(res){
+				       alert(res);
+					   window.location.href="__URL__/collect";
+				   });
+			   }
+			</script>
 		<!-- 引入尾部 -->
 <include file="./Application/Home/View/Public/footer.html" />
 </body>

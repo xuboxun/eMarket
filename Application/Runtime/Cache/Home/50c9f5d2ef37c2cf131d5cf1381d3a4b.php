@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+		<link rel="stylesheet" href="/e-market/Public/css/login.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- 引入头部 -->
@@ -24,9 +24,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -38,7 +38,7 @@ descriptioin : 公有头部
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/eMarket/Public/image/system/logo.png">
+				<img src="/e-market/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form> 
@@ -53,7 +53,7 @@ descriptioin : 公有头部
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
 							if($.trim($("#searchValue").val()) != ""){
-								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 								return false;
 							}else{
 								return false;
@@ -68,7 +68,7 @@ descriptioin : 公有头部
 							if(oldsearch != search) {
 								if(search != null && search != ""){
 									// 向服务器传数据
-									$.post('/eMarket/index.php/Home/Index/search',{
+									$.post('/e-market/index.php/Home/Index/search',{
 										search:search
 									},function(ans){
 										if(ans.length != 0) {
@@ -77,7 +77,7 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="
 													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
@@ -147,8 +147,8 @@ descriptioin : 公有头部
 			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" id="password" />
 			 </div>            
              <div class="link">
-			 	<a class="forgetpsw" href="/eMarket/index.php/Home/Login/findpwd">忘记密码</a>
-			 	<a class="sign" href="/eMarket/index.php/Home/Login/register">注册</a>
+			 	<a class="forgetpsw" href="/e-market/index.php/Home/Login/findpwd">忘记密码</a>
+			 	<a class="sign" href="/e-market/index.php/Home/Login/register">注册</a>
 			 </div>
              <div> 
              	<input class="submit" type="button" value="登录" onclick="f1();"/>
@@ -180,7 +180,7 @@ descriptioin : 公有头部
 				     if(password){
 					     $.ajax({
 						    asnyc:false,
-							url:"/eMarket/index.php/Home/Login/do_login",
+							url:"/e-market/index.php/Home/Login/do_login",
 							type:"post",
 						    data:"username="+username+"&password="+password,
                             success:function(res){
@@ -188,7 +188,7 @@ descriptioin : 公有头部
 									       $("#ts").html("账户或密码错误");
 									  }else{
 									       // alert("hello");
-									    	window.location.href = "/eMarket/index.php/Home/Index/index";
+									    	window.location.href = "/e-market/index.php/Home/Index/index";
 									  }
 							    },
 						 });

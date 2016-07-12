@@ -2,14 +2,15 @@
 namespace Home\Controller;
 use Think\Controller;
 class PersonController extends Controller {
-    //判断是否已登录
-    public function is_login(){
-        if($_SESSION['username']){
-            return 1;
+     //判断是否已登录
+    public function _initialize(){
+         if($_SESSION['username']){
+            
         }else{
-            return 0;
+           $this->redirect("Login/login");
         }
     }
+    
     public function bought(){
        $uid=1;
  //        Select 
@@ -33,11 +34,9 @@ class PersonController extends Controller {
         $this->display();
      }
      public function cart(){
-        if($this->is_login()==1){
+       
            $uid=$_SESSION['uid'];
-        }else{
-            $this->redirect("Login/login");
-        }
+      
         
         $m=M("cart");
         $where["uid"]=$uid;
@@ -78,7 +77,7 @@ class PersonController extends Controller {
         //var_dump($sql);exit;
          $Model = new \Think\Model();// 实例化一个model对象 没有对应任何数据表
          $arr= $Model->query($sql);
-         //var_dump($arr);
+         var_dump($arr);
          $this->assign("list",$arr);
         
         $this->display();
@@ -86,9 +85,25 @@ class PersonController extends Controller {
      public function setting(){
         $this->display();
      }
-     public function add_cart(){
-        $uid=1;
-        $gid=1;
+     //在收藏夹添加购物车
+     public function add_delete_collect(){
+        $uid=$_SESSION['uid'];
+        $gid=I("post.id");
+        $this->delete_collect($uid,$gid);
+        $this->add_cart($uid,$gid);
+     }
+     //在收藏夹取消关注
+     public function collect_delete(){
+        $uid=$_SESSION['uid'];
+        $gid=I("post.id");
+        if($this->delete_collect($uid,$gid)==1){
+            echo "success";
+        }else{
+            echo "failure";
+        }
+     }
+     //添加购物车
+     public function add_cart($uid,$gid){
         $p=A("Commen");
         if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
             $data['uid']=$uid;
@@ -96,7 +111,7 @@ class PersonController extends Controller {
             $m=M("cart");
             $str=$m->where($data)->find();
             if($str){
-                echo "failure";
+                echo "success";
             }else{
                 if($m->add($data)){
                        echo "success";
@@ -108,6 +123,59 @@ class PersonController extends Controller {
             echo "failure";
         }
      }
+     //购物车删除单件商品
+     public function delete_cart_all(){
+        $uid=$_SESSION['uid'];
+        $arr=I('post.');
+        $num=I("post.num");
+        for($i=0;$i<$num;$i++){
+            $gid=$arr[$i];
+            $this->delete_cart_do($uid,$gid);
+        }
+        echo "success";
+        // if($this->delete_cart_do($uid,$gid)==1){
+        //     echo "success";
+        // }else{
+        //     echo "failure";
+        // }
+     }
+     //购物车删除多件商品
+      public function delete_cart_one(){
+        $uid=$_SESSION['uid'];
+        $gid=I("post.id");
+        if($this->delete_cart_do($uid,$gid)==1){
+            echo "success";
+        }else{
+            echo "failure";
+        }
+     }
+     //从购物车删除
+     public function delete_cart_do($uid,$gid){
+        $p=A("Commen");
+        if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
+            $data['uid']=$uid;
+            $data['gid']=$gid;
+            $m=M("cart");
+            $str=$m->where($data)->delete();
+            return 1;
+        }else{
+            return 0;
+        }
+     }
+     //取消关注
+       public function delete_collect($uid,$gid){
+        $p=A("Commen");
+        if($p->check("uid","user",$uid)=="success" && $p->check("gid","goods",$gid)=="success"){
+            $data['uid']=$uid;
+            $data['gid']=$gid;
+            $m=M("collect_goods");
+            $str=$m->where($data)->delete();
+            return 1;
+        }else{
+            return 0;
+        }
+     }
+     //交易购买
      public function sold_goods(){
         $uid=1;
         $arr=I("post.");

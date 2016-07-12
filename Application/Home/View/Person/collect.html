@@ -22,7 +22,7 @@ description : 个人中的收藏商品页面
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="__URL__/collect">收藏的商品</a></li>
+						<li><a href="__URL__/collect" id="collect_goods">收藏的商品</a></li>
 						<li><a href="__URL__/collect2">收藏的店铺</a></li>
 					</ul>
 				</div>
@@ -61,7 +61,7 @@ description : 个人中的收藏商品页面
 				 						<a href=""><img src="__PUBLIC__/image/goods/{$vo.img}"/></a>
 				 					</div>
 				 					<div class="p_name">
-				 						<input type="checkbox" value="" name="">
+				 						
 				 						<a href="" title="西西卖诺 水果蛋糕 ">{$vo.name}</a>
 				 					</div>
 									<div class="price">
@@ -71,8 +71,8 @@ description : 个人中的收藏商品页面
 										<span><a href="">{$vo.number}人评价</a><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好评度{$vo.evaluate}%</b></span>
 									</div>
 						            <div>
-						            	<a class="btn" href="">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="">取消关注</a>
+						            	<a class="btn" href="javascript:f1({$vo.gid});">加入购物车</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						            	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn" href="javascript:f2({$vo.gid});">取消关注</a>
 						            </div>
 				 				</div>
 				 			</li>
@@ -84,6 +84,32 @@ description : 个人中的收藏商品页面
 			</div>
 		</div>
 	</div>
+	 <script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			    $(document).ready(function(){ 
+				            $("#collect").css("background-color","#E43D00");
+						    $("#collect_goods").css("color","#FF4400");
+　                　}); 
+                
+               function f1(gid){
+			       //alert(gid);
+				   $.post("__URL__/add_delete_collect",{
+				       id:gid
+				   },function(res){
+				       alert(res);
+					   window.location.href="__URL__/collect";
+				   });
+			   }
+			   function f2(gid){
+			      $.post("__URL__/collect_delete",{
+				       id:gid
+				   },function(res){
+				       alert(res);
+					   window.location.href="__URL__/collect";
+				   });
+			   }
+			</script>
+
 		<!-- 引入尾部 -->
 <include file="./Application/Home/View/Public/footer.html" />
 </body>

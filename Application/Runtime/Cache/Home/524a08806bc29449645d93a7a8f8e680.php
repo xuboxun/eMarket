@@ -140,11 +140,11 @@ descriptioin : 公有头部
 	 				<p style="color:#999;font-size:14px;display:none;" id="username1">!!支持中文、字母、数字的组，4-20个字符</p>
 	 			</div>
 	 			<div class="txt"style="height:100px;">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="password" value="设置密码" onclick="f1('password1','!!建议使用字母、数字和符号两种及以上的组合，6-20个字符')" onblur="f2('password1')"/>
+	 				<input class="input_test shuru" type="password" style="color:#777" id="password" value="设置密码" onclick="f1('password1','!!建议使用字母、数字和符号两种及以上的组合，6-20个字符')" onblur="f2('password1')"/>
 	 				<p style="color:#999;font-size:14px;display:none;" id="password1">!!建议使用字母、数字和符号两种及以上的组合，6-20个字符</p>
 	 			</div>
 	 			<div class="txt">
-	 				<input class="input_test shuru" type="text" style="color:#777" id="repassword" value="确认密码" onclick="f1('repassword1','!!请再次输入密码')" onblur="fre('repassword1')"/>
+	 				<input class="input_test shuru" type="password" style="color:#777" id="repassword" value="确认密码" onclick="f1('repassword1','!!请再次输入密码')" onblur="fre('repassword1')"/>
 	 				<p style="color:#999;font-size:14px;display:none;" id="repassword1">!!请再次输入密码</p>
 	 			</div>
 	 			<div class="txt">
@@ -205,7 +205,7 @@ descriptioin : 公有头部
 			function check_empty(id,con){
 			      var tr=trimStr(document.getElementById(id).value);
 				  if(tr==con||tr==''){
-				     $("#"+id+"1").html(con+"不能为空");
+				     $("#"+id+"1").html("<td style='color:red;'>"+con+"不能为空"+"</td>");
 					 document.getElementById(id+"1").style.display="block";
 				  }else{
 				     k++;
@@ -240,7 +240,7 @@ descriptioin : 公有头部
 				 if(pwd==repwd){
 				     
 				 }else{
-				     $("#repassword1").html("密码不一致");
+				     $("#repassword1").html("<td style='color:red;'>密码不一致</td>");
 					 document.getElementById("repassword1").style.display="block";
 					 k--;
 				 }
@@ -252,9 +252,9 @@ descriptioin : 公有头部
 			}
 			function check_email(){
 			     var tr=trimStr(document.getElementById('email').value);
-				alert(tr);
+				//alert(tr);
 			    if(tr=="邮箱账号"||tr==''){
-				    $("#email1").html("邮箱不能为空");
+				    $("#email1").html("<td style='color:red;'>邮箱不能为空</td>");
 					 document.getElementById("email1").style.display="block";
 					return 0;
 				}else{
@@ -282,11 +282,12 @@ descriptioin : 公有头部
 							    
 							}else{
 							     	var tr=trimStr(document.getElementById('email').value);
-					                $.post('/e-market/index.php/Home/Login/sendyzm',{
+					               $.post('/e-market/index.php/Home/Login/sendyzm',{
 					                         con:tr
 					                },function(res){
 						                     alert(res);
 					                });
+									
 				                    document.getElementById(id).disabled=true;
 				                    var i=30;
 				                    var time=setInterval(function(){
@@ -303,20 +304,22 @@ descriptioin : 公有头部
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
-				$.post('/e-market/index.php/Home/Login/getyzm',{
-				      
-				},function(res){
-				    if(res==1){
+				                    $.ajax({
+						                  asnyc:false,
+							              url:"/e-market/index.php/Home/Login/getyzm",
+							              type:"post",
+                                          success:function(res){
+							                       if(res==1){
 					    
-					}else{
-					   if(res==tr){
-					     // k++;
-					   }else{
-					      alert("邮箱验证码错误");return;
-					   }
-				    }
-				});
-				k++;
+					                                }else{
+					                                     if(res==tr){
+					                                            k++;
+					                                     }else{
+					                                            alert("邮箱验证码错误");return;
+					                                     }
+				                                    }
+							              },
+						             });
 			}
 			function register(){
 			    k=0;
@@ -325,7 +328,7 @@ descriptioin : 公有头部
 				check_email();
 				check_yzm();
 				check_tel();
-				//alert(k);
+				alert(k);
 			    if(k==6){
 				     var username=trimStr(document.getElementById('username').value);
 					 var password=trimStr(document.getElementById('password').value);
@@ -337,7 +340,12 @@ descriptioin : 公有头部
 						 email:email,
 						 tel:tel
 					 },function(res){
-					    alert(res);
+					   alert(res);
+					   if(res=="注册成功"){
+					      window.location.href="Index/index";		
+					   }else{
+					      window.location.href="/e-market/index.php/Home/Login/register";		
+					   }   
 					 });
 				}
 			}

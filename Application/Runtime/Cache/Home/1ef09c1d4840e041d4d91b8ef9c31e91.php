@@ -44,12 +44,12 @@ descriptioin : 个人页面的头部
 	<!--头部开始-->
 		<div class="header">
 			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
-			<div class="letter">
+			<div class="letter"> 
 				<ul>
-					<li><a  href="/e-market/index.php/Home/Person/cart.html">购物车</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/collect.html">收藏夹</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/bought.html">已买宝贝</a></li>		
-					<li><a  href="/e-market/index.php/Home/Person/setting.html">个人设置</a></li>
+					<li><a  href="/e-market/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
+					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
+					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -100,43 +100,16 @@ descriptioin : 个人页面的头部
 				 						</div>
 				 					</td>
 				 					<td width="170px" id="pricenum<?php echo ($i); ?>"><?php echo ($vo["price"]); ?></td>
-				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的关注</a></span></td>
+				 					<td width="170px"><span><a href="javascript:delete_cart(<?php echo ($vo["gid"]); ?>);">删除</a><br></span></td>
 				 				</tr>
 				 			</tbody><?php endforeach; endif; else: echo "" ;endif; ?>
-				 		<!--	<tbody>
-				 				<tr class="cart_three">
-				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
-				 					<td width="460px">
-				 						<div class="goods-item">
-				 							<div class="cafa">
-				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/e-market/Public/image/goods/fruit.jpg"/></a>
-				 							</div>
-				 							<div class="link">
-				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
-				 							</div>
-				 						</div>
-				 					</td>
-				 					<td width="170px"><span>70</span></td>
-				 					<td width="170px">
-				 						<div class="sum">
-				 							<a class="decrement" href="">-&nbsp;</a>
-				 							<input type="text" value="1"/>
-				 							<a class="increment" href="">&nbsp;+</a>
-				 						</div>
-				 					</td>
-				 					<td width="170px"><span>70</span></td>
-				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
-				 				</tr>
-				 				
-<<<<<<< Updated upstream
-				 			</tbody>
--->
+				 		
 
 				 			</tbody>
 
 				 		    <tr class="count">
 				 					 <td width="100px"><input type="checkbox" name="check_list" onclick="f3();" value=""/></td>
-				 					<td width="100px"><a>删除选中的物品</a>&nbsp;&nbsp;&nbsp;&nbsp;<a>移到我的关注</a></td>
+				 					<td width="100px"><a href="javascript:delete_cart_all();">删除选中的物品</a></td>
 				 					<td colspan="1"></td>
 				 					<td id="numprice">已选择<strong>0</strong>件商品</td>
 				 					<td id="sumprice">总价<strong>￥0</strong></td>
@@ -155,6 +128,7 @@ descriptioin : 个人页面的头部
 			<script type="text/javascript">
 			       function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
 				   $(document).ready(function(){ 
+				            $("#cart").css("background-color","#E43D00");
 　　                        $("#submit").attr("disabled","true");
 　                　}); 
 				   var k=0;var sum=0;
@@ -259,6 +233,40 @@ descriptioin : 个人页面的头部
                             success:function(res){
 							        if(res=="success"){
                                         window.location.href="/e-market/index.php/Home/Person/bought";									
+ 									}
+							    },
+						 });
+				   }
+				   function delete_cart(gid){
+				      $.post("/e-market/index.php/Home/Person/delete_cart_one",{
+					       id:gid,
+					  },function(res){
+					       alert(res);
+						   window.location.href="/e-market/index.php/Home/Person/cart";
+					  })
+				   }
+				   function delete_cart_all(){
+				       var str= "";
+					   var arr="";
+					   var t=0;
+				       $("input[name='check_list']:checked").each(function(){
+							          str=$(this).val();  
+							          if(str){
+										gid=Number($("#gid"+str).val());
+										arr+=t+"="+gid+"&";
+										t++;
+									  }
+                                 });
+								 arr+="num="+t;
+				   	    $.ajax({
+						    asnyc:false,
+							url:"/e-market/index.php/Home/Person/delete_cart_all",
+							type:"post",
+						    data:arr,
+                            success:function(res){
+							        alert(res);
+							        if(res=="success"){
+                                        window.location.href="/e-market/index.php/Home/Person/cart";									
  									}
 							    },
 						 });
