@@ -143,6 +143,7 @@ a.sidenav-ul-li-current-a {
 	margin-left: 2%;
 	float: right;
 	background: #ddd;
+	display: none;
 }
 /*图片区域*/
 .ad-img {

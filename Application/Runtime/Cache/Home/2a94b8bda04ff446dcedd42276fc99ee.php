@@ -150,40 +150,40 @@ descriptioin : 公有头部
 <div class="sidenav">
 	<ul class="sidenav-ul">
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">水果</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=水果" class="sidenav-ul-li-a">水果</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">家常菜</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=家常菜" class="sidenav-ul-li-a">家常菜</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">小吃零食</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=小吃零食" class="sidenav-ul-li-a">小吃零食</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">海鲜水产</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=海鲜水产" class="sidenav-ul-li-a">海鲜水产</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">禽类蛋品</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=禽类蛋品" class="sidenav-ul-li-a">禽类蛋品</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">冷冻食饮</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=冷冻食饮" class="sidenav-ul-li-a">冷冻食饮</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">中外名酒</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=中外名酒" class="sidenav-ul-li-a">中外名酒</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">进口食品</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=进口食品" class="sidenav-ul-li-a">进口食品</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">地方特产</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=地方特产" class="sidenav-ul-li-a">地方特产</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">饮料冲调</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=饮料冲调" class="sidenav-ul-li-a">饮料冲调</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">养生保健</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=养生保健" class="sidenav-ul-li-a">养生保健</a>
 		</li>
 		<li class="sidenav-ul-li">
-			<a href="" class="sidenav-ul-li-a">粮油调味</a>
+			<a href="/eMarket/index.php/Home/Goods/classa?key=粮油调味" class="sidenav-ul-li-a">粮油调味</a>
 		</li>
 	</ul>
 </div>
@@ -192,31 +192,33 @@ descriptioin : 公有头部
 	var node = "";
 	$(".sidenav-ul .sidenav-ul-li").mouseover(function(){
 		$(this).children(".sidenav-ul-li-a").addClass("sidenav-ul-li-current-a");
-		// 发送数据
-		$.ajax({
-	        url: '/eMarket/index.php/Home/Index/side',
-	        async: false, //改为同步方式
-	        type: "POST",
-	        data: {
-				guidea : $(this).children(".sidenav-ul-li-a").html()
-			},
-	        success: function(guide){
-	        			node += '<div class="show-side-area"><div class="side-area-detail">'+
-						        		'<div class="side-area-detail-ul-area">';
-						for(var i = 0;i < guide[0].length;i++){
-							node += '<ul class="side-area-detail-ul">'+
-							'<span><a href="">'+guide[0][i]+' <i>></i></a></span>';
-							for(var j = 0;j < guide[1][i].length;j++){
-								node += '<li class="side-area-detail-ul-li"><a href="">'+guide[1][i][j]+'</a></li>';
+		if($(this).children(".sidenav-ul-li-a").next().length == 0){
+			// 发送数据
+			$.ajax({
+		        url: '/eMarket/index.php/Home/Index/side',
+		        async: false, //改为同步方式
+		        type: "POST",
+		        data: {
+					guidea : $(this).children(".sidenav-ul-li-a").html()
+				},
+		        success: function(guide){
+		        			node += '<div class="show-side-area"><div class="side-area-detail">'+
+							        		'<div class="side-area-detail-ul-area">';
+							for(var i = 0;i < guide[0].length;i++){
+								node += '<ul class="side-area-detail-ul">'+
+								'<span><a href="/eMarket/index.php/Home/Goods/classb?key='+guide[0][i]+'">'+guide[0][i]+'　<i>></i></a></span>';
+								for(var j = 0;j < guide[1][i].length;j++){
+									node += '<li class="side-area-detail-ul-li"><a href="/eMarket/index.php/Home/Goods/classb?key='+guide[1][i][j]+'">'+guide[1][i][j]+'</a></li>';
+								}
+								node += '</ul>';
 							}
-							node += '</ul>';
-						}
-						node += '</div><div class="side-area-detail-ads"></div></div></div>';
-					},
-	        dataType:"json"
-	    });
-		// 创建节点
-		$(this).append(node);
+							node += '</div><div class="side-area-detail-ads"></div></div></div>';
+						},
+		        dataType:"json"
+		    });
+			// 创建节点
+			$(this).append(node);
+		}
 		node = "";
     })
 	// 鼠标移出
@@ -225,6 +227,7 @@ descriptioin : 公有头部
 		$(this).children(".sidenav-ul-li-a").removeClass("sidenav-ul-li-current-a");
 		$(this).children(".show-side-area").remove();
 	})
+
 </script>
 
 				<!-- 宣传图片区 -->
@@ -254,59 +257,6 @@ descriptioin : 公有头部
 			<div class="publicblock block2">
 				<div class="block-title">
 					<h5>猜你喜欢</h5>
-				</div>
-				<div class="block-main">
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<!-- repeat from sql -->
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<!--  -->
-				</div>
-			</div>
-			<!-- 区块3 -->
-			<div class="publicblock block1">
-				<div class="block-title">
-					<h5>促销打折</h5>
 				</div>
 				<div class="block-main">
 					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">

@@ -2,7 +2,7 @@
 author : huangyifan
 version : 1.0
 date : 2016.7.10
-description : 商品详情页面
+description : 一级商品页面
 -->
 <!DOCTYPE html>
 <html>
@@ -138,116 +138,157 @@ descriptioin : 公有头部
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
 	<!-- 导航栏 end
+
 	<!-- 中心区 start -->
 	<div id="main">
-		<div class="container goods-detail-container">
-			<div class="goods-detail-area">
-				<!-- 图片展示区域 -->
-				<div class="goods-detail-imgarea">
-					<div class="goods-detail-imgarea-bigimg">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
+		<div class="main-banner">
+			<img src="/eMarket/Public/image/system/goodbanner.png">
+		</div>
+		<div class="container">
+			<div class="goods-area">
+				<h2>标题一</h2>
+				<div class="good-area-content-first">
+					<div class="good-area-content-big"></div>
+					<div class="good-area-content-row goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
 					</div>
-					<div class="goods-detail-imgarea-thumbnail">
-						<span><</span>
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
-						<span>></span>
+					<div class="good-area-content-row goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
 					</div>
-				</div>
-				<!-- 购买区域，价格，选择数量 -->
-				<div class="goods-detail-buyarea">
-					<div class="goods-detail-title"><?php echo ($goods['g_name']); ?></div>
-					<div class="goods-detail-price"><h2>好 食 光 价：<i>￥<?php echo ($goods['price']); ?> </i></h2></div>
-					<div class="goods-detail-restnum">库存数量：<?php echo ($goods['count']); ?>件</div>
-					<div class="goods-detail-buynum"><font>购买量</font> <button id="minus">-</button><input type="text" name="buynum" id="buynum" value="1"><button id="add">+</button></div>
-					<div class="goods-detail-operate">
-						<span>收藏</span>
-						<span>加入购物车</span>
-						<span>立即购买</span>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
 					</div>
-				</div>
-				<!-- 商家信息 -->
-				<div class="shop-information">
-					<h2>店铺信息</h2>
-					<img src="/eMarket/Public/image/shop/<?php echo ($shop['s_img']); ?>">
-					<h3>店名：<?php echo ($shop['sname']); ?></h3>
-					<h3>掌柜：<?php echo ($business['username']); ?></h3>
-					<h3>联系：<?php echo ($business['tel']); ?></h3>
-					<hr>
-					<div class="eva-kind"><font>好评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
-					<div class="eva-kind" style="border-right:0px;"><font>差评</font><i><?php echo ($goods['g_evaluate']); ?></i></div>
-					<span><a href="">进入店铺</a></span>
-					<span><a href="">收藏店铺</a></span>
-				</div>
-			</div>
-			<div class="about-goods">
-				<div class="about-goods-title">
-					<font>评论</font>
-				</div>
-				<!-- 评论 -->
-				<div class="goods-evaluete">
-					<div class="goods-evaluete-line">
-						<img src="">
-						<div class="goods-evaluete-line-user">黄一凡 2016年12月12日</div>
-						<div class="goods-evaluete-line-word">东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
 					</div>
-					<div class="goods-evaluete-line">
-						<img src="">
-						<div class="goods-evaluete-line-user">黄一凡 2016年12月12日</div>
-						<div class="goods-evaluete-line-word">东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!真的是超级好的卖家，解答疑问不厌其烦，细致认真，关键是东西好，而且货物发得超快，包装仔细，值得信赖!超大一包！东西收到，很满意!!</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="other-goods">
-				<div class="about-goods-title">
-					<font>其他推荐</font>
+			<div class="goods-area">
+				<h2>标题二</h2>
+				<div class="good-area-content">
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
+					<div class="good-area-content-col goods-block">
+						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
+						<div class="goods-block-description">
+							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
+							<div class="goods-price">¥16.90</div>
+							<div class="goods-sold-num">已售<i>4</i>件</div>
+						</div>
+					</div>
 				</div>
-				<!-- 推荐内容 -->
-				<div class="other-goods-content">
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="good-area-content-col goods-block">
-						<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
+			</div>
+			<div class="goods-area">
+				<h2>标题二</h2>
+				<div class="good-area-content">
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
+					<div class="good-area-content-col"></div>
 				</div>
 			</div>
 		</div>
