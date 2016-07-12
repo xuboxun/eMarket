@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2016-07-12T00:00:13+08:00 ] ::1 /eMarket/index.php/Home/Index/index
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
@@ -10629,4 +10630,1644 @@ SQL: SELECT * FROM `system` WHERE `guideb` = '鸡' ORDER BY sysid asc  [ RunTime
 SQL: SELECT * FROM `system` WHERE `guideb` = '鸭' ORDER BY sysid asc  [ RunTime:0.0008s ]
 SQL: SELECT * FROM `system` WHERE `guideb` = '鹅' ORDER BY sysid asc  [ RunTime:0.0008s ]
 SQL: SELECT * FROM `system` WHERE `guideb` = '蛋类' ORDER BY sysid asc  [ RunTime:0.0007s ]
+=======
+[ 2016-07-12T00:06:51+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000425s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008290s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008560s ]
+
+[ 2016-07-12T00:06:52+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001627s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:06:53+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000992s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001274s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001454s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:06:54+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001816s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002053s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:06:54+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001613s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:06:54+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001451s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:06:56+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001459s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:07:01+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000978s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001872s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:07:01+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001938s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001445s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:07:01+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001564s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:07:02+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000908s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002013s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:07:23+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000851s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000255s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000484s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026085s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003764s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003995s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001894s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002158s ]
+
+[ 2016-07-12T00:07:24+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001888s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0146s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000353s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023200s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023430s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006160s ]
+
+[ 2016-07-12T00:07:26+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001217s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001481s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0103s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0402s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000431s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001658s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001909s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010102s ]
+
+[ 2016-07-12T00:07:27+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001743s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000354s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021800s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003049s ]
+
+[ 2016-07-12T00:07:30+08:00 ] ::1 /e-market/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002024s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002406s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000399s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022842s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023107s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001955s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003266s ]
+
+[ 2016-07-12T00:07:32+08:00 ] ::1 /e-market/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008231s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008528s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000431s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020417s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001913s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001792s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002017s ]
+
+[ 2016-07-12T00:07:33+08:00 ] ::1 /e-market/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000894s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002359s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022773s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001727s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001977s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001379s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001567s ]
+
+[ 2016-07-12T00:07:34+08:00 ] ::1 /e-market/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000819s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001707s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001925s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000395s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021155s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001766s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001447s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001670s ]
+
+[ 2016-07-12T00:07:35+08:00 ] ::1 /e-market/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001453s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001487s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000328s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018558s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002278s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002542s ]
+
+[ 2016-07-12T00:07:36+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000814s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000321s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000511s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003597s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005703s ]
+
+[ 2016-07-12T00:09:59+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001114s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:09:59+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000971s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:09:59+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000080s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001516s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001781s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022606s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003883s ]
+
+[ 2016-07-12T00:10:16+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001937s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008969s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:17+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000062s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004432s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:17+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000299s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000515s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046973s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003214s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005899s ]
+
+[ 2016-07-12T00:10:17+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004267s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:18+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000361s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003432s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000344s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000544s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035237s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035444s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003413s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010771s ]
+
+[ 2016-07-12T00:10:18+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004846s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005074s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:19+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003279s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000428s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009059s ]
+
+[ 2016-07-12T00:10:19+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004770s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:19+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003460s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002965s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003200s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:20+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003548s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:20+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004234s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004525s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:21+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000687s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037803s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002931s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.030625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.030905s ]
+
+[ 2016-07-12T00:10:21+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001893s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006069s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006352s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:22+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001505s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006366s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:22+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003525s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000317s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000690s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033778s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002831s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003041s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007485s ]
+
+[ 2016-07-12T00:10:23+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001789s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010017s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:23+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001729s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005177s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005620s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:23+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006131s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000292s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000551s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046970s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047214s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003050s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005559s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009405s ]
+
+[ 2016-07-12T00:10:24+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003489s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:24+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002734s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003303s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:25+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003522s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:25+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003208s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:25+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004033s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:25+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000143s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003018s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:26+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003188s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003414s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:26+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003356s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003540s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:26+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001934s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003631s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:27+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000227s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001936s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003407s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:28+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001889s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007616s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:28+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002881s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003077s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:31+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003347s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:31+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003433s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:31+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003355s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:32+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000115s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008105s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:10:35+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005934s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000430s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048042s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006861s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007328s ]
+
+[ 2016-07-12T00:16:04+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000993s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002433s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000310s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000573s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032612s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002669s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003078s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004825s ]
+
+[ 2016-07-12T00:16:08+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001901s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:16:10+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001609s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002068s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000243s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000445s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007038s ]
+
+[ 2016-07-12T00:16:13+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001509s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.5575s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.1185s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000479s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001450s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001686s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.035504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.035770s ]
+
+[ 2016-07-12T00:16:17+08:00 ] ::1 /e-market/index.php/Home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001566s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000370s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001556s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002349s ]
+
+[ 2016-07-12T00:16:34+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001962s ]
+SQL: select * from user where (username='22' and password='22') or (tel='22' and password='22') or (email='22' and password='22') [ RunTime:0.0012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001866s ]
+
+[ 2016-07-12T00:16:41+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000870s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001361s ]
+SQL: select * from user where (username='22' and password='89999') or (tel='22' and password='89999') or (email='22' and password='89999') [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001619s ]
+
+[ 2016-07-12T00:18:04+08:00 ] ::1 /e-market/index.php/Home/Login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002930s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001295s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001547s ]
+
+[ 2016-07-12T00:18:16+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001943s ]
+SQL: select * from user where (username='username' and password='password') or (tel='username' and password='password') or (email='username' and password='password') [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001250s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001469s ]
+
+[ 2016-07-12T00:18:17+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000977s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002119s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000482s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003651s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001780s ]
+
+[ 2016-07-12T00:19:13+08:00 ] ::1 /e-market/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001493s ]
+
+[ 2016-07-12T00:19:13+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001188s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001551s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000228s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000457s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019876s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020104s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001756s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002437s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002635s ]
+
+[ 2016-07-12T00:23:58+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001584s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001788s ]
+SQL: select * from user where (username='username' and password='password') or (tel='username' and password='password') or (email='username' and password='password') [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001940s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002161s ]
+
+[ 2016-07-12T00:24:00+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001101s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002159s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001771s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000475s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025553s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001033s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001254s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006344s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006607s ]
+
+[ 2016-07-12T00:24:11+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007445s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.5512s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:1.0650s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000323s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000632s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027754s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027998s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006293s ]
+
+[ 2016-07-12T00:24:41+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000060s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002196s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000351s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000598s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025326s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002017s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002270s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003331s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003602s ]
+
+[ 2016-07-12T00:26:09+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000953s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001620s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0768s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0592s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000234s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000609s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002147s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003901s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004184s ]
+
+[ 2016-07-12T00:31:16+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0535s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 0  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000556s ]
+NOTIC: [8] Undefined variable: list E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023197s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006972s ]
+
+[ 2016-07-12T00:31:21+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000899s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001245s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001452s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0173s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 0  [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000358s ]
+NOTIC: [8] Undefined variable: list E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001782s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004579s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004847s ]
+
+[ 2016-07-12T00:31:23+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002637s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002960s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0457s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 0  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000645s ]
+NOTIC: [8] Undefined variable: list E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026698s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004574s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004842s ]
+
+[ 2016-07-12T00:33:25+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000963s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001655s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000293s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000593s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001965s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002271s ]
+
+[ 2016-07-12T00:33:27+08:00 ] ::1 /e-market/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001498s ]
+
+[ 2016-07-12T00:33:27+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000436s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001616s ]
+
+[ 2016-07-12T00:33:49+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003226s ]
+SQL: select * from user where (username='username' and password='password') or (tel='username' and password='password') or (email='username' and password='password') [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: uid E:\ruanjian\wamp\www\e-market\Application\Home\Controller\LoginController.class.php 第 87 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003016s ]
+
+[ 2016-07-12T00:33:51+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000070s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002830s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000540s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001858s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005588s ]
+
+[ 2016-07-12T00:35:39+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001209s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001756s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001949s ]
+SQL: select * from user where (username='username' and password='password') or (tel='username' and password='password') or (email='username' and password='password') [ RunTime:0.0008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001792s ]
+
+[ 2016-07-12T00:35:41+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001156s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000305s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000555s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028887s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006389s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006665s ]
+
+[ 2016-07-12T00:35:42+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000058s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001715s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:35:44+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000064s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004941s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:35:53+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000975s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000735s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000986s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030821s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001070s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006397s ]
+
+[ 2016-07-12T00:35:55+08:00 ] ::1 /e-market/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001546s ]
+
+[ 2016-07-12T00:35:56+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002109s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016784s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001449s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001697s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001671s ]
+
+[ 2016-07-12T00:36:06+08:00 ] ::1 /e-market/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002603s ]
+SQL: select * from user where (username='username' and password='password') or (tel='username' and password='password') or (email='username' and password='password') [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001342s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001507s ]
+
+[ 2016-07-12T00:36:07+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001970s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002247s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000325s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000604s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002908s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002059s ]
+
+[ 2016-07-12T00:36:26+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001854s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002127s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000307s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000542s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.166714s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001865s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006939s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007247s ]
+
+[ 2016-07-12T00:37:09+08:00 ] ::1 /e-market/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000864s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001544s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 La table 'e-market.system' n'existe pas
+
+[ 2016-07-12T00:37:18+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001201s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001597s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0575s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 0  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] Undefined variable: list E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 80 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025895s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026164s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005008s ]
+
+[ 2016-07-12T00:37:58+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001163s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001825s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0122s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000175s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021329s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010728s ]
+
+[ 2016-07-12T00:38:04+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001657s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0428s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0157s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 2 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000349s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008819s ]
+INFO: [ app_end ] --END-- [ RunTime:0.009121s ]
+
+[ 2016-07-12T00:38:05+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000164s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006211s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000328s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000543s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039670s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006189s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006511s ]
+
+[ 2016-07-12T00:38:18+08:00 ] ::1 /e-market/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002120s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000426s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000651s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029404s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002735s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007379s ]
+
+[ 2016-07-12T00:38:21+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003684s ]
+NOTIC: [8] Undefined index: username E:\ruanjian\wamp\www\e-market\Application\Home\Controller\PersonController.class.php 第 7 行.
+
+[ 2016-07-12T00:38:21+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000861s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001996s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002331s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001541s ]
+
+[ 2016-07-12T00:38:33+08:00 ] ::1 /e-market/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001895s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001842s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002191s ]
+
+[ 2016-07-12T00:38:33+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001281s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001485s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001072s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001523s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001758s ]
+
+[ 2016-07-12T00:38:36+08:00 ] ::1 /e-market/index.php/Home/Person/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000065s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001448s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002870s ]
+NOTIC: [8] Undefined index: username E:\ruanjian\wamp\www\e-market\Application\Home\Controller\PersonController.class.php 第 7 行.
+
+[ 2016-07-12T00:38:36+08:00 ] ::1 /e-market/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000069s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000847s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002549s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 22 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020460s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001834s ]
+
+[ 2016-07-12T00:38:49+08:00 ] ::1 /e-market/index.php/Home/Login/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000400s ]
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 20 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 20 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 21 行.
+NOTIC: [8] Undefined variable: nav E:\ruanjian\wamp\www\e-market\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 21 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017859s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005161s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007119s ]
+>>>>>>> 54e8ddbe0cc8886b8a1c2ff800f6efb1cc83d8f1
 

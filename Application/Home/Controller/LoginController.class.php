@@ -49,7 +49,15 @@ class LoginController extends Controller {
      // }
         $m=M($table);
         if($m->add($data)){
-        	echo "注册成功";
+          $str=$m->where($data)->find();
+          if($str){
+             session('uid',$str['uid']);
+             session('username',$data['username']);
+             echo "注册成功";
+          }else{
+             echo "注册失败";
+          }
+        	
         }else{
         	echo "注册失败";
         }
@@ -85,6 +93,7 @@ class LoginController extends Controller {
         // echo $password;
          if($arr){
           session('username',$username);
+          session("uid",$arr[0]['uid']);
          	echo "success";
          }else{
          	echo "failure";

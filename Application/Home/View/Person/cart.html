@@ -192,32 +192,33 @@ description : 个人中的购物车页面
 					  $("#sumprice").html("总价<strong>￥"+pricesum+"</strong>");
 				   }
 				   function submit(){
-				      var t=0;
+				      var t=0;var er=1;
 					  var num=0;
 					  var gid;
 					  var str="";
-					  var arr= new Array();;
+					  var arr= "";
+					
 				       $("input[name='check_list']:checked").each(function(){
 							          str=$(this).val();  
 							          if(str){
 									    arr[t]= new Array();
                                         num=Number($("#"+str).val());
 										gid=Number($("#gid"+str).val());
-										arr[t]['num']=num;
-										arr[t]['gid']=gid;
-										t++;
+										arr+=er+"="+num+"&"+(er+1)+"="+gid+"&";
+										t++;er=er+2;
 									  }
                                  });
-					 //windows.location.href="__URL__/sold_goods"
-					 alert(arr);
+					arr+="t="+(er-1);
 					  $.ajax({
 						    asnyc:false,
 							url:"__URL__/sold_goods",
 							type:"post",
 							traditional :true,
-						    data:{'con':arr}, 
+						    data:arr,
                             success:function(res){
-							         alert(res);
+							        if(res=="success"){
+                                        window.location.href="__URL__/bought";									
+ 									}
 							    },
 						 });
 				   }
