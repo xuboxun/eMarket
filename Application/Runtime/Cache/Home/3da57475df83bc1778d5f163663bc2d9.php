@@ -1,8 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><!-- 
 author : sudonglin
 version : 1.0
-date : 2016.7.11
-description : 个人中的设置页面
+date : 2016.7.10
+description : 个人中的个人中心页面
 -->
 <!doctype html>
 <html>
@@ -72,83 +72,41 @@ descriptioin : 公有头部
 				<!--订单内容-->
 				<div class="right"> 
 				 	<div class="things">
-				 		<div class="address">
-
-				 			<div class="addresslist">
-				 				<div class="smc">
-				 					<div class="litem">
-				 						<div class="item">
-				 							<span>收货人：<b>大帅哥</b></span>                     
-				 						</div>
-				 						<div class="item">
-				 							<span>所在地区：<b>湖北省武汉市洪山区城区</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>地址：<b>湖北省武汉市洪山区 狮子山道 华中农业大学</b></span>                                     
-				 						</div>
-				 						<div class="item">
-				 							<span>手机：<b>1567897773</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>电子邮箱<b>666666@qq.com</b></span>
-				 						</div>
-				 					</div>
-				 					<div class="ritem">
-				 						<div class="item">
-				 							<span>支付方式: <b>在线支付</b></span
-				 						</div>
-				 						<div class="item">
-				 							<span>配送方式: <b>配送区域内的由快递配送</b></span>
-				 						</div>
-				 						<div class="extra">
-				 							<a class="theme-login">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">删除</a>
-				 						</div>
-				 					</div>
+				 		<div class="address">						
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>登陆密码</h3>
 				 				</div>
-				 			</div>
-				 		</div>	
-				 		<div class="addresslist">
-				 				<div class="smc">
-				 					<div class="litem">
-				 						<div class="item">
-				 							<span>收货人：<b>大帅哥</b></span>                     
-				 						</div>
-				 						<div class="item">
-				 							<span>所在地区：<b>湖北省武汉市洪山区城区</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>地址：<b>湖北省武汉市洪山区 狮子山道 华中农业大学</b></span>                                     
-				 						</div>
-				 						<div class="item">
-				 							<span>手机：<b>1567897773</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>电子邮箱<b>666666@qq.com</b></span>
-				 						</div>
-				 					</div>
-				 					<div class="ritem">
-				 						<div class="item">
-				 							<span>支付方式: <b>在线支付</b></span
-				 						</div>
-				 						<div class="item">
-				 							<span>配送方式: <b>配送区域内的由快递配送</b></span>
-				 						</div>
-				 						<div class="extra">
-				 							<a class="theme-login">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">删除</a>
-				 						</div>
-				 					</div>
+				 				<div class="f2right">
+				 					 <span>互联网账号存在被盗风险，建议您定期更改密码以保护账户安全</span>
+				 					  <a href="/eMarket/index.php/home/Login/findpwd">修改</a>
 				 				</div>
-				 			</div>
-				 		</div>	 
-
-				 		 <a class="btn btn-primary theme-login">新增收货地址</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">您已经创建<strong>2</strong>个收货地址，最多可创建20个</span>
-				    </div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>头像昵称</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span>可随时更换您喜欢的头像或昵称</span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>绑定手机</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span> 您验证的手机： 159*****742    若已丢失或停用，请立即更换，避免账户被盗 </span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 							 		 
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<!--  -->
-<script src="/eMarket/Public/js/jquery.min.js"></script>
+		<script src="/eMarket/Public/js/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
   $('.theme-login').click(function(){
@@ -171,7 +129,7 @@ jQuery(document).ready(function($) {
      <div class="theme-popbod dform">
            <form class="theme-signin" name="loginform" action="" method="post">
                 <div class="f1">
-                	<em>* </em> 收&nbsp;货&nbsp;人&nbsp;：<input type="text" class=""/><span style="display:none">请您填写收货人姓名</span>
+                	<em>* </em>：<input type="text" class=""/><span style="display:none">请您填写收货人姓名</span>
                 </div>
                 <div class="f1">
                 	<em>* </em> 详细地址：<input type="text" class=""/><span style="display:none">请您填写收货人详细地址</span>
@@ -188,7 +146,6 @@ jQuery(document).ready(function($) {
            </form>
      </div>
 </div>
-<div class="theme-popover-mask"></div>
 		<!-- 引入尾部 -->
 <!-- 
 author : huangyifan

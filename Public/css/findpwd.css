@@ -4,6 +4,9 @@ body{
 	font-size:16px;
 	font-family: ;
 }
+#header .search{
+	float: right;
+}
 /*整体布局*/
 .main{
 	width:100%;

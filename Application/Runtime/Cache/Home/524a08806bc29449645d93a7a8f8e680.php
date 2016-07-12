@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/register.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/register.css">
 	</head>
 	<body>
 		<!-- 
@@ -22,9 +22,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -36,7 +36,7 @@ descriptioin : 公有头部
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/e-market/Public/image/system/logo.png">
+				<img src="/eMarket/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form> 
@@ -51,7 +51,7 @@ descriptioin : 公有头部
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
 							if($.trim($("#searchValue").val()) != ""){
-								window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 								return false;
 							}else{
 								return false;
@@ -66,7 +66,7 @@ descriptioin : 公有头部
 							if(oldsearch != search) {
 								if(search != null && search != ""){
 									// 向服务器传数据
-									$.post('/e-market/index.php/Home/Index/search',{
+									$.post('/eMarket/index.php/Home/Index/search',{
 										search:search
 									},function(ans){
 										if(ans.length != 0) {
@@ -75,7 +75,7 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
 													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
@@ -130,8 +130,8 @@ descriptioin : 公有头部
 	<!-- 导航栏 end
 	 	<div class="main">
 	 		<!--<div class="header">
-	 			<img src="/e-market/Public/image/logoletter.png"/>
-	 			<a>已有账号</a><a href="/e-market/index.php/Home/Login/login">请登录</a>
+	 			<img src="/eMarket/Public/image/logoletter.png"/>
+	 			<a>已有账号</a><a href="/eMarket/index.php/Home/Login/login">请登录</a>
 	 		</div>-->
 	 		<div class="lcontant">
 			   <form name="form">
@@ -164,12 +164,12 @@ descriptioin : 公有头部
 	 		</div>
 	 		<div class="rcontant">
 	 			<div class="right1">
-	 				<img src="/e-market/Public/image/register.png"/>
+	 				<img src="/eMarket/Public/image/register.png"/>
 	 			</div>
-	 			<a href="/e-market/index.php/Home/Login/">----------商业注册</a>
+	 			<a href="/eMarket/index.php/Home/Login/">----------商业注册</a>
 	 		</div>
 	 	</div>
-	 	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	 	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
 			<script type="text/javascript">
 			var k=0;
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
@@ -215,7 +215,7 @@ descriptioin : 公有头部
 			function check_used(id,name){
 		       	var tr=trimStr(document.getElementById(id).value);
 			    check_empty(id,name);
-				$.get('/e-market/index.php/Home/Login/check_user',{
+				$.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:id,
 					              con:tr
 			    },function(res){
@@ -262,7 +262,7 @@ descriptioin : 公有头部
                     if(!reg.test(tr)) {
                            alert("请输入有效的邮箱地址！");return 0;
                     }else{
-					        $.get('/e-market/index.php/Home/Login/check_user',{
+					        $.get('/eMarket/index.php/Home/Login/check_user',{
 						          zd:"email",
 					              con:tr
 					        },function(res){
@@ -282,7 +282,7 @@ descriptioin : 公有头部
 							    
 							}else{
 							     	var tr=trimStr(document.getElementById('email').value);
-					                $.post('/e-market/index.php/Home/Login/sendyzm',{
+					                $.post('/eMarket/index.php/Home/Login/sendyzm',{
 					                         con:tr
 					                },function(res){
 						                     alert(res);
@@ -303,7 +303,7 @@ descriptioin : 公有头部
 			}
 			function check_yzm(){
 			    var tr=trimStr(document.getElementById('num').value);
-				$.post('/e-market/index.php/Home/Login/getyzm',{
+				$.post('/eMarket/index.php/Home/Login/getyzm',{
 				      
 				},function(res){
 				    if(res==1){
@@ -331,13 +331,18 @@ descriptioin : 公有头部
 					 var password=trimStr(document.getElementById('password').value);
 					 var email=trimStr(document.getElementById('email').value);
 					 var tel=trimStr(document.getElementById('tel').value);
-					 $.post('/e-market/index.php/Home/Login/record_user',{
+					 $.post('/eMarket/index.php/Home/Login/record_user',{
 					     username:username,
 						 password:password,
 						 email:email,
 						 tel:tel
 					 },function(res){
-					    alert(res);
+					   alert(res);
+					   if(res=="注册成功"){
+					      window.location.href="/eMarket/index.php/Home/Index/index";		
+					   }else{
+					      window.location.href="/eMarket/index.php/Home/Login/register";		
+					   }   
 					 });
 				}
 			}

@@ -16,31 +16,30 @@ description : 个人中的收藏商品页面
 	<body>
 		<!--头部包含-->
 		<!-- 
-author : sudonglin
+author : huangyifan
 version : 1.0
-date : 2016.7.9
-descriptioin : 个人页面的头部
+date : 2016.7.8
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- 顶部 end -->
+	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
 			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
@@ -99,7 +98,7 @@ descriptioin : 个人页面的头部
  -->
                             <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
 				 				<div class="c_goods">
-				 					<div class="p_img">
+				 					<div class="p1_img">
 				 						<a href=""><img src="/eMarket/Public/image/goods/<?php echo ($vo["img"]); ?>"/></a>
 				 					</div>
 				 					<div class="p_name">

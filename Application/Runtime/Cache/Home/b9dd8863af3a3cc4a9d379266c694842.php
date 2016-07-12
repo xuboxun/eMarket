@@ -4,13 +4,10 @@
 		<meta charset="utf-8"/>
 		<title>好食光</title>
 		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
-		
-		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/findpwd.css">	
 	</head>
 	<body>
-		<!-- 引入头部 -->
-		<!-- 
+	   <!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
@@ -131,83 +128,128 @@ descriptioin : 公有头部
 	<!-- 导航栏 start -->
 	<!-- <div id="nav"></div> -->
 	<!-- 导航栏 end
-	    <!--整体布局-->
-		<div class="main">
-		<!--中间部分-->
-		<div class="owner">
-		<!--登陆表格-->
-		<div class="contant">
-		
-		<div class="login_title">账户登录</div>
-		<p style="color:red;" id="ts"></p>
-		 <form name="form" method="post">
-		     <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="手机号/会员名/qq邮箱" id="username"/>
-			 </div>
-			 <div class="filed">
-			 	<input class="input_test" type="text" style="color:#666;" placeholder="请输入密码" id="password" />
-			 </div>            
-             <div class="link">
-			 	<a class="forgetpsw" href="/eMarket/index.php/Home/Login/findpwd">忘记密码</a>
-			 	<a class="sign" href="/eMarket/index.php/Home/Login/register">注册</a>
-			 </div>
-             <div> 
-             	<input class="submit" type="button" value="登录" onclick="f1();"/>
-			 </div>		
-		 </form>
-			<!--输入框文字隐藏功能-->
-			<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
-			<script type="text/javascript">
+	   <div class="main">
+	   		<!--头部-->
+	   		<!--<div class="header">
+	   			<img src="/eMarket/Public/image/logoletter.png"/>
+	   			<a href="/eMarket/index.php/Home/Login/login">登录</a><a href="/eMarket/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+	   		</div>-->
+	   		<!--主题内容-->
+	   		<div class="contant">
+	   			<div>
+	   				用户名：<input  class="shuru" type="text" name="username" style="color:#666" placeholder="邮箱账号" id="username">
+	   			</div>
+				<p style="color:red;" id="yxts"></p>
+	   			<div>
+
+	   				验证码：<input  class="shuru" type="text" name="code" style="width:140px" id="code"/><input type="button" name="" id="yzm"	onclick="sendmail();" value="获取验证码" style="width:80px;margin-left:20px;height:42px;background:#2283D2;color:#444"/>
+	   				
+	   			</div>
+				<p style="color:red;" id="yzmts"></p>
+				<div id="password" style="display:none;">
+	   				密&nbsp&nbsp&nbsp码：<input  class="shuru" type="text"  style="color:#666" placeholder="请输入密码" id="pwd">
+	   			</div>
+	   			<div>
+	   				<input class="submit" type="button" value="确定" onclick="f1();"/>
+	   			</div>
+	   		</div>
+	   </div>
+	   <script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+	   <script type="text/javascript">
 			function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
-			$(function(){
-			$('.input_test').bind({
-			focus:function(){
-			if (this.value == this.defaultValue){
-			this.value="";
-			}
-			},
-			blur:function(){
-			if (this.value == ""){
-			this.value = this.defaultValue;
-			}
-			}
-			});
-			})
+			var reg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+			var pl=0;
 			function f1(){
-			     var username=trimStr($("#username").val());
-				 var password=trimStr($("#password").val());
-				 if(username){
-
-				     if(password){
-					     $.ajax({
-						    asnyc:false,
-							url:"/eMarket/index.php/Home/Login/do_login",
-							type:"post",
-						    data:"username="+username+"&password="+password,
-                            success:function(res){
-							          if(res=="failure"){
-									       $("#ts").html("账户或密码错误");
-									  }else{
-									       // alert("hello");
-									    	window.location.href = "/eMarket/index.php/Home/Index/index";
-									  }
-							    },
-						 });
-					 }else{
-					    $("#ts").html("密码不能为空");
-					 }
-				 }else{
-				 
-				     $("#ts").html("用户名不能为空");
-				 }
+			if(pl>0){
+			   var password=trimStr($("#pwd").val());
+			  
+			                    $.ajax({
+						               asnyc:false,
+							           url:"/eMarket/index.php/Home/Login/repwd",
+							           type:"post",
+						               data:"pwd="+password,
+                                       success:function(res){
+							               if(res=="success"){
+									           
+									       }else{
+										      alert("请重试");
+									          window.location.href="/eMarket/index.php/Home/Login/findpwd";
+									       }
+							           },
+						         });
 			}
-			</script>
-
-		 </div>
-		</div>
-		</div>
-		</div>
-		<!-- 
+			   var username=trimStr($("#username").val());
+			   var code=trimStr($("#code").val());
+			   if(username){
+			      $("#yxts").html("");
+                    if(!reg.test(username)) {
+                           $('#yxts').html("请输入有效的邮箱地址！");
+                    }else{
+					       if(code){
+				                 $("#yzmts").html("");
+								 $.ajax({
+						               asnyc:false,
+							           url:"/eMarket/index.php/Home/Login/getmd",
+							           type:"post",
+						               data:"con="+code,
+                                       success:function(res){
+							               if(res=="success"){
+									           $("#password").css("display","block");
+											   pl++;
+									       }else{
+									           $("#yzmts").html("验证码错误，请重试");
+									       }
+							           },
+						         });
+					       }else{
+				                 $("#yzmts").html("请您填写验证码");
+				           }
+					}
+			      
+			   }else{
+			  // alert("sdfs");
+			      $("#yxts").html("邮箱不能为空");
+			   }
+			}
+			function sendmail(){
+			     var username=trimStr($("#username").val());
+				 if(username){
+                    if(!reg.test(username)) {
+                           $('#yxts').html("请输入有效的邮箱地址！");
+                    }else{
+					        $.ajax({
+						    asnyc:false,
+							url:"/eMarket/index.php/Home/Login/sendpwd",
+							type:"post",
+						    data:"con="+username,
+                            success:function(res){
+							        if(res=="发送成功"){
+									  alert("发送成功");
+									  $("#yzm").attr("disabled","true");
+									  var i=60;
+				                      var time=setInterval(function(){
+				                         if(i>0){
+				                            $('#yzm').val(i+"秒后重发");
+						                    i--;
+				                         }else{
+				                            $('#yzm').val("获取验证码");
+                                            document.getElementById("yzm").disabled=false;											
+				                            clearInterval(time);
+				                         }
+				                     },1000);
+									}else{
+									   alert("res");
+									}
+							    },
+						    });
+					}
+			   }else{
+			      $("#yxts").html("邮箱不能为空");
+			   }
+			}
+	   </script>
+	   <!-- 尾部引入 -->
+	   <!-- 
 author : huangyifan
 version : 1.0
 date : 2016.7.8
