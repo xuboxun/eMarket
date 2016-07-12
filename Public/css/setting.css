@@ -1,7 +1,3 @@
-*{
-	margin:0 auto;
-	padding:0;
-}
 /*整体布局*/
 .contant{
 	width:100%;
@@ -24,6 +20,15 @@
 	padding:30px;
 	/*background-color:#666;*/
 }
+.left ul li a{
+	font-size: 18px;
+	/*font-family: "华文楷体";*/
+	line-height: 40px;
+}
+.left ul li a:hover{
+	color:#FF4400;
+	text-decoration: underline;
+}
 .right{
 	float:left;
 	width:85%;
@@ -39,4 +44,42 @@
 	background-color:#FFFFFF;
 	border-radius: 5px;
 	
+}
+.address{
+	width:94%;
+	margin-left: 3%;
+	min-height:700px;
+	margin-top:20px;
+	/*background-color:pink;*/
+}
+.addresslist{
+	width:100%;
+	height:230px;
+	border:4px solid #E6E6E6;
+	margin-bottom: 20px;
+}
+.smc{
+	margin:20px 20px 20px 20px;
+	color:#666;
+}
+.litem{
+	width:50%;
+	float:left;
+}
+.ritem{
+	float:left;
+}
+.item{
+	height:38px;
+	line-height: 38px;
+}
+.extra{
+	margin-left:80%;
+	margin-top:90px;
+}
+.extra a{
+	color:blue;
+}
+.extra a:hover{
+	color:#C81522;
 }
