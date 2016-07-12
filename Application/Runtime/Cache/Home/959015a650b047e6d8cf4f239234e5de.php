@@ -26,25 +26,14 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-<<<<<<< HEAD
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
-			</div>
-			<div class="banner-right">
-				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
-=======
 				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
 				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -76,8 +65,8 @@ descriptioin : 公有头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="/e-market/index.php/Home/Person/center">个人信息</a></li>
-						<li><a href="/e-market/index.php/Home/Person/setting">收货地址</a></li>
+						<li><a href="/e-market/index.php/Home/Person/center" >个人信息</a></li>
+						<li><a href="/e-market/index.php/Home/Person/setting" id="person_address">收货地址</a></li>
 					</ul>
 				</div>
 				<!--订单内容-->
@@ -85,23 +74,21 @@ descriptioin : 公有头部
 				 	<div class="things">
 				 		<div class="address">
 
-				 			<div class="addresslist">
+				 			<div class="addresslist" id="op" style="display:none">
 				 				<div class="smc">
 				 					<div class="litem">
 				 						<div class="item">
-				 							<span>收货人：<b>大帅哥</b></span>                     
+				 							<span>收货人：<b><?php echo ($list["nickname"]); ?></b></span>                     
+				 						</div>
+				 					
+				 						<div class="item">
+				 							<span>地址：<b><?php echo ($list["address"]); ?></b></span>                                     
 				 						</div>
 				 						<div class="item">
-				 							<span>所在地区：<b>湖北省武汉市洪山区城区</b></span>
+				 							<span>手机：<b><?php echo ($list["tel"]); ?></b></span>
 				 						</div>
 				 						<div class="item">
-				 							<span>地址：<b>湖北省武汉市洪山区 狮子山道 华中农业大学</b></span>                                     
-				 						</div>
-				 						<div class="item">
-				 							<span>手机：<b>1567897773</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>电子邮箱<b>666666@qq.com</b></span>
+				 							<span>电子邮箱<b><?php echo ($list["email"]); ?></b></span>
 				 						</div>
 				 					</div>
 				 					<div class="ritem">
@@ -112,47 +99,15 @@ descriptioin : 公有头部
 				 							<span>配送方式: <b>配送区域内的由快递配送</b></span>
 				 						</div>
 				 						<div class="extra">
-				 							<a class="theme-login">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">删除</a>
+				 							<!--<a class="theme-login">编辑</a>-->&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:delete_address();">删除</a>
 				 						</div>
 				 					</div>
 				 				</div>
 				 			</div>
+							
 				 		</div>	
-				 		<div class="addresslist">
-				 				<div class="smc">
-				 					<div class="litem">
-				 						<div class="item">
-				 							<span>收货人：<b>大帅哥</b></span>                     
-				 						</div>
-				 						<div class="item">
-				 							<span>所在地区：<b>湖北省武汉市洪山区城区</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>地址：<b>湖北省武汉市洪山区 狮子山道 华中农业大学</b></span>                                     
-				 						</div>
-				 						<div class="item">
-				 							<span>手机：<b>1567897773</b></span>
-				 						</div>
-				 						<div class="item">
-				 							<span>电子邮箱<b>666666@qq.com</b></span>
-				 						</div>
-				 					</div>
-				 					<div class="ritem">
-				 						<div class="item">
-				 							<span>支付方式: <b>在线支付</b></span
-				 						</div>
-				 						<div class="item">
-				 							<span>配送方式: <b>配送区域内的由快递配送</b></span>
-				 						</div>
-				 						<div class="extra">
-				 							<a class="theme-login">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="">删除</a>
-				 						</div>
-				 					</div>
-				 				</div>
-				 			</div>
-				 		</div>	 
-
-				 		 <a class="btn btn-primary theme-login">新增收货地址</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">您已经创建<strong>2</strong>个收货地址，最多可创建20个</span>
+				 		
+				 		<a class="btn btn-primary theme-login" id="new_add" style="display:block">新增收货地址</a>
 				    </div>
 			</div>
 		</div>
@@ -161,7 +116,7 @@ descriptioin : 公有头部
 <!--  -->
 <script src="/e-market/Public/js/jquery.min.js"></script>
 <script>
-jQuery(document).ready(function($) {
+jQuery(document).ready(function() {
   $('.theme-login').click(function(){
   	//alert("hello");
       $('.theme-popover-mask').fadeIn(100);
@@ -170,8 +125,13 @@ jQuery(document).ready(function($) {
   $('.theme-poptit .close').click(function(){
       $('.theme-popover-mask').fadeOut(100);
       $('.theme-popover').slideUp(200);
-  })
-
+  })		
+    $("#set").css("background","#E43D00");
+	$("#person_address").css("color","#FF4400");
+	if(<?php echo ($list); ?>){
+		 $("#op").css("display","block");
+			$("#new_add").hide();
+	}                         
 })
 </script>
 <div class="theme-popover">
@@ -182,24 +142,62 @@ jQuery(document).ready(function($) {
      <div class="theme-popbod dform">
            <form class="theme-signin" name="loginform" action="" method="post">
                 <div class="f1">
-                	<em>* </em> 收&nbsp;货&nbsp;人&nbsp;：<input type="text" class=""/><span style="display:none">请您填写收货人姓名</span>
+                	<em>* </em> 收&nbsp;货&nbsp;人&nbsp;：<input type="text" class="" id="username"/><span id="username_ts" style="display:none;color:red;">请您填写收货人姓名</span>
                 </div>
                 <div class="f1">
-                	<em>* </em> 详细地址：<input type="text" class=""/><span style="display:none">请您填写收货人详细地址</span>
+                	<em>* </em> 详细地址：<input type="text" class="" id="address"/><span id="address_ts" style="display:none;color:red;">请您填写收货人详细地址</span>
                 </div>
                   <div class="f1">
-                	<em>* </em> 手机号码：<input type="text" class=""/><span style="display:none">请您填写收货人手机号码</span>
+                	<em>* </em> 手机号码：<input type="text" class="" id="tel"/><span id="tel_ts" style="display:none;color:red;">请您填写收货人手机号码</span>
                 </div>
-                  <div class="f1">
-                	&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;：<input type="text" class=""/>
-                </div>
-                  <div class="f1">
-                	<a style="margin-top:30px;"type="" class="btn">保存收货地址</a>
+                <div class="f1">
+                	<a style="margin-top:30px;"type="" class="btn" href="javascript:f1();">保存收货地址</a>
                 </div>
            </form>
      </div>
 </div>
 <div class="theme-popover-mask"></div>
+<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			    
+			    var k=0;
+			    function check_empty(id,con){
+				    if(con){
+					    k++;
+						 $("#"+id+"_ts").css("display","none");
+				    }else{
+					    $("#"+id+"_ts").css("display","block");
+					}
+				}
+			    function f1(){  
+                        k=0;		
+                        var username=$("#username").val();	
+                        var address=$("#address").val();	
+                        var tel=$("#tel").val();							
+                     	check_empty("username",username);
+                        check_empty("address",address);		
+                        check_empty("tel",tel);		
+                        if(k==3){
+						  // alert("hello");
+						   $.post("/e-market/index.php/Home/Person/add_address",{
+						       nickname:username,
+							   address:address,
+							   tel:tel,
+						   },function(res){
+						       alert(res);
+							   window.location.href="/e-market/index.php/Home/Person/setting";
+						   });
+						}	   						
+				}
+				function delete_address(){
+				   $.post("/e-market/index.php/Home/Person/delete_address",{
+				       
+				   },function(res){
+				      alert(res);
+					  window.location.href="/e-market/index.php/Home/Person/setting";
+				   });
+				}
+			</script>
 		<!-- 引入尾部 -->
 <!-- 
 author : huangyifan

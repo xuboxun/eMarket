@@ -22,7 +22,7 @@ description : 个人中的购物车页面
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="__URL__/bought.html">所有订单</a></li>
+						<li><a href="__URL__/bought.html" id="order">所有订单</a></li>
 						<li><a href="">待评价</a></li>
 						<li><a href="">待付款</a></li>
 						<li><a href="">待发货</a></li>
@@ -31,7 +31,7 @@ description : 个人中的购物车页面
 				</div>
 				<!--订单内容-->
 				<div class="right">
-				 	<div class="series"><p>所有订单</p></div> 
+				 	
 				 	<div class="things">
 				 	<!-- 表格控制布局 -->
 				 		<table class="tab">
@@ -113,6 +113,11 @@ description : 个人中的购物车页面
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			   $("#bought").css("background","#E43D00");
+			   $("#order").css("color","#FF4400");
+			</script>
 		<!-- 引入尾部 -->
 		<include file="./Application/Home/View/Public/footer.html" />
 	</body>

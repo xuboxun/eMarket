@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/findpwd.css">	
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/findpwd.css">	
 	</head>
 	<body>
 	   <!-- 
@@ -22,9 +22,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -36,7 +36,7 @@ descriptioin : 公有头部
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/eMarket/Public/image/system/logo.png">
+				<img src="/e-market/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form> 
@@ -51,7 +51,7 @@ descriptioin : 公有头部
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
 							if($.trim($("#searchValue").val()) != ""){
-								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 								return false;
 							}else{
 								return false;
@@ -66,7 +66,7 @@ descriptioin : 公有头部
 							if(oldsearch != search) {
 								if(search != null && search != ""){
 									// 向服务器传数据
-									$.post('/eMarket/index.php/Home/Index/search',{
+									$.post('/e-market/index.php/Home/Index/search',{
 										search:search
 									},function(ans){
 										if(ans.length != 0) {
@@ -75,7 +75,7 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
+													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="
 													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
@@ -131,8 +131,8 @@ descriptioin : 公有头部
 	   <div class="main">
 	   		<!--头部-->
 	   		<!--<div class="header">
-	   			<img src="/eMarket/Public/image/logoletter.png"/>
-	   			<a href="/eMarket/index.php/Home/Login/login">登录</a><a href="/eMarket/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
+	   			<img src="/e-market/Public/image/logoletter.png"/>
+	   			<a href="/e-market/index.php/Home/Login/login">登录</a><a href="/e-market/index.php/Home/Login/register">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</a>
 	   		</div>-->
 	   		<!--主题内容-->
 	   		<div class="contant">
@@ -165,7 +165,7 @@ descriptioin : 公有头部
 			  
 			                    $.ajax({
 						               asnyc:false,
-							           url:"/eMarket/index.php/Home/Login/repwd",
+							           url:"/e-market/index.php/Home/Login/repwd",
 							           type:"post",
 						               data:"pwd="+password,
                                        success:function(res){
@@ -173,7 +173,7 @@ descriptioin : 公有头部
 									           
 									       }else{
 										      alert("请重试");
-									          window.location.href="/eMarket/index.php/Home/Login/findpwd";
+									          window.location.href="/e-market/index.php/Home/Login/findpwd";
 									       }
 							           },
 						         });
@@ -189,7 +189,7 @@ descriptioin : 公有头部
 				                 $("#yzmts").html("");
 								 $.ajax({
 						               asnyc:false,
-							           url:"/eMarket/index.php/Home/Login/getmd",
+							           url:"/e-market/index.php/Home/Login/getmd",
 							           type:"post",
 						               data:"con="+code,
                                        success:function(res){
@@ -219,7 +219,7 @@ descriptioin : 公有头部
                     }else{
 					        $.ajax({
 						    asnyc:false,
-							url:"/eMarket/index.php/Home/Login/sendpwd",
+							url:"/e-market/index.php/Home/Login/sendpwd",
 							type:"post",
 						    data:"con="+username,
                             success:function(res){

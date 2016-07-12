@@ -25,33 +25,14 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-<<<<<<< HEAD
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-=======
-<<<<<<< Updated upstream
-				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
-				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
-=======
-				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
->>>>>>> Stashed changes
-			</div>
-			<div class="banner-right">
-				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-<<<<<<< Updated upstream
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
-=======
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
->>>>>>> Stashed changes
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -83,7 +64,7 @@ descriptioin : 公有头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="/e-market/index.php/Home/Person/bought.html">所有订单</a></li>
+						<li><a href="/e-market/index.php/Home/Person/bought.html" id="order">所有订单</a></li>
 						<li><a href="">待评价</a></li>
 						<li><a href="">待付款</a></li>
 						<li><a href="">待发货</a></li>
@@ -92,7 +73,7 @@ descriptioin : 公有头部
 				</div>
 				<!--订单内容-->
 				<div class="right">
-				 	<div class="series"><p>所有订单</p></div> 
+				 	
 				 	<div class="things">
 				 	<!-- 表格控制布局 -->
 				 		<table class="tab">
@@ -172,6 +153,11 @@ descriptioin : 公有头部
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+			<script type="text/javascript">
+			   $("#bought").css("background","#E43D00");
+			   $("#order").css("color","#FF4400");
+			</script>
 		<!-- 引入尾部 -->
 		<!-- 
 author : huangyifan

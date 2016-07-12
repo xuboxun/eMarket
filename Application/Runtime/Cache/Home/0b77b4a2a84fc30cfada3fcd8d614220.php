@@ -25,25 +25,14 @@ descriptioin : 公有头部
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-<<<<<<< HEAD
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
-			</div>
-			<div class="banner-right">
-				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
-=======
 				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
 				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>

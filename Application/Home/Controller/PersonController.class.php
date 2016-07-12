@@ -12,18 +12,10 @@ class PersonController extends Controller {
     }
     
     public function bought(){
-       $uid=1;
- //        Select 
- // Blog.id as id,
- // Blog.name as name,
- // Blog.title as title,
- // Category.title as category_name,
- // User.name as username 
- // from think_blog Blog JOIN think_category Category JOIN think_user User 
- // where Blog.category_id=Category.id AND Blog.user_id=User.id
+       $uid=$_SESSION['uid'];
         $sql="Select goods.price as price,goods.g_name as name,user.uid as uid,goodsorder.number as number,
               goods.gid as gid,goods.g_img as img
-              from user JOIN goods JOIN goodsorder 
+              from user JOIN goods JOIN goodsorder
               where goodsorder.gid=goods.gid AND goodsorder.uid=user.uid AND user.uid=$uid";
         
         //var_dump($sql);exit;
@@ -54,7 +46,7 @@ class PersonController extends Controller {
         $this->display();
      }
      public function collect(){
-        $uid=1;
+        $uid=$_SESSION['uid'];
         $sql="Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
               goods.gid as gid,goods.g_img as img,goods.sold as number
               from user JOIN goods JOIN collect_goods
@@ -69,11 +61,16 @@ class PersonController extends Controller {
         $this->display();
      }
       public function collect2(){
-        $uid=1;
-        $sql="Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
+        $uid=$_SESSION['uid'];
+        // $sql="Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
+        //       goods.gid as gid
+        //       from user JOIN shop JOIN collect_shop JOIN goods
+        //       where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid AND goods.sid=shop.sid";
+        $sql="select * from goods,
+             (Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
               from user JOIN shop JOIN collect_shop
-              where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid";
-        
+              where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=$uid) as newtable
+          where  goods.sid=newtable.sid";
         //var_dump($sql);exit;
          $Model = new \Think\Model();// 实例化一个model对象 没有对应任何数据表
          $arr= $Model->query($sql);
@@ -83,6 +80,19 @@ class PersonController extends Controller {
         $this->display();
      }
      public function setting(){
+        $m=M("user");
+        $where['uid']=$_SESSION['uid'];
+        $str=$m->where($where)->find();
+        if($str){
+            if($str['address']&&$str['nickname']){
+               // var_dump($str);
+                $this->assign("list",$str);
+            }else{
+                $this->assign("list",0);
+            }
+        }else{
+            $this->assign("list",0);
+        }
         $this->display();
      }
      //在收藏夹添加购物车
@@ -177,7 +187,7 @@ class PersonController extends Controller {
      }
      //交易购买
      public function sold_goods(){
-        $uid=1;
+         $uid=$_SESSION['uid'];
         $arr=I("post.");
         $t=I("post.t");
         //echo $t;
@@ -219,5 +229,23 @@ class PersonController extends Controller {
         }else{
           //  echo "failure";
         }
+     }
+     //添加收货地址
+     public function add_address(){
+         $uid=$_SESSION['uid'];
+         $arr=I("post.");
+         $where['uid']=$uid;
+         $m=M("user");
+         $m->where($where)->save($arr);
+         echo "seccess";
+     }
+     //删除收货地址
+     public function delete_address(){
+        $where['uid']=$_SESSION['uid'];
+        $data['address']="";
+        $data['nickname']="";
+        $m=M("user");
+        $m->where($where)->save($data);
+        echo "success";
      }
 }

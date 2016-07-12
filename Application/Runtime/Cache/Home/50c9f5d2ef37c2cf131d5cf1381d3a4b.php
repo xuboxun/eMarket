@@ -3,21 +3,10 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-<<<<<<< HEAD
-		<link rel="stylesheet" href="/e-market/Public/css/login.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
-=======
-<<<<<<< Updated upstream
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
+		<link rel="stylesheet" href="/e-market/Public/css/login.css">
 		
-=======
-		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
->>>>>>> Stashed changes
-		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
+		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- 引入头部 -->

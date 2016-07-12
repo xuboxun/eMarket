@@ -9,65 +9,38 @@ description : 个人中的个人中心页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/setting.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-=======
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/setting.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/motaikuang.css">
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
+		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/motaikuang.css">
 	</head>
 	<body>
 		<!--头部包含-->
 		<!-- 
-<<<<<<< HEAD
-author : sudonglin
-version : 1.0
-date : 2016.7.9
-descriptioin : 个人页面的头部
--->
-
-=======
 author : huangyifan
 version : 1.0
 date : 2016.7.8
 descriptioin : 公有头部
 -->
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-<<<<<<< HEAD
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
-			</div>
-			<div class="banner-right">
-				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
-=======
 				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
 				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
+					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-<<<<<<< HEAD
-	<!-- 顶部 end -->
+	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
 			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
@@ -77,18 +50,6 @@ descriptioin : 公有头部
 					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
 					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
 					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
-=======
-	<!-- 底部 end -->
-	<!--头部开始-->
-		<div class="header">
-			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
-			<div class="letter">
-				<ul>
-					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
-					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
-					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 				</ul>				
 			</div>
 			<div class="search">
@@ -104,29 +65,13 @@ descriptioin : 公有头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-<<<<<<< HEAD
-						<li><a href="/e-market/index.php/Home/Person/center">个人信息</a></li>
+						<li><a href="/e-market/index.php/Home/Person/center" id="person_info">个人信息</a></li>
 						<li><a href="/e-market/index.php/Home/Person/setting">收货地址</a></li>
-=======
-						<li><a href="/eMarket/index.php/Home/Person/center">个人信息</a></li>
-						<li><a href="/eMarket/index.php/Home/Person/setting">收货地址</a></li>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 					</ul>
 				</div>
 				<!--订单内容-->
 				<div class="right"> 
 				 	<div class="things">
-<<<<<<< HEAD
-				 		<div class="address">
-
-				 			
-
-				 		 <input class="submit" type="button" value="新增收货地址"/>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">您已经创建<strong>2</strong>个收货地址，最多可创建20个</span>
-				</div>
-			</div>
-		</div>
-	</div>
-=======
 				 		<div class="address">						
 				 			<div class="f2">
 				 				<div class="f2left">
@@ -134,7 +79,7 @@ descriptioin : 公有头部
 				 				</div>
 				 				<div class="f2right">
 				 					 <span>互联网账号存在被盗风险，建议您定期更改密码以保护账户安全</span>
-				 					  <a href="/eMarket/index.php/home/Login/findpwd">修改</a>
+				 					  <a href="/e-market/index.php/home/Login/findpwd">修改</a>
 				 				</div>
 				 			</div>	
 				 			<div class="f2">
@@ -161,7 +106,7 @@ descriptioin : 公有头部
 				</div>
 			</div>
 		</div>
-		<script src="/eMarket/Public/js/jquery.min.js"></script>
+		<script src="/e-market/Public/js/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
   $('.theme-login').click(function(){
@@ -173,7 +118,8 @@ jQuery(document).ready(function($) {
       $('.theme-popover-mask').fadeOut(100);
       $('.theme-popover').slideUp(200);
   })
-
+  $("#set").css("background","#E43D00");
+	$("#person_info").css("color","#FF4400");
 })
 </script>
 <div class="theme-popover">
@@ -200,7 +146,6 @@ jQuery(document).ready(function($) {
                 </div>
            </form>
      </div>
->>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 </div>
 		<!-- 引入尾部 -->
 <!-- 
