@@ -9,10 +9,10 @@ description : 商品详情页面
 <head>
 	<meta charset="utf-8">
 	<title>好食光</title>
-	<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/e-market/Public/css/goods.css">
-	<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
-	<script type="text/javascript" src="/e-market/Public/js/base.js"></script>
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/goods.css">
+	<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/eMarket/Public/js/base.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -32,9 +32,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -46,7 +46,7 @@ descriptioin : 公有头部
 	<div id="header">
 		<div class="container">
 			<div class="logo">
-				<img src="/e-market/Public/image/system/logo.png">
+				<img src="/eMarket/Public/image/system/logo.png">
 			</div>
 			<div class="search">
 				<form> 
@@ -61,7 +61,7 @@ descriptioin : 公有头部
 					<script type="text/javascript">
 						$("#submit_search").click(function(){
 							if($.trim($("#searchValue").val()) != ""){
-								window.location.href="/e-market/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
+								window.location.href="/eMarket/index.php/Home/Goods/classb?key="+$.trim($("#searchValue").val());
 								return false;
 							}else{
 								return false;
@@ -76,7 +76,7 @@ descriptioin : 公有头部
 							if(oldsearch != search) {
 								if(search != null && search != ""){
 									// 向服务器传数据
-									$.post('/e-market/index.php/Home/Index/search',{
+									$.post('/eMarket/index.php/Home/Index/search',{
 										search:search
 									},function(ans){
 										if(ans.length != 0) {
@@ -85,7 +85,7 @@ descriptioin : 公有头部
 											if($(".search-ul").html() == "" || $(".search-ul").html() == null){
 												addhtml = $(".search-ul").html();
 												for(var i = 0;i < ans.length;i++) {
-													addhtml += "<li><a href='/e-market/index.php/Home/Goods/detail.html?gid="
+													addhtml += "<li><a href='/eMarket/index.php/Home/Goods/detail.html?gid="
 													+ans[i]['gid']+"' target='blanket'>"+ans[i]['g_name']+"</a></li>";
 													$(".search-ul").html(addhtml);
 												}
@@ -145,14 +145,14 @@ descriptioin : 公有头部
 				<!-- 图片展示区域 -->
 				<div class="goods-detail-imgarea">
 					<div class="goods-detail-imgarea-bigimg">
-						<img src="/e-market/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
 					</div>
 					<div class="goods-detail-imgarea-thumbnail">
 						<span><</span>
-						<img src="/e-market/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
-						<img src="/e-market/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
-						<img src="/e-market/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
-						<img src="/e-market/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
+						<img src="/eMarket/Public/image/goods/<?php echo ($goods["g_img"]); ?>">
 						<span>></span>
 					</div>
 				</div>
@@ -171,7 +171,7 @@ descriptioin : 公有头部
 				<!-- 商家信息 -->
 				<div class="shop-information">
 					<h2>店铺信息</h2>
-					<img src="/e-market/Public/image/shop/<?php echo ($shop["s_img"]); ?>">
+					<img src="/eMarket/Public/image/shop/<?php echo ($shop["s_img"]); ?>">
 					<h3>店名：<?php echo ($shop["sname"]); ?></h3>
 					<h3>掌柜：<?php echo ($business["username"]); ?></h3>
 					<h3>联系：<?php echo ($business["tel"]); ?></h3>
@@ -207,9 +207,9 @@ descriptioin : 公有头部
 				<!-- 推荐内容 -->
 				<div class="other-goods-content">
 					<?php if(is_array($other)): $i = 0; $__LIST__ = $other;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$other): $mod = ($i % 2 );++$i;?><div class="good-area-content-col goods-block">
-							<a href="/e-market/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><div class="goods-block-img"><img src="/e-market/Public/image/goods/<?php echo ($other["g_img"]); ?>" title="<?php echo ($other["g_name"]); ?>"></div></a>
+							<a href="/eMarket/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><div class="goods-block-img"><img src="/eMarket/Public/image/goods/<?php echo ($other["g_img"]); ?>" title="<?php echo ($other["g_name"]); ?>"></div></a>
 							<div class="goods-block-description">
-								<div class="goods-title"><a href="/e-market/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><?php echo ($other["g_name"]); ?></a></div>
+								<div class="goods-title"><a href="/eMarket/index.php/Home/Goods/detail?gid=<?php echo ($other["gid"]); ?>"><?php echo ($other["g_name"]); ?></a></div>
 								<div class="goods-price"><?php echo ($other["price"]); ?></div>
 							</div>
 						</div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -251,7 +251,7 @@ descriptioin : 公有头部
                 		<h2 class="model-form-h2">确认订单信息</h2>
                 		<div>
                 			<div class="model-form-img">
-                				<img src="/e-market/Public/image/goods/<?php echo ($goods['g_img']); ?>">
+                				<img src="/eMarket/Public/image/goods/<?php echo ($goods['g_img']); ?>">
                 			</div>
                 			<div class="model-form-price">
                 				<span class="model-form-price-span1"></span>
@@ -270,13 +270,13 @@ descriptioin : 公有头部
                 			if($('input:radio:checked').val() == null){
                 				alert("请确认收货地址");
                 			}else{
-                				$.post('/e-market/index.php/Home/Goods/buy',{
+                				$.post('/eMarket/index.php/Home/Goods/buy',{
                 					uid : <?php echo ($user["uid"]); ?>,
                 					gid : <?php echo ($goods["gid"]); ?>,
                 					number : $("#buynum").val()
                 				},function(res){
                 					if(res != 0){
-                						window.location.href = "/e-market/index.php/Home/Person/bought";
+                						window.location.href = "/eMarket/index.php/Home/Person/bought";
                 					}else{
                 						alert("服务器开小差了，订单未成功，请稍后再试");
                 					}

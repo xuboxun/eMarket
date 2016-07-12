@@ -9,10 +9,10 @@ description : 个人中的个人中心页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/setting.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/motaikuang.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/setting.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/motaikuang.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -31,9 +31,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -43,13 +43,13 @@ descriptioin : 公有头部
 	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
 			<div class="letter"> 
 				<ul>
-					<li><a  href="/e-market/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
-					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -65,8 +65,8 @@ descriptioin : 公有头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="/e-market/index.php/Home/Person/center" id="person_info">个人信息</a></li>
-						<li><a href="/e-market/index.php/Home/Person/setting">收货地址</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/center" id="person_info">个人信息</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/setting">收货地址</a></li>
 					</ul>
 				</div>
 				<!--订单内容-->
@@ -79,7 +79,7 @@ descriptioin : 公有头部
 				 				</div>
 				 				<div class="f2right">
 				 					 <span>互联网账号存在被盗风险，建议您定期更改密码以保护账户安全</span>
-				 					  <a href="/e-market/index.php/home/Login/findpwd">修改</a>
+				 					  <a href="/eMarket/index.php/home/Login/findpwd">修改</a>
 				 				</div>
 				 			</div>	
 				 			<div class="f2">
@@ -106,7 +106,7 @@ descriptioin : 公有头部
 				</div>
 			</div>
 		</div>
-		<script src="/e-market/Public/js/jquery.min.js"></script>
+		<script src="/eMarket/Public/js/jquery.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
   $('.theme-login').click(function(){

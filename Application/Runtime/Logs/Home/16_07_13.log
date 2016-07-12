@@ -1,0 +1,937 @@
+[ 2016-07-13T01:22:10+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001715s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002046s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0291s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0050s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0009s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0135s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0006s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (2,16,1,11,18,19,0) order by gid desc limit 6 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.006584s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.006742s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001487s ]
+
+[ 2016-07-13T01:22:12+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001567s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '地方特产'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '地方特产' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '武汉' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '北京' ORDER BY sysid asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '上海' ORDER BY sysid asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西安' ORDER BY sysid asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '成都' ORDER BY sysid asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '杭州' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '广州' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '南京' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:12+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '饮料冲调'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '饮料冲调' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0013s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '茶饮' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '咖啡' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '奶茶' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '可乐' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '橙汁' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '纯净水' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:12+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '粮油调味'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '粮油调味' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '食用油' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '调味品' ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '方便食品' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0148s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '中外名酒'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '中外名酒' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '中国' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '俄罗斯' ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '日本' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '美国' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '英法' ORDER BY sysid asc  [ RunTime:0.0004s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品'  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸡' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸭' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鹅' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蛋类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '小吃零食'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '小吃零食' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '辣条' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '薯片' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '饼干' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '面包' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '糖' ORDER BY sysid asc  [ RunTime:0.0009s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000877s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '青菜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '瓜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蘑菇类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '腌菜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000946s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '苹果' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '香蕉' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '桃子' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '樱桃' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西瓜' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '橘子' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '梨子' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
+[ 2016-07-13T01:22:24+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000769s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '苹果' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '香蕉' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '桃子' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '樱桃' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西瓜' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '橘子' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '梨子' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T01:22:27+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸡' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸭' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鹅' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蛋类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
+[ 2016-07-13T01:24:04+08:00 ] ::1 /eMarket/index.php/Home/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002294s ]
+
+[ 2016-07-13T01:24:04+08:00 ] ::1 /eMarket/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 24 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000735s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2016-07-13T01:27:02+08:00 ] ::1 /eMarket/index.php/Home/Login/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000196s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 20 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 20 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 21 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\524a08806bc29449645d93a7a8f8e680.php 第 21 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001336s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003816s ]
+
+[ 2016-07-13T01:27:19+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001695s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0085s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0015s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0008s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (13,18,7,4,6,5,0) order by gid desc limit 6 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000282s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000533s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.086022s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086312s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001031s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2016-07-13T01:27:32+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000923s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0043s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0048s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0006s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0005s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (14,4,14,15,5,19,0) order by gid desc limit 6 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2016-07-13T01:27:34+08:00 ] ::1 /eMarket/index.php/Home/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000758s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 23 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 24 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\50c9f5d2ef37c2cf131d5cf1381d3a4b.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010313s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010507s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000739s ]
+
+[ 2016-07-13T01:27:39+08:00 ] ::1 /eMarket/index.php/Home/Login/do_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: select * from user where (username='aaa' and password='aaa') or (tel='aaa' and password='aaa') or (email='aaa' and password='aaa') [ RunTime:0.1016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2016-07-13T01:27:39+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0046s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0010s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0035s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0009s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (15,20,16,16,20,20,0) order by gid desc limit 6 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000185s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058340s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058517s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2016-07-13T01:27:44+08:00 ] ::1 /eMarket/index.php/Home/Goods/detail?gid=15
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000928s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0263s ]
+SQL: SHOW COLUMNS FROM `shop` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0147s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 15 LIMIT 1   [ RunTime:0.0095s ]
+SQL: SELECT * FROM `shop` WHERE `sid` = 2 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `business` WHERE ( bid=2 ) LIMIT 1   [ RunTime:0.0070s ]
+SQL: SELECT * FROM `goods` WHERE `g_name` LIKE '%辣条，不辣不要钱%' LIMIT 6   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `user` WHERE `username` = 'aaa' LIMIT 1   [ RunTime:0.0055s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in D:\wamp\www\eMarket\Application\Home\Controller\GoodsController.class.php on line 68 and defined D:\wamp\www\eMarket\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content D:\wamp\www\eMarket\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015959s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2016-07-13T01:28:18+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0057s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0007s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0005s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (11,11,6,9,4,11,0) order by gid desc limit 6 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000146s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000791s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000963s ]
+
+[ 2016-07-13T01:28:22+08:00 ] ::1 /eMarket/index.php/Home/Goods/detail?gid=6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001754s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `shop` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `business` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 6 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `shop` WHERE `sid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `business` WHERE ( bid=1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `goods` WHERE `g_name` LIKE '%梨子%' LIMIT 6   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `user` WHERE `username` = 'aaa' LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Missing argument 1 for Think\Controller::show(), called in D:\wamp\www\eMarket\Application\Home\Controller\GoodsController.class.php on line 68 and defined D:\wamp\www\eMarket\ThinkPHP\Library\Think\Controller.class.php 第 68 行.
+NOTIC: [8] Undefined variable: content D:\wamp\www\eMarket\ThinkPHP\Library\Think\Controller.class.php 第 69 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015015s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001075s ]
+
+[ 2016-07-13T01:34:47+08:00 ] ::1 /eMarket/index.php/Home/Goods/buy
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0047s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0056s ]
+SQL: INSERT INTO `goodsorder` (`uid`,`gid`,`number`) VALUES ('1','6','3') [ RunTime:0.0736s ]
+SQL: SELECT * FROM `goods` WHERE `gid` = 6 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `goods` SET `gid`='6',`sid`='1',`g_name`='梨子',`price`='5.5',`g_img`='p1.jpg',`count`='55',`g_classa`='瓜果',`g_classb`='梨子',`g_evaluate`='33%',`sold`='16' WHERE `gid` = 6 [ RunTime:0.0826s ]
+
+[ 2016-07-13T01:34:47+08:00 ] ::1 /eMarket/index.php/Home/Person/bought
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001012s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goodsorder.number as number,
+              goods.gid as gid,goods.g_img as img
+              from user JOIN goods JOIN goodsorder
+              where goodsorder.gid=goods.gid AND goodsorder.uid=user.uid AND user.uid=1 [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012543s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001061s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000899s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001053s ]
+
+[ 2016-07-13T01:35:04+08:00 ] ::1 /eMarket/index.php/Home/Person/bought.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000641s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goodsorder.number as number,
+              goods.gid as gid,goods.g_img as img
+              from user JOIN goods JOIN goodsorder
+              where goodsorder.gid=goods.gid AND goodsorder.uid=user.uid AND user.uid=1 [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014554s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014720s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000883s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000985s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001200s ]
+
+[ 2016-07-13T01:35:05+08:00 ] ::1 /eMarket/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001124s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0967s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019348s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019596s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000953s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001308s ]
+
+[ 2016-07-13T01:35:07+08:00 ] ::1 /eMarket/index.php/Home/Person/collect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018574s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000777s ]
+
+[ 2016-07-13T01:35:08+08:00 ] ::1 /eMarket/index.php/Home/Person/collect2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: select * from goods,
+             (Select shop.s_address as address,shop.sname as name,user.uid as uid,shop.sid as sid,shop.s_img as img
+              from user JOIN shop JOIN collect_shop
+              where collect_shop.sid=shop.sid AND collect_shop.uid=user.uid AND user.uid=1) as newtable
+          where  goods.sid=newtable.sid [ RunTime:0.0389s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\0b77b4a2a84fc30cfada3fcd8d614220.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\0b77b4a2a84fc30cfada3fcd8d614220.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\0b77b4a2a84fc30cfada3fcd8d614220.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\0b77b4a2a84fc30cfada3fcd8d614220.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009827s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000713s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2016-07-13T01:35:11+08:00 ] ::1 /eMarket/index.php/Home/Person/collect.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000984s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001255s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goods.g_evaluate as evaluate,
+              goods.gid as gid,goods.g_img as img,goods.sold as number
+              from user JOIN goods JOIN collect_goods
+              where collect_goods.gid=goods.gid AND collect_goods.uid=user.uid AND user.uid=1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000212s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000464s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\d6b4c18a1335a17a19d041a564b63ccd.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000729s ]
+
+[ 2016-07-13T01:35:12+08:00 ] ::1 /eMarket/index.php/Home/Person/cart.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `cart` [ RunTime:0.0459s ]
+SQL: SELECT * FROM `cart` WHERE `uid` = 1  [ RunTime:0.0053s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 29 行.
+NOTIC: [8] Undefined variable: list D:\wamp\www\eMarket\Application\Runtime\Cache\Home\1ef09c1d4840e041d4d91b8ef9c31e91.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001142s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001360s ]
+
+[ 2016-07-13T01:35:13+08:00 ] ::1 /eMarket/index.php/Home/Person/setting.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000921s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `user` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\959015a650b047e6d8cf4f239234e5de.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\959015a650b047e6d8cf4f239234e5de.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\959015a650b047e6d8cf4f239234e5de.php 第 30 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\959015a650b047e6d8cf4f239234e5de.php 第 30 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011426s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000511s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-07-13T01:35:15+08:00 ] ::1 /eMarket/index.php/Home/Person/bought.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000880s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goodsorder.number as number,
+              goods.gid as gid,goods.g_img as img
+              from user JOIN goods JOIN goodsorder
+              where goodsorder.gid=goods.gid AND goodsorder.uid=user.uid AND user.uid=1 [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012430s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-07-13T03:29:11+08:00 ] ::1 /eMarket/index.php/Home/Person/bought.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000826s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: Select goods.price as price,goods.g_name as name,user.uid as uid,goodsorder.number as number,
+              goods.gid as gid,goods.g_img as img
+              from user JOIN goods JOIN goodsorder
+              where goodsorder.gid=goods.gid AND goodsorder.uid=user.uid AND user.uid=1 [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 28 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+NOTIC: [8] Undefined variable: nav D:\wamp\www\eMarket\Application\Runtime\Cache\Home\ed2fa53676518f049f04d7656cce5d15.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000534s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001631s ]
+
+[ 2016-07-13T03:29:13+08:00 ] ::1 /eMarket/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001128s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0044s ]
+SQL: SHOW COLUMNS FROM `goodsorder` [ RunTime:0.0041s ]
+SQL: Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6  [ RunTime:0.0324s ]
+SQL: Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `goods`  [ RunTime:0.0005s ]
+SQL: Select gid,g_name as name,g_img as img,price from goods where gid in (5,8,1,14,15,9,0) order by gid desc limit 6 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016815s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000707s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2016-07-13T03:29:14+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000874s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '海鲜水产'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '海鲜水产' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '虾类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鱼类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蟹类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '贝类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '菜类' ORDER BY sysid asc  [ RunTime:0.0007s ]
+
+[ 2016-07-13T03:29:14+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001023s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001215s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '小吃零食'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '小吃零食' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '辣条' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '薯片' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '饼干' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '面包' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '糖' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T03:29:15+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '青菜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '瓜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蘑菇类' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '腌菜类' ORDER BY sysid asc  [ RunTime:0.0008s ]
+
+[ 2016-07-13T03:29:15+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000981s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001149s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '苹果' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '香蕉' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '桃子' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '樱桃' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西瓜' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '橘子' ORDER BY sysid asc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '梨子' ORDER BY sysid asc  [ RunTime:0.0004s ]
+
+[ 2016-07-13T03:29:17+08:00 ] ::1 /eMarket/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002148s ]
+SQL: SHOW COLUMNS FROM `goods` [ RunTime:0.0045s ]
+SQL: SHOW COLUMNS FROM `shop` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `goods` WHERE `g_name` LIKE '%果%' LIMIT 5   [ RunTime:0.0005s ]
+
+[ 2016-07-13T03:29:18+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001560s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果'  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '水果' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0012s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '苹果' ORDER BY sysid asc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '香蕉' ORDER BY sysid asc  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '桃子' ORDER BY sysid asc  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '樱桃' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西瓜' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '橘子' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '梨子' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
+[ 2016-07-13T03:29:19+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000889s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '家常菜' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '青菜类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '瓜类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蘑菇类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '腌菜类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T03:29:19+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0049s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '海鲜水产'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '海鲜水产' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '虾类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鱼类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蟹类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '贝类' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '菜类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
+[ 2016-07-13T03:29:19+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000853s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001311s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '禽类蛋品' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸡' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鸭' ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '鹅' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '蛋类' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
+[ 2016-07-13T03:29:19+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '地方特产'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '地方特产' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '武汉' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '北京' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '上海' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '西安' ORDER BY sysid asc  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '成都' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '杭州' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '广州' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '南京' ORDER BY sysid asc  [ RunTime:0.0005s ]
+
+[ 2016-07-13T03:29:19+08:00 ] ::1 /eMarket/index.php/Home/Index/side
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `system` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '粮油调味'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guidea` = '粮油调味' GROUP BY guideb ORDER BY sysid asc  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '食用油' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '调味品' ORDER BY sysid asc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `system` WHERE `guideb` = '方便食品' ORDER BY sysid asc  [ RunTime:0.0006s ]
+
