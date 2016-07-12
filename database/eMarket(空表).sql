@@ -91,7 +91,7 @@ create table goods
    g_classa             varchar(50),
    g_classb             varchar(50),
    g_evaluate           varchar(50),
-   sold                 varchar(50),
+   sold                 int(10) default 0,
    primary key (gid)
 );
 
@@ -100,10 +100,12 @@ create table goods
 /*==============================================================*/
 create table goodsorder
 (
+   oid                  int not null AUTO_INCREMENT,
    uid                  int not null,
    gid                  int not null,
    number               int not null,
-   primary key (uid, gid)
+   otime                int not null,   
+   primary key (oid,uid, gid)
 );
 
 /*==============================================================*/

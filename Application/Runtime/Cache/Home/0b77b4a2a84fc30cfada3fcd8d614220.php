@@ -9,9 +9,9 @@ description : 个人中的收藏店铺页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -30,9 +30,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -42,13 +42,13 @@ descriptioin : 公有头部
 	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
 			<div class="letter"> 
 				<ul>
-					<li><a  href="/e-market/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
-					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -64,8 +64,8 @@ descriptioin : 公有头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
-						<li><a href="/e-market/index.php/Home/Person/collect">收藏的商品</a></li>
-						<li><a href="/e-market/index.php/Home/Person/collect2" id="collect_shop">收藏的店铺</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/collect">收藏的商品</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/collect2" id="collect_shop">收藏的店铺</a></li>
 					</ul>
 				</div>
 				<!--订单内容-->
@@ -77,7 +77,7 @@ descriptioin : 公有头部
 				 					<div class="c2_brand">
 					 					<div class="p2_img">
 					 						<input type="checkbox" value="" name="">
-					 						<a href=""><img src="/e-market/Public/image/goods/collectshop.png"/></a>
+					 						<a href=""><img src="/eMarket/Public/image/goods/collectshop.png"/></a>
 					 					</div>
 					 					<div class="p2_name">
 					 						<a href="">&nbsp;&nbsp;良品铺子&nbsp;&nbsp;官方旗舰店</a>
@@ -100,7 +100,7 @@ descriptioin : 公有头部
 							        		<li>
 							        			<div class="material">
 								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
+					 									<a href=""><img src="/eMarket/Public/image/goods/liangpin.jpg"/></a>
 							 						</div>
 							 						<div class="price">
 														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
@@ -110,7 +110,7 @@ descriptioin : 公有头部
 							        	<li>
 							        			<div class="material">
 								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
+					 									<a href=""><img src="/eMarket/Public/image/goods/liangpin.jpg"/></a>
 							 						</div>
 							 						<div class="price">
 														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
@@ -120,7 +120,7 @@ descriptioin : 公有头部
 						 					<li>
 							        			<div class="material">
 								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
+					 									<a href=""><img src="/eMarket/Public/image/goods/liangpin.jpg"/></a>
 							 						</div>
 							 						<div class="price">
 														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
@@ -130,7 +130,7 @@ descriptioin : 公有头部
 						 					<li>
 							        			<div class="material">
 								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
+					 									<a href=""><img src="/eMarket/Public/image/goods/liangpin.jpg"/></a>
 							 						</div>
 							 						<div class="price">
 														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
@@ -142,73 +142,7 @@ descriptioin : 公有头部
 				 				</div>
 
 
-				 				<div class="c2_goods">
-				 					<div class="c2_brand">
-					 					<div class="p2_img">
-					 						<input type="checkbox" value="" name="">
-					 						<a href=""><img src="/e-market/Public/image/goods/collectshop.png"/></a>
-					 					</div>
-					 					<div class="p2_name">
-					 						<a href="">&nbsp;&nbsp;良品铺子&nbsp;&nbsp;官方旗舰店</a>
-					 						<div class="null"></div>
-					 					</div>
-										<div class="value">
-											<a href="">关注人气：<strong>75816人</strong></a>
-											<p href="">关注时间：<strong>2016-07-11</strong></p>
-										</div>
-										<div>
-											<input class="submit" type="button" value="进入店铺"/>
-										</div>
-							            <div>
-							            	<input class="submit2" type="button" value="联系客服"/>
-							            	<input class="submit2" type="button" value="取消关注"/>
-							            </div>
-							        </div>
-							        <div class="c2_material">
-							        	<ul>
-							        		<li>
-							        			<div class="material">
-								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
-							 						</div>
-							 						<div class="price">
-														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
-													</div>
-												</div>
-						 					</li>
-							        	<li>
-							        			<div class="material">
-								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
-							 						</div>
-							 						<div class="price">
-														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
-													</div>
-												</div>
-						 					</li>
-						 					<li>
-							        			<div class="material">
-								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
-							 						</div>
-							 						<div class="price">
-														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
-													</div>
-												</div>
-						 					</li>
-						 					<li>
-							        			<div class="material">
-								        			<div class="p_img">
-					 									<a href=""><img src="/e-market/Public/image/goods/liangpin.jpg"/></a>
-							 						</div>
-							 						<div class="price">
-														<strong price="49.90">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥142.00</strong>
-													</div>
-												</div>
-						 					</li>
-							        	</ul>
-							        </div>
-				 				</div>
+				 			
 
 				 				
 				 			 </div>
@@ -225,19 +159,19 @@ descriptioin : 公有头部
                 
                function f1(gid){
 			       //alert(gid);
-				   $.post("/e-market/index.php/Home/Person/add_delete_collect",{
+				   $.post("/eMarket/index.php/Home/Person/add_delete_collect",{
 				       id:gid
 				   },function(res){
 				       alert(res);
-					   window.location.href="/e-market/index.php/Home/Person/collect";
+					   window.location.href="/eMarket/index.php/Home/Person/collect";
 				   });
 			   }
 			   function f2(gid){
-			      $.post("/e-market/index.php/Home/Person/collect_delete",{
+			      $.post("/eMarket/index.php/Home/Person/collect_delete",{
 				       id:gid
 				   },function(res){
 				       alert(res);
-					   window.location.href="/e-market/index.php/Home/Person/collect";
+					   window.location.href="/eMarket/index.php/Home/Person/collect";
 				   });
 			   }
 			</script>

@@ -9,6 +9,32 @@ class IndexController extends Controller {
 
     public function index(){
 
+        $db1 = M('goods');
+        $db2 = M('goodsorder');
+
+        // 猜你喜欢
+        $sqllove = "Select goods.gid,goods.g_name as name,goods.g_img as img,goods.price from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by (goodsorder.number) desc limit 6 ";
+        $love = $db2 -> query($sqllove);
+        // var_dump($love);
+        $this->assign('love',$love);
+
+        // 热销商品
+        $sqlhot="Select goods.price as price,goods.g_name as name,goodsorder.number as number, goods.gid as gid,goods.g_img as img from goods JOIN goodsorder where goods.gid=goodsorder.gid GROUP BY goodsorder.gid order by sum(goodsorder.number) desc limit 6 ";
+        $hotsold = $db2 -> query($sqlhot);
+        $this->assign('hotsold',$hotsold);
+
+        // 美食看看
+        $look = null;
+        $ran = "";
+        $num = count($db1 -> select());
+        for($i = 0;$i < 6;$i++){
+           $ran .= rand(1, $num).",";
+        }
+        $sqllook="Select gid,g_name as name,g_img as img,price from goods where gid in (".$ran."0) order by gid desc limit 6";
+        $look = $db1 -> query($sqllook);
+        $this->assign('look',$look);
+
+
         $this->display();
      }
      

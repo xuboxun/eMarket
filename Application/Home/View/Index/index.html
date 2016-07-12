@@ -57,51 +57,15 @@ description : 首页
 					<h5>猜你喜欢</h5>
 				</div>
 				<div class="block-main">
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
+					<volist name="love" id="love">
+						<div class="goods-block" title="{$love.name}">
+							<a href="__APP__/Home/Goods/detail?gid={$love.gid}"><div class="goods-block-img"><img src="__PUBLIC__/image/goods/{$love.img}"></div></a>
+							<div class="goods-block-description">
+								<div class="goods-title"><a href="__APP__/Home/Goods/detail?gid={$love.gid}">{$love.name}</a></div>
+								<div class="goods-price">¥{$love.price}</div>
+							</div>
 						</div>
-					</div>
-					<!-- repeat from sql -->
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<!--  -->
+					</volist>
 				</div>
 			</div>
 			<!-- 区块4 -->
@@ -110,51 +74,15 @@ description : 首页
 					<h5>热销商品</h5>
 				</div>
 				<div class="block-main">
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
+					<volist name="hotsold" id="hotsold">
+						<div class="goods-block" title="{$hotsold.name}">
+							<a href="__APP__/Home/Goods/detail?gid={$hotsold.gid}"><div class="goods-block-img"><img src="__PUBLIC__/image/goods/{$hotsold.img}"></div></a>
+							<div class="goods-block-description">
+								<div class="goods-title"><a href="__APP__/Home/Goods/detail?gid={$hotsold.gid}">{$hotsold.name}</a></div>
+								<div class="goods-price">¥{$hotsold.price}</div>
+							</div>
 						</div>
-					</div>
-					<!-- repeat from sql -->
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<!--  -->
+					</volist>
 				</div>
 			</div>
 			<!-- 区块5 -->
@@ -163,55 +91,19 @@ description : 首页
 					<h5>美食看看</h5>
 				</div>
 				<div class="block-main">
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
+					<volist name="look" id="look">
+						<div class="goods-block" title="{$look.name}">
+							<a href="__APP__/Home/Goods/detail?gid={$look.gid}"><div class="goods-block-img"><img src="__PUBLIC__/image/goods/{$look.img}"></div></a>
+							<div class="goods-block-description">
+								<div class="goods-title"><a href="__APP__/Home/Goods/detail?gid={$look.gid}">{$look.name}</a></div>
+								<div class="goods-price">¥{$look.price}</div>
+							</div>
 						</div>
-					</div>
-					<!-- repeat from sql -->
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<div class="goods-block" title="百草味 台湾特色糕点 凤梨酥300g/盒 美食">
-						<a href=""><div class="goods-block-img"><img src="__PUBLIC__/image/goods/goodsimg.jpg"></div></a>
-						<div class="goods-block-description">
-							<div class="goods-title"><a href="">百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
-							<div class="goods-price">¥16.90</div>
-						</div>
-					</div>
-					<!--  -->
+					</volist>
 				</div>
 			</div>
 			<!-- 区块3 -->
-			<div class="publicblock block4">
+			<div class="publicblock block4" style="display:none;">
 				<div class="block-title">
 					<h5>促销打折</h5>
 				</div>

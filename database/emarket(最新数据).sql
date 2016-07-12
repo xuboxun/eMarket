@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2016-07-11 15:53:49
+-- Generation Time: 2016-07-12 13:56:37
 -- 服务器版本： 5.6.17
 -- PHP Version: 5.5.12
 
@@ -115,28 +115,36 @@ CREATE TABLE IF NOT EXISTS `goods` (
   `g_classa` varchar(50) DEFAULT NULL,
   `g_classb` varchar(50) DEFAULT NULL,
   `g_evaluate` varchar(50) DEFAULT NULL,
-  `sold` varchar(50) DEFAULT NULL,
+  `sold` int(10) DEFAULT '0',
   PRIMARY KEY (`gid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- 转存表中的数据 `goods`
 --
 
 INSERT INTO `goods` (`gid`, `sid`, `g_name`, `price`, `g_img`, `count`, `g_classa`, `g_classb`, `g_evaluate`, `sold`) VALUES
-(1, 1, '苹果', '5', 'fruit.jpg', '55', '瓜果', '苹果', '33%', '3333'),
-(2, 2, '苹果', '6', 'fruit.jpg', '55', '瓜果', '苹果', '33%', '3333'),
-(3, 3, '苹果', '7', 'fruit.jpg', '55', '瓜果', '苹果', '33%', '3333'),
-(4, 4, '苹果', '4.5', 'fruit.jpg', '55', '瓜果', '苹果', '33%', '3333'),
-(5, 5, '苹果', '2.5', 'fruit.jpg', '55', '瓜果', '苹果', '33%', '3333'),
-(6, 1, '梨子', '5.5', 'fruit.jpg', '55', '瓜果', '梨子', '33%', '3333'),
-(7, 2, '梨子', '5.5', 'fruit.jpg', '55', '瓜果', '梨子', '33%', '3333'),
-(8, 3, '梨子', '515', 'fruit.jpg', '55', '瓜果', '梨子', '33%', '3333'),
-(9, 4, '梨子', '5.3', 'fruit.jpg', '55', '瓜果', '梨子', '33%', '3333'),
-(10, 5, '梨子', '5.5', 'fruit.jpg', '55', '瓜果', '梨子', '33%', '3333'),
-(11, 1, '香蕉', '5.5', 'fruit.jpg', '55', '瓜果', '香蕉', '33%', '3333'),
-(12, 2, '香蕉', '5.5', 'fruit.jpg', '55', '瓜果', '香蕉', '33%', '3333'),
-(13, 3, '香蕉', '5.5', 'fruit.jpg', '55', '瓜果', '香蕉', '33%', '3333');
+(1, 1, '苹果', '5', 'a1.jpg', '55', '瓜果', '苹果', '33%', 0),
+(2, 2, '苹果', '6', 'a2.jpg', '55', '瓜果', '苹果', '33%', 0),
+(3, 3, '苹果', '7', 'a3.jpg', '55', '瓜果', '苹果', '33%', 0),
+(4, 4, '苹果', '4.5', 'a4.jpg', '55', '瓜果', '苹果', '33%', 2),
+(5, 5, '苹果', '2.5', 'a5.jpg', '55', '瓜果', '苹果', '33%', 5),
+(6, 1, '梨子', '5.5', 'p1.jpg', '55', '瓜果', '梨子', '33%', 13),
+(7, 2, '梨子', '5.5', 'p2.jpg', '55', '瓜果', '梨子', '33%', 6),
+(8, 3, '梨子', '515', 'p3.jpg', '55', '瓜果', '梨子', '33%', 0),
+(9, 4, '梨子', '5.3', 'p4.jpg', '55', '瓜果', '梨子', '33%', 0),
+(10, 5, '梨子', '5.5', 'p5.jpg', '55', '瓜果', '梨子', '33%', 0),
+(11, 1, '香蕉', '5.5', 'b1.jpg', '55', '瓜果', '香蕉', '33%', 53),
+(12, 2, '香蕉', '5.5', 'b2.jpg', '55', '瓜果', '香蕉', '33%', 0),
+(13, 3, '香蕉', '5.5', 'b3.jpg', '55', '瓜果', '香蕉', '33%', 0),
+(14, 4, '香蕉', '6.5', 'b4.jpg', '2000', '瓜果', '香蕉', '40%', 0),
+(15, 2, '辣条，不辣不要钱', '1.5', 'l1.jpg', '540', '辣条', '辣条', NULL, 50),
+(16, 1, '辣条，不辣不要钱', '1.5', 'l2.jpg', '452', '辣条', '辣条', NULL, 0),
+(17, 3, '辣条，不辣不要钱', '1.5', 'l3.jpg', '45', '辣条', '辣条', NULL, 0),
+(18, 5, '辣条，不辣不要钱', '1.5', 'l4.jpg', '42', '辣条', '辣条', NULL, 0),
+(19, 4, '辣条，不辣不要钱', '1.5', 'l5.jpg', '404', '辣条', '辣条', NULL, 0),
+(20, 1, '辣条，不辣不要钱', '2.0', 'l6.jpg', '500', '辣条', '辣条', '20%', 0),
+(21, 3, '辣条，不辣不要钱', '', 'l7.jpg', '300', '辣条', '辣条', '35%', 0);
 
 -- --------------------------------------------------------
 
@@ -145,11 +153,28 @@ INSERT INTO `goods` (`gid`, `sid`, `g_name`, `price`, `g_img`, `count`, `g_class
 --
 
 CREATE TABLE IF NOT EXISTS `goodsorder` (
+  `oid` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
   `gid` int(11) NOT NULL,
   `number` int(11) NOT NULL,
-  PRIMARY KEY (`uid`,`gid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `otime` int(11) NOT NULL,
+  PRIMARY KEY (`oid`,`uid`,`gid`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- 转存表中的数据 `goodsorder`
+--
+
+INSERT INTO `goodsorder` (`oid`, `uid`, `gid`, `number`, `otime`) VALUES
+(1, 1, 6, 3, 0),
+(2, 1, 6, 4, 0),
+(3, 1, 6, 6, 0),
+(4, 1, 7, 6, 0),
+(5, 1, 5, 5, 0),
+(6, 1, 4, 2, 0),
+(7, 1, 11, 3, 0),
+(8, 1, 15, 50, 0),
+(9, 2, 11, 50, 0);
 
 -- --------------------------------------------------------
 
@@ -449,7 +474,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `tel` (`tel`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `user`
+--
+
+INSERT INTO `user` (`uid`, `username`, `password`, `email`, `headimg`, `nickname`, `sex`, `address`, `tel`) VALUES
+(1, 'aaa', 'aaa', '1060031655@qq.com', NULL, NULL, NULL, '华中农业大学', '15927690835'),
+(2, '吃货', 'aaa', '1234325342@qq.com', NULL, NULL, NULL, '华中农业大学', '45678912311');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

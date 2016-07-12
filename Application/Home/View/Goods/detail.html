@@ -150,11 +150,11 @@ description : 商品详情页面
                 	<script>
                 		$("#order-submit").click(function(){
                 			if($('input:radio:checked').val() == null){
-                				alert("请确认收货地址")
+                				alert("请确认收货地址");
                 			}else{
                 				$.post('__URL__/buy',{
                 					uid : {$user.uid},
-                					gid : {$goods['gid']},
+                					gid : {$goods.gid},
                 					number : $("#buynum").val()
                 				},function(res){
                 					if(res != 0){

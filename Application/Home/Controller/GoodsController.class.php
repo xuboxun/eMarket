@@ -17,12 +17,14 @@ class GoodsController extends Controller {
         $this->show();
     }
     public function classb(){
-         $header=A('Public'); 
+        $header=A('Public'); 
         $header->header();
 
         $kind = $_GET['key'];
         $db1 = M('goods');
         $db2 = M('shop');
+        // $db3 = M('goodsorder')
+
         $data['g_name'] = array('like',"%$kind%");
         $goods = $db1 -> where($data) -> select();
         // $shop = $db2 -> select();
@@ -30,6 +32,7 @@ class GoodsController extends Controller {
         for ($i = 0; $i < $length; $i++) { 
             $goods[$i]['address'] = $db2 -> where('sid='.$goods[$i]['sid']) -> getField("s_address");
         }
+
         $this->assign('goods',$goods);
         $this->show();
     }
@@ -94,9 +97,17 @@ class GoodsController extends Controller {
         $data['uid'] = $_POST['uid'];
         $data['gid'] = $_POST['gid'];
         $data['number'] = $_POST['number'];
+
         $db = M('goodsorder');
-        $res = $db->add($data);
-        $this->ajaxReturn($res);
+        $db2 = M('goods');
+        $res = $db -> add($data);
+
+        $data2['gid'] = $_POST['gid'];
+        $goods = $db2 -> where($data2) -> find();
+
+        $goods['sold'] = $goods['sold'] + $_POST['number'];
+        $ren = $db2 -> where($data2) -> save($goods); // 更新销售量
+        $this -> ajaxReturn($res);
      }
      
 }

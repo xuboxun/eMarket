@@ -9,9 +9,9 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -30,9 +30,9 @@ descriptioin : 公有头部
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
-					<li><a href="/e-market/index.php/Home/Person/cart">购物车</a></li>
-					<li><a href="/e-market/index.php/Home/Person/collect">收藏夹</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
@@ -42,13 +42,13 @@ descriptioin : 公有头部
 	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
-			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
 			<div class="letter"> 
 				<ul>
-					<li><a  href="/e-market/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
-					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
-					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html" id="cart">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
 				</ul>				
 			</div>
 			<div class="search">
@@ -82,7 +82,7 @@ descriptioin : 公有头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<a href=""><img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
+				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
@@ -225,23 +225,23 @@ descriptioin : 公有头部
 					arr+="t="+(er-1);
 					  $.ajax({
 						    asnyc:false,
-							url:"/e-market/index.php/Home/Person/sold_goods",
+							url:"/eMarket/index.php/Home/Person/sold_goods",
 							type:"post",
 							traditional :true,
 						    data:arr,
                             success:function(res){
 							        if(res=="success"){
-                                        window.location.href="/e-market/index.php/Home/Person/bought";									
+                                        window.location.href="/eMarket/index.php/Home/Person/bought";									
  									}
 							    },
 						 });
 				   }
 				   function delete_cart(gid){
-				      $.post("/e-market/index.php/Home/Person/delete_cart_one",{
+				      $.post("/eMarket/index.php/Home/Person/delete_cart_one",{
 					       id:gid,
 					  },function(res){
 					       alert(res);
-						   window.location.href="/e-market/index.php/Home/Person/cart";
+						   window.location.href="/eMarket/index.php/Home/Person/cart";
 					  })
 				   }
 				   function delete_cart_all(){
@@ -259,13 +259,13 @@ descriptioin : 公有头部
 								 arr+="num="+t;
 				   	    $.ajax({
 						    asnyc:false,
-							url:"/e-market/index.php/Home/Person/delete_cart_all",
+							url:"/eMarket/index.php/Home/Person/delete_cart_all",
 							type:"post",
 						    data:arr,
                             success:function(res){
 							        alert(res);
 							        if(res=="success"){
-                                        window.location.href="/e-market/index.php/Home/Person/cart";									
+                                        window.location.href="/eMarket/index.php/Home/Person/cart";									
  									}
 							    },
 						 });

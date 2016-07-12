@@ -3,10 +3,17 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
+<<<<<<< Updated upstream
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
 		<link rel="stylesheet" href="/e-market/Public/css/login.css">
 		
 		<script type="text/javascript" src="/e-market/Public/js/jquery.min.js"></script>
+=======
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" href="/eMarket/Public/css/login.css">
+		
+		<script type="text/javascript" src="/eMarket/Public/js/jquery.min.js"></script>
+>>>>>>> Stashed changes
 	</head>
 	<body>
 		<!-- 引入头部 -->

@@ -268,11 +268,11 @@ descriptioin : 公有头部
                 	<script>
                 		$("#order-submit").click(function(){
                 			if($('input:radio:checked').val() == null){
-                				alert("请确认收货地址")
+                				alert("请确认收货地址");
                 			}else{
                 				$.post('/e-market/index.php/Home/Goods/buy',{
                 					uid : <?php echo ($user["uid"]); ?>,
-                					gid : <?php echo ($goods['gid']); ?>,
+                					gid : <?php echo ($goods["gid"]); ?>,
                 					number : $("#buynum").val()
                 				},function(res){
                 					if(res != 0){

@@ -155,7 +155,7 @@ descriptioin : 公有头部
 							<div class="goods-location"><?php echo ($volistgoods["address"]); ?></div>
 						</div>
 					</div><?php endforeach; endif; else: echo "" ;endif; ?>
-				<div class="good-area-content-col goods-block">
+				<!-- <div class="good-area-content-col goods-block">
 					<a href=""><div class="goods-block-img"><img src="/eMarket/Public/image/goods/goodsimg.jpg"></div></a>
 					<div class="goods-block-description">
 						<div class="goods-price">¥16.90</div>
@@ -163,7 +163,7 @@ descriptioin : 公有头部
 						<div class="goods-title"><a href="">样式效果：百草味 台湾特色糕点 凤梨酥300g/盒 美食</a></div>
 						<div class="goods-location">浙江 金华</div>
 					</div>
-				</div>
+				</div> -->
 			</div>
 
 		</div>
