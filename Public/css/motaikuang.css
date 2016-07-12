@@ -29,7 +29,7 @@ button, input {
 	border:1px solid;
 	outline:none;
 	line-height:normal;
-*overflow:visible
+    *overflow:visible
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
 border:0;
@@ -216,8 +216,8 @@ input.btn {
 	position:fixed;
 	top:35%;
 	left:45%;
-	width:800px;
-	height:560px;
+	width:700px;
+	height:460px;
 	margin:-180px 0 0 -330px;
 	border-radius:5px;
 	border:solid 2px #666;

@@ -1,29 +1,28 @@
 <!-- 
-author : sudonglin
+author : huangyifan
 version : 1.0
-date : 2016.7.9
-descriptioin : 个人页面的头部
+date : 2016.7.8
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="__APP__/Home/Login/login">请登录</a></span>
-				<span><a href="__APP__/Home/Login/register">注册</a></span>
+				<span><a href="{$nav.url.0}">{$nav.state.0}</a></span>
+				<span><a href="{$nav.url.1}">{$nav.state.1}</a></span>
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
 					<li><a href="__APP__/Home/Index/index">商城首页</a></li>
-					<li><a href="">购物车</a></li>
-					<li><a href="">收藏夹</a></li>
+					<li><a href="__APP__/Home/Person/cart">购物车</a></li>
+					<li><a href="__APP__/Home/Person/collect">收藏夹</a></li>
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- 顶部 end -->
+	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
 			<div class="logoletter"><img src="__PUBLIC__/image/logoletter.jpg"/></div>

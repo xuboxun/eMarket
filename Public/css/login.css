@@ -4,6 +4,9 @@ body{
 	font-size:16px;
 	font-family: ;
 }
+#header .search{
+	float: right;
+}
 /*总体布局*/
 .main{
 	width:100%;
@@ -16,7 +19,7 @@ body{
 	width:92%;
 	margin-left:2%;
 	height:450px;
-	background-image:url(../image/login.jpg);
+	background-image:url(../image/login3.jpg);
 	background-size:100% 700px; 
 	margin-top:130px;
 	background-repeat:no-repeat;

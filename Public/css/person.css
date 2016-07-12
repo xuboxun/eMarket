@@ -238,13 +238,17 @@ ul li .c_goods{
 	height:400px;
 	/*background-color: #666;*/
 }
-.p_img a{
+.p1_img img{
+	width:180px;
+	height:200px;
+}
+.p1_img a{
 	cursor: pointer;
 }
-.p_name a{
+.p1_name a{
 	color:#005EA7;
 }
-.p_name a:hover{
+.p1_name a:hover{
 	cursor: pointer;
 }
 .c_goods div strong{
@@ -280,7 +284,7 @@ ul li .c_goods{
 /*collect收藏店铺页面css开始*/
 .c2_goods{
 	float:left;
-	width:95%;
+	width:98%;
 	height:270px;
 	/*background-color:#666;*/
 	border-top: 1px solid #ccc;
@@ -295,11 +299,12 @@ ul li .c_goods{
 	float:left;
 }
 .c2_material{
-	margin-left: 10px;
+	
 	margin-top: 10px;
 }
 .material{
 	float:left;
+<<<<<<< HEAD
 	width:160px;
 	height:260px;
 	/*background: red;*/
@@ -307,6 +312,15 @@ ul li .c_goods{
 .material img{
 	
 	width:150px;
+=======
+	width:180px;
+	height:260px;
+	background:;
+}
+.material img{
+	margin-left: 20px;
+	width:180px;
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 	height:200px;
 }
 .p2_img img{

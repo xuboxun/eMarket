@@ -16,16 +16,16 @@ description : 个人中的收藏店铺页面
 	<body>
 		<!--头部包含-->
 		<!-- 
-author : sudonglin
+author : huangyifan
 version : 1.0
-date : 2016.7.9
-descriptioin : 个人页面的头部
+date : 2016.7.8
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
+<<<<<<< HEAD
 				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
 				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
@@ -34,13 +34,23 @@ descriptioin : 个人页面的头部
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
+=======
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- 顶部 end -->
+	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
 			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>

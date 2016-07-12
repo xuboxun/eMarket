@@ -9,23 +9,39 @@ description : 个人中的个人中心页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/setting.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
 		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
+=======
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/setting.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/motaikuang.css">
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 	</head>
 	<body>
 		<!--头部包含-->
 		<!-- 
+<<<<<<< HEAD
 author : sudonglin
 version : 1.0
 date : 2016.7.9
 descriptioin : 个人页面的头部
 -->
 
+=======
+author : huangyifan
+version : 1.0
+date : 2016.7.8
+descriptioin : 公有头部
+-->
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
+<<<<<<< HEAD
 				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
 				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
 			</div>
@@ -34,12 +50,23 @@ descriptioin : 个人页面的头部
 					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
+=======
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+			</div>
+			<div class="banner-right">
+				<ul class="banner-right-ul">
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
 	<!-- 顶部 end -->
 	<!--头部开始-->
 		<div class="header">
@@ -50,6 +77,18 @@ descriptioin : 个人页面的头部
 					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
 					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
 					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
+=======
+	<!-- 底部 end -->
+	<!--头部开始-->
+		<div class="header">
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
+			<div class="letter">
+				<ul>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 				</ul>				
 			</div>
 			<div class="search">
@@ -65,13 +104,19 @@ descriptioin : 个人页面的头部
 			<!-- 侧边栏 -->
 				<div class="left">
 					<ul>
+<<<<<<< HEAD
 						<li><a href="/e-market/index.php/Home/Person/center">个人信息</a></li>
 						<li><a href="/e-market/index.php/Home/Person/setting">收货地址</a></li>
+=======
+						<li><a href="/eMarket/index.php/Home/Person/center">个人信息</a></li>
+						<li><a href="/eMarket/index.php/Home/Person/setting">收货地址</a></li>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 					</ul>
 				</div>
 				<!--订单内容-->
 				<div class="right"> 
 				 	<div class="things">
+<<<<<<< HEAD
 				 		<div class="address">
 
 				 			
@@ -81,6 +126,81 @@ descriptioin : 个人页面的头部
 			</div>
 		</div>
 	</div>
+=======
+				 		<div class="address">						
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>登陆密码</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span>互联网账号存在被盗风险，建议您定期更改密码以保护账户安全</span>
+				 					  <a href="/eMarket/index.php/home/Login/findpwd">修改</a>
+				 				</div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>头像昵称</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span>可随时更换您喜欢的头像或昵称</span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>绑定手机</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span> 您验证的手机： 159*****742    若已丢失或停用，请立即更换，避免账户被盗 </span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 							 		 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="/eMarket/Public/js/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+  $('.theme-login').click(function(){
+  	//alert("hello");
+      $('.theme-popover-mask').fadeIn(100);
+      $('.theme-popover').slideDown(200);
+  })
+  $('.theme-poptit .close').click(function(){
+      $('.theme-popover-mask').fadeOut(100);
+      $('.theme-popover').slideUp(200);
+  })
+
+})
+</script>
+<div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h3>添加收货地址</h3>
+     </div>
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="loginform" action="" method="post">
+                <div class="f1">
+                	<em>* </em>：<input type="text" class=""/><span style="display:none">请您填写收货人姓名</span>
+                </div>
+                <div class="f1">
+                	<em>* </em> 详细地址：<input type="text" class=""/><span style="display:none">请您填写收货人详细地址</span>
+                </div>
+                  <div class="f1">
+                	<em>* </em> 手机号码：<input type="text" class=""/><span style="display:none">请您填写收货人手机号码</span>
+                </div>
+                  <div class="f1">
+                	&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;：<input type="text" class=""/>
+                </div>
+                  <div class="f1">
+                	<a style="margin-top:30px;"type="" class="btn">保存收货地址</a>
+                </div>
+           </form>
+     </div>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 </div>
 		<!-- 引入尾部 -->
 <!-- 

@@ -19,6 +19,7 @@ class LoginController extends Controller {
      public function logout(){
 
         session('username',null);
+        session('uid',null);
         $this->redirect('login');
      }
 

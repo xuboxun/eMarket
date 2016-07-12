@@ -9,40 +9,50 @@ description : 个人中的购物车页面
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/base.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/person.css">
-		<link rel="stylesheet" type="text/css" href="/e-market/Public/css/p_base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/person.css">
+		<link rel="stylesheet" type="text/css" href="/eMarket/Public/css/p_base.css">
 	</head>
 	<body>
 		<!--头部包含-->
 		<!-- 
-author : sudonglin
+author : huangyifan
 version : 1.0
-date : 2016.7.9
-descriptioin : 个人页面的头部
+date : 2016.7.8
+descriptioin : 公有头部
 -->
-
 <!-- 顶部 start -->
 	<div id="banner">
 		<div class="container">
 			<div class="banner-user">
-				<span><a href="/e-market/index.php/Home/Login/login">请登录</a></span>
-				<span><a href="/e-market/index.php/Home/Login/register">注册</a></span>
+<<<<<<< Updated upstream
+				<span><a href="<?php echo ($nav["url"]["0"]); ?>"><?php echo ($nav["state"]["0"]); ?></a></span>
+				<span><a href="<?php echo ($nav["url"]["1"]); ?>"><?php echo ($nav["state"]["1"]); ?></a></span>
+=======
+				<span><a href="/eMarket/index.php/Home/Login/login">请登录</a></span>
+				<span><a href="/eMarket/index.php/Home/Login/register">注册</a></span>
+>>>>>>> Stashed changes
 			</div>
 			<div class="banner-right">
 				<ul class="banner-right-ul">
-					<li><a href="/e-market/index.php/Home/Index/index">商城首页</a></li>
+					<li><a href="/eMarket/index.php/Home/Index/index">商城首页</a></li>
+<<<<<<< Updated upstream
+					<li><a href="/eMarket/index.php/Home/Person/cart">购物车</a></li>
+					<li><a href="/eMarket/index.php/Home/Person/collect">收藏夹</a></li>
+=======
 					<li><a href="">购物车</a></li>
 					<li><a href="">收藏夹</a></li>
+>>>>>>> Stashed changes
 					<li><a href="">客服中心</a></li>
 					<li><a href="">网站导航</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- 顶部 end -->
+	<!-- 底部 end -->
 	<!--头部开始-->
 		<div class="header">
+<<<<<<< HEAD
 			<div class="logoletter"><img src="/e-market/Public/image/logoletter.jpg"/></div>
 			<div class="letter"> 
 				<ul>
@@ -50,6 +60,15 @@ descriptioin : 个人页面的头部
 					<li><a  href="/e-market/index.php/Home/Person/collect.html" id="collect">收藏夹</a></li>				
 					<li><a  href="/e-market/index.php/Home/Person/bought.html" id="bought">已买宝贝</a></li>		
 					<li><a  href="/e-market/index.php/Home/Person/setting.html" id="set">个人设置</a></li>
+=======
+			<div class="logoletter"><img src="/eMarket/Public/image/logoletter.jpg"/></div>
+			<div class="letter">
+				<ul>
+					<li><a  href="/eMarket/index.php/Home/Person/cart.html">购物车</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/collect.html">收藏夹</a></li>				
+					<li><a  href="/eMarket/index.php/Home/Person/bought.html">已买宝贝</a></li>		
+					<li><a  href="/eMarket/index.php/Home/Person/setting.html">个人设置</a></li>
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 				</ul>				
 			</div>
 			<div class="search">
@@ -83,7 +102,7 @@ descriptioin : 个人页面的头部
 				 					<td width="460px">
 				 						<div class="goods-item">
 				 							<div class="cafa">
-				 								<a href=""><img title="【好食光】" src="/e-market/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
+				 								<a href=""><img title="【好食光】" src="/eMarket/Public/image/goods/<?php echo ($vo["g_img"]); ?>"/></a>
 				 							</div>
 				 							<div class="link">
 				 								<a href="">【好食光】<?php echo ($vo["g_name"]); ?></a>
@@ -103,7 +122,38 @@ descriptioin : 个人页面的头部
 				 					<td width="170px"><span><a href="javascript:delete_cart(<?php echo ($vo["gid"]); ?>);">删除</a><br></span></td>
 				 				</tr>
 				 			</tbody><?php endforeach; endif; else: echo "" ;endif; ?>
+<<<<<<< HEAD
 				 		
+=======
+				 		<!--	<tbody>
+				 				<tr class="cart_three">
+				 			        <td width="100px"><input type="checkbox" check="checked" name=""/></td>
+				 					<td width="460px">
+				 						<div class="goods-item">
+				 							<div class="cafa">
+				 								<a><img title="【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm"src="/eMarket/Public/image/goods/fruit.jpg"/></a>
+				 							</div>
+				 							<div class="link">
+				 								<a href="">【好食光】珍享&nbsp;&nbsp;美国进口樱桃 1kg果径约26-28mm</a>
+				 							</div>
+				 						</div>
+				 					</td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px">
+				 						<div class="sum">
+				 							<a class="decrement" href="">-&nbsp;</a>
+				 							<input type="text" value="1"/>
+				 							<a class="increment" href="">&nbsp;+</a>
+				 						</div>
+				 					</td>
+				 					<td width="170px"><span>70</span></td>
+				 					<td width="170px"><span><a href="">删除</a><br><a href="">移到我的收藏</a></span></td>
+				 				</tr>
+				 				
+<<<<<<< Updated upstream
+				 			</tbody>
+-->
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 
 				 			</tbody>
 
@@ -226,13 +276,13 @@ descriptioin : 个人页面的头部
 					arr+="t="+(er-1);
 					  $.ajax({
 						    asnyc:false,
-							url:"/e-market/index.php/Home/Person/sold_goods",
+							url:"/eMarket/index.php/Home/Person/sold_goods",
 							type:"post",
 							traditional :true,
 						    data:arr,
                             success:function(res){
 							        if(res=="success"){
-                                        window.location.href="/e-market/index.php/Home/Person/bought";									
+                                        window.location.href="/eMarket/index.php/Home/Person/bought";									
  									}
 							    },
 						 });

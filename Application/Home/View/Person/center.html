@@ -12,6 +12,7 @@ description : 个人中的个人中心页面
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/setting.css">
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/p_base.css">
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/motaikuang.css">
 	</head>
 	<body>
 		<!--头部包含-->
@@ -29,15 +30,79 @@ description : 个人中的个人中心页面
 				<!--订单内容-->
 				<div class="right"> 
 				 	<div class="things">
-				 		<div class="address">
-
-				 			
-
-				 		 <input class="submit" type="button" value="新增收货地址"/>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#666;">您已经创建<strong>2</strong>个收货地址，最多可创建20个</span>
+				 		<div class="address">						
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>登陆密码</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span>互联网账号存在被盗风险，建议您定期更改密码以保护账户安全</span>
+				 					  <a href="__APP__/home/Login/findpwd">修改</a>
+				 				</div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>头像昵称</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span>可随时更换您喜欢的头像或昵称</span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 			<div class="f2">
+				 				<div class="f2left">
+				 					<h3>绑定手机</h3>
+				 				</div>
+				 				<div class="f2right">
+				 					 <span> 您验证的手机： 159*****742    若已丢失或停用，请立即更换，避免账户被盗 </span>
+				 					  <a class="theme-login">修改</a>
+				 				</div>
+				 			</div>	
+				 							 		 
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+  $('.theme-login').click(function(){
+  	//alert("hello");
+      $('.theme-popover-mask').fadeIn(100);
+      $('.theme-popover').slideDown(200);
+  })
+  $('.theme-poptit .close').click(function(){
+      $('.theme-popover-mask').fadeOut(100);
+      $('.theme-popover').slideUp(200);
+  })
+
+})
+</script>
+<div class="theme-popover">
+     <div class="theme-poptit">
+          <a href="javascript:;" title="关闭" class="close">×</a>
+          <h3>添加收货地址</h3>
+     </div>
+     <div class="theme-popbod dform">
+           <form class="theme-signin" name="loginform" action="" method="post">
+                <div class="f1">
+                	<em>* </em>：<input type="text" class=""/><span style="display:none">请您填写收货人姓名</span>
+                </div>
+                <div class="f1">
+                	<em>* </em> 详细地址：<input type="text" class=""/><span style="display:none">请您填写收货人详细地址</span>
+                </div>
+                  <div class="f1">
+                	<em>* </em> 手机号码：<input type="text" class=""/><span style="display:none">请您填写收货人手机号码</span>
+                </div>
+                  <div class="f1">
+                	&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱&nbsp;&nbsp;&nbsp;：<input type="text" class=""/>
+                </div>
+                  <div class="f1">
+                	<a style="margin-top:30px;"type="" class="btn">保存收货地址</a>
+                </div>
+           </form>
+     </div>
 </div>
 		<!-- 引入尾部 -->
 <include file="./Application/Home/View/Public/footer.html" />

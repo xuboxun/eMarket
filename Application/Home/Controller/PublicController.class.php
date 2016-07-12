@@ -10,9 +10,7 @@ class PublicController extends Controller {
             $nav['url'][1]=U('Login/register');
 
         }else{
-            // $con=M('user');
-            // $where['username']=$_SESSION['username'];
-            // $data=$con->where($where)->select();
+
 
             $nav['state'][0]="欢迎你 "."$_SESSION[username]";
             $nav['url'][0]="javascript:;";

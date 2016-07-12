@@ -83,3 +83,58 @@
 .extra a:hover{
 	color:#C81522;
 }
+/*添加收货地址模态框css样式*/
+.f1{
+	font-size: 1em;
+}
+.f1 em{
+	color: red;
+}
+.f1 input{
+	margin-top: 20px;
+	height:18px;
+	line-height: 18px;
+	width:240px;
+    padding:11px 8px 11px 50px;
+    border:1px solid #888;
+}
+/*个人信息css样式*/
+.f2{
+	width:100%;
+	height:120px;
+	/*background: yellow;*/
+	border-bottom: 1px solid #ccc;
+}  
+.f2left{
+	margin-top: 40px;
+	width:20%;
+	height:40px;
+	float:left;
+	/*background: #FF4400;*/
+	border-right: 1px solid #ccc;
+}
+.f2left h3{
+	text-align:center;
+	line-height: 40px;
+	letter-spacing: 2px;
+	color:;
+}
+
+.f2right{
+	float:left;
+	width:75%;
+	height:80px;
+
+}
+.f2right span{
+	margin-left: 30px;
+	line-height: 120px;
+	color:red;
+	/*background: pink;*/
+
+}
+.f2right a{
+	cursor: pointer;
+	margin-left:60px;
+	color:#3399FF;
+}

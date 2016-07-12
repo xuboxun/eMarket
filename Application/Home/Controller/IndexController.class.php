@@ -2,9 +2,12 @@
 namespace Home\Controller;
 use Think\Controller;
 class IndexController extends Controller {
-    public function index(){
+    public function _initialize(){
         $header=A('Public'); 
         $header->header();
+    }
+
+    public function index(){
 
         $this->display();
      }

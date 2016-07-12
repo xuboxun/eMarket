@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>好食光</title>
-		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/register.css">
 		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/base.css">
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/register.css">
 	</head>
 	<body>
 		<include file="./Application/Home/View/Public/header.html" />
@@ -222,7 +222,7 @@
 					 },function(res){
 					   alert(res);
 					   if(res=="注册成功"){
-					      window.location.href="Index/index";		
+					      window.location.href="__APP__/Home/Index/index";		
 					   }else{
 					      window.location.href="__URL__/register";		
 					   }   

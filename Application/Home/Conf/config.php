@@ -4,7 +4,15 @@ return array(
 		//'配置项'=>'配置值'
 	'DB_TYPE'=>'mysql',
 	'DB_HOST'=>'127.0.0.1',
+<<<<<<< HEAD
 	'DB_NAME'=>'emarket',//设置数据库名；
+=======
+<<<<<<< Updated upstream
+	'DB_NAME'=>'eMarket',//设置数据库名；
+=======
+	'DB_NAME'=>'emarket',//设置数据库名；
+>>>>>>> Stashed changes
+>>>>>>> 726d56db9a388061684bc8de5f46c2dc8eed59b4
 	'DB_user'=>'root',
 	'DB_PWD'=>'',
 	'DB_PORT'=>'3306',
